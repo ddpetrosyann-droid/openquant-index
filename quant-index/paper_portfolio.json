@@ -1,0 +1,38 @@
+[
+  {
+    "Strategy": "#0001: Asset Class Trend (GTAA 5)",
+    "Assets": "SPY,EFA,BND,VNQ,GSG",
+    "Date": "2026-01-02",
+    "Capital": 10000
+  },
+  {
+    "Strategy": "#0001: Asset Class Trend (GTAA 5)",
+    "Assets": "SPY,EFA,BND,VNQ,GSG",
+    "Date": "2026-10-14",
+    "Capital": 10000
+  },
+  {
+    "Strategy": "#0001: Asset Class Trend (GTAA 5)",
+    "Assets": "SPY,EFA,BND,VNQ,GSG",
+    "Date": "2026-10-14",
+    "Capital": 10000
+  },
+  {
+    "Strategy": "#0001: Asset Class Trend (GTAA 5)",
+    "Assets": "SPY,EFA,BND,VNQ,GSG",
+    "Date": "2026-10-14",
+    "Capital": 10000
+  },
+  {
+    "Strategy": "#0001: Asset Class Trend (GTAA 5)",
+    "Assets": "SPY,EFA,BND,VNQ,GSG",
+    "Date": "2026-10-14",
+    "Capital": 10000
+  },
+  {
+    "Strategy": "Custom BTC (20/150 SMA)",
+    "Assets": "BTC",
+    "Date": "2026-10-14",
+    "Capital": 10000
+  }
+]
