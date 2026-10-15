@@ -1,0 +1,9110 @@
+001
+Asset Class Trend-Following
+Monthly
+EquitiesBondsCommoditiesREITs
+11.27%
+6.87%
+momentumasset class pickingtrend-following
+#0002
+Momentum Asset Allocation Strategy
+Monthly
+EquitiesBondsCommoditiesREITs
+14.49%
+11.00%
+momentumasset class pickingrotational system
+#0003
+Sector Momentum - Rotational System
+Monthly
+Equities
+13.94%
+18.38%
+momentumrotational systemsector picking
+#0004
+Overnight Anomaly
+Intraday
+Equities
+14.00%
+market timingseasonality
+#0005
+FX Carry Trade
+Monthly
+Currencies
+7.27%
+9.60%
+carry tradeFX anomalyforex systemfactor investingsmart beta
+#0006
+Bond Carry Strategy
+Monthly
+Bonds
+9.91%
+8.63%
+carry tradefactor investingsmart beta
+#0007
+Low Volatility Factor Effect in Stocks
+Monthly
+Equities
+11.30%
+10.10%
+stock pickingvolatility effectfactor investingsmart beta
+#0008
+Currency Momentum Factor
+Monthly
+Currencies
+7.61%
+10.22%
+momentumFX anomalyforex systemfactor investingsmart beta
+#0009
+Currency Value Factor - PPP Strategy
+Quarterly
+Currencies
+7.82%
+9.33%
+FX anomalyforex systemvaluefactor investingsmart beta
+#0010
+Sector Rotation based on Monetary Policy
+Yearly
+Equities
+15.82%
+15.50%
+sector picking
+#0011
+Stock Return Reversal within Industries
+Monthly
+Equities
+16.78%
+12.91%
+stock pickingreversalequity long short
+#0012
+Pairs Trading with Stocks
+Daily
+Equities
+11.16%
+5.85%
+equity long shortpairs tradingarbitrage
+#0013
+Short Term Reversal Effect in Stocks
+Weekly
+Equities
+16.25%
+14.94%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0014
+Momentum Factor Effect in Stocks
+Monthly
+Equities
+8.30%
+16.60%
+momentumstock pickingmomentum in stocksfactor investingsmart beta
+#0015
+Momentum Factor Effect in Country Equity Indexes
+Monthly
+Equities
+17.70%
+momentumrotational systemcountry pickingfactor investingsmart beta
+#0016
+Reversal Effect in International Equity ETFs
+3 Years
+Equities
+6.40%
+rotational systemreversalcountry pickingfactor investingsmart beta
+#0017
+Momentum Effect in Anomalies/Trading Systems
+Yearly
+Equities
+13.76%
+momentumfactor investingsmart betafactor allocation
+#0018
+Liquidity Effect in Stocks
+Yearly
+Equities
+6.68%
+11.87%
+stock pickingequity long shortliquidity risk premiumfactor investingsmart beta
+#0019
+Dividend Month Anomaly
+Monthly
+Equities
+17.90%
+20.00%
+seasonalitystock pickingfactor investingsmart beta
+#0020
+Volatility Risk Premium Effect
+Monthly
+Equities
+26.00%
+19.00%
+volatility effectvolatility premiumfactor investingsmart beta
+#0021
+Momentum Effect in Commodities
+Monthly
+Commodities
+14.60%
+25.57%
+momentumrotational systemfactor investingsmart beta
+#0022
+Term Structure Effect in Commodities
+Monthly
+Commodities
+11.73%
+23.84%
+rotational systemterm spreadfactor investingsmart beta
+#0023
+Momentum Effect Combined with Term Structure in Commodities
+Monthly
+Commodities
+21.80%
+27.60%
+momentumrotational systemterm spreadfactor investingsmart beta
+#0024
+Merger Arbitrage
+Daily
+Equities
+6.86%
+4.72%
+equity long shortarbitragefactor investingsmart beta
+#0025
+Size Factor - Small Capitalization Stocks Premium
+Yearly
+Equities
+6.10%
+25.60%
+stock pickingequity long shortsmall capfactor investingsmart beta
+#0026
+Value (Book-to-Market) Factor
+Monthly
+Equities
+3.60%
+12.02%
+stock pickingvaluefundamental analysisfactor investingsmart beta
+#0027
+Market Timing with Aggregate and Idiosyncratic Stock Volatilities
+Quarterly
+Equities
+20.07%
+37.80%
+market timingvolatility effect
+#0028
+Value and Momentum Factors across Asset Classes
+Monthly
+EquitiesBondsREITs
+11.90%
+10.00%
+momentumasset class pickingvaluefactor investingsmart beta
+#0029
+Market Timing S&P 500 with VIX and COT Report
+Weekly
+Equities
+9.70%
+11.00%
+market timingsentiment tradingalternative data
+#0030
+Timing Commodities and S&P500 with COT Report
+Weekly
+EquitiesCommodities
+16.80%
+10.30%
+asset class pickingmarket timingsentiment tradingalternative data
+#0031
+Market Seasonality Effect in World Equity Indexes
+6 Months
+Equities
+8.80%
+market timingseasonality
+#0032
+Combining Seasonality and Momentum in US Equity Sectors
+Monthly
+Equities
+12.90%
+17.00%
+momentumrotational systemsector pickingseasonalityequity long short
+#0033
+Post-Earnings Announcement Effect
+Quarterly
+Equities
+15.00%
+stock pickingequity long shortfundamental analysisearnings announcementfactor investingsmart beta
+#0034
+Post-Loss/Profit Announcement Drift in Stocks
+Daily
+Equities
+26.00%
+5.00%
+stock pickingequity long shortfundamental analysisearnings announcementtrading earningsfactor investingsmart beta
+#0035
+Insiders Trading Effect in Stocks
+Yearly
+Equities
+7.70%
+stock pickingequity long shortinsiders trading effectalternative datafactor investingsmart beta
+#0036
+Net Payout Yield Effect
+Yearly
+Equities
+22.13%
+stock pickingvaluefundamental analysisfactor investingsmart beta
+#0037
+Net Current Asset Value Effect
+Yearly
+Equities
+31.19%
+stock pickingvaluefundamental analysisfactor investingsmart beta
+#0038
+Accrual Anomaly
+Yearly
+Equities
+7.50%
+10.26%
+stock pickingequity long shortfundamental analysisaccruals effectfactor investingsmart beta
+#0039
+Market Timing with Aggregate Accruals
+Yearly
+Equities
+34.00%
+37.70%
+market timingaccruals effect
+#0040
+High-Frequency Arbitrage with ETF Twins
+Intraday
+Equities
+28.91%
+14.69%
+equity long shortpairs tradingarbitrage
+#0041
+Turn of the Month in Equity Indexes
+Daily
+Equities
+7.20%
+6.90%
+market timingseasonality
+#0042
+Alpha Cloning - Following 13F Fillings
+Quarterly
+Equities
+20.21%
+stock pickingalternative data
+#0043
+Gold Market Timing
+Monthly
+Commodities
+31.00%
+29.63%
+market timing
+#0044
+Paired Switching
+Quarterly
+EquitiesBonds
+11.30%
+9.30%
+momentumasset class pickingrotational systemmarket timingfund picking
+#0045
+Short Interest Effect - Long-Short Version
+Monthly
+Equities
+19.70%
+17.14%
+stock pickingequity long shortfactor investingsmart beta
+#0046
+Short Interest Effect - Long Only version
+Monthly
+Equities
+26.80%
+stock pickingfactor investingsmart beta
+#0047
+Changes in Long Term Rates Predict FX Rates
+Monthly
+Currencies
+5.92%
+3.67%
+FX anomalyforex system
+#0048
+Term Spread Predicts FX Rates
+Monthly
+Currencies
+6.66%
+3.94%
+FX anomalyforex systemfactor investingsmart beta
+#0049
+S&P 500 Index Addition Effect
+Daily
+Equities
+114.00%
+stock picking
+#0050
+FED Model
+Monthly
+EquitiesBonds
+11.00%
+10.00%
+asset class pickingmarket timing
+#0051
+Momentum - Short Term Reversal Strategy
+Monthly
+Equities
+26.00%
+17.64%
+momentumstock pickingreversalequity long shortmomentum in stocksfactor investingsmart beta
+#0052
+Asset Growth Effect
+Yearly
+Equities
+20.84%
+14.07%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0053
+Sentiment and Style Rotation Effect in Stocks
+Monthly
+Equities
+22.84%
+rotational systemmarket timingstock pickingequity long shortfundamental analysissentiment tradingfactor allocation
+#0054
+Momentum and State of Market (Sentiment) Filters
+Monthly
+Equities
+13.20%
+9.40%
+momentummarket timingstock pickingequity long shortmomentum in stockssentiment tradingfactor investingsmart beta
+#0055
+Pairs Trading with Country ETFs
+Daily
+Equities
+20.60%
+10.00%
+equity long shortpairs tradingarbitrage
+#0056
+COT Report Predicts Prices of Agricultural Commodities
+Weekly
+Commodities
+54.00%
+market timingsentiment tradingalternative data
+#0057
+Term Spread Premium
+Monthly
+Bonds
+10.20%
+10.00%
+factor investingsmart betamarket timingterm spreadbond timing
+#0058
+VIX Predicts Stock Index Returns
+Daily
+Equities
+15.90%
+market timingvolatility effect
+#0059
+Open Interest in Futures Predicts Commodity Returns
+Monthly
+Commodities
+11.90%
+market timing
+#0060
+Short Term Trend Following with Small Volatile Stocks
+Intraday
+Equities
+23.00%
+trend-followingstock pickingmomentum in stocksliquidity risk premiumsmall cap
+#0061
+Lunar Cycle in Equity Market
+Monthly
+Equities
+10.00%
+market timingseasonalityalternative data
+#0062
+Shorting Overvalued Stocks
+Yearly
+Equities
+24.80%
+stock pickingfundamental analysisshort selling
+#0063
+Trendfollowing Combined with Volatility Premium
+Daily
+Equities
+14.88%
+14.24%
+trend-followingmarket timingvolatility effectvolatility premium
+#0064
+Statistical Arbitrage with ETFs
+Daily
+EquitiesBondsCommodities
+20.00%
+arbitrage
+#0065
+Enhanced Value Premium - Piotroski F-SCORE
+Yearly
+Equities
+23.00%
+18.40%
+stock pickingvalueequity long shortfundamental analysisfactor investingsmart beta
+#0066
+Combining Momentum Effect with Volume
+Monthly
+Equities
+26.00%
+18.00%
+momentumstock pickingequity long shortmomentum in stocksvolume effectfactor investingsmart beta
+#0067
+Industry Momentum - Riding Industry Bubbles
+Monthly
+Equities
+18.00%
+momentumrotational systemsector pickingfactor investingsmart betatrend-following
+#0068
+Combining Earnings, Revenue and Price Momentum
+Monthly
+Equities
+18.72%
+16.38%
+momentumstock pickingequity long shortmomentum in stocksfundamental analysisfactor investingsmart beta
+#0069
+Post-Earnings Announcement Drift Combined with Strong Momentum
+Daily
+Equities
+46.50%
+momentumstock pickingequity long shortmomentum in stocksearnings announcementtrading earningsfactor investingsmart beta
+#0070
+Combining Post-Earnings Announcement Drift with Accrual Anomaly
+#0076
+Selecting Best Equity Fund Managers
+Yearly
+Equities
+27.63%
+fund picking
+#0077
+Betting Against Beta Factor in Stocks
+Monthly
+Equities
+8.86%
+11.50%
+stock pickingequity long shortbeta factorfactor investingsmart beta
+#0078
+Betting Against Beta Factor in International Equities
+Monthly
+Equities
+6.80%
+13.08%
+equity long shortcountry pickingbeta factorfactor investingsmart beta
+#0079
+Election Cycle
+Yearly
+Equities
+23.84%
+15.34%
+market timingseasonality
+#0080
+Earnings Announcement Premium
+Monthly
+Equities
+18.36%
+16.12%
+stock pickingequity long shortearnings announcementfactor investingsmart beta
+#0081
+Combining Value Stocks with Momentum and Volume Factors
+Monthly
+Equities
+25.81%
+16.91%
+momentumstock pickingvalueequity long shortmomentum in stocksvolume effectfactor investingsmart beta
+#0082
+Combining Growth Stocks with Momentum and Volume Factors
+Monthly
+Equities
+25.13%
+19.52%
+momentumstock pickingequity long shortmomentum in stocksvolume effectgrowth stocksfactor investingsmart beta
+#0083
+Pre-Holiday Effect
+Daily
+Equities
+6.39%
+market timingseasonality
+#0084
+Mean-Reverting Yield Curve Strategies
+Monthly
+Bonds
+3.73%
+reversalarbitrage
+#0085
+Momentum in Mutual Fund Returns
+Quarterly
+Equities
+19.00%
+19.50%
+momentumfund picking
+#0086
+Seasonality in Government Bond Returns
+6 Months
+EquitiesBonds
+11.73%
+asset class pickingmarket timingseasonality
+#0087
+Baltic Dry Index as Predictor of Stock Returns
+Monthly
+Equities
+10.23%
+10.40%
+market timing
+#0088
+52-Weeks High Effect in Stocks
+Monthly
+Equities
+11.75%
+11.00%
+stock pickingequity long shortfactor investingsmart beta
+#0089
+Liquidity Effect in Mutual Funds
+Yearly
+Equities
+10.26%
+18.70%
+liquidity risk premiumfund picking
+#0090
+Pairs Trading with ADRs
+Daily
+Equities
+33.00%
+60.90%
+equity long shortpairs tradingarbitrage
+#0091
+Momentum Factor and Style Rotation Effect
+Monthly
+Equities
+9.25%
+16.01%
+momentumrotational systemfactor allocation
+#0092
+January Effect Filter and Momentum in Stocks
+Monthly
+Equities
+2.80%
+27.94%
+momentumseasonalitystock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0093
+January Effect Filter and Mean Reversion in Stocks
+Monthly
+Equities
+11.27%
+12.70%
+seasonalitystock pickingreversalequity long shortfactor investingsmart beta
+#0094
+Trading on Earnings Announcements
+Daily
+Equities
+74.66%
+stock pickingearnings announcementtrading earnings
+#0095
+Value Combined with Post-Earnings Announcement Drift
+Quarterly
+Equities
+18.84%
+33.50%
+stock pickingvalueequity long shortearnings announcementfactor investingsmart beta
+#0096
+Crude Oil Predicts Equity Returns
+Monthly
+Equities
+11.90%
+9.80%
+market timing
+#0097
+Half-Day Reversal
+Intraday
+Equities
+57.70%
+17.70%
+stock pickingreversal
+#0098
+Tax Expense Momentum
+Quarterly
+Equities
+16.54%
+12.92%
+momentumstock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0099
+FX Carry Trade Combined with PPP (Value) Strategy
+Monthly
+Currencies
+8.30%
+4.97%
+carry tradeFX anomalyforex systemvaluefactor investingsmart beta
+#0100
+Trading WTI/BRENT Spread
+Daily
+Commodities
+9.92%
+11.27%
+pairs tradingarbitragespread trading
+#0101
+Earnings Revision Strategy
+Monthly
+Equities
+23.00%
+6.44%
+equity long shortfundamental analysisalternative datafactor investingsmart beta
+#0102
+Option-Expiration Week Effect
+Weekly
+Equities
+9.30%
+8.70%
+market timingseasonalitystock picking
+#0103
+Intraday Reversal in Currency Markets
+Intraday
+Currencies
+21.42%
+10.93%
+market timingFX anomalyforex systemreversal
+#0104
+Credit Spread Predicts Equity Returns
+Daily
+Equities
+16.10%
+17.50%
+market timingsmall cap
+#0105
+Trading Natural Gas/Propane Spread
+Daily
+Commodities
+25.59%
+12.70%
+pairs tradingarbitragespread trading
+#0106
+Post-Guidance Drift
+Daily
+Equities
+21.74%
+stock pickingequity long shortfundamental analysisearnings announcementalternative datafactor investingsmart beta
+#0107
+Short Term Reversal with ETFs
+Weekly
+Equities
+19.80%
+26.00%
+reversalequity long short
+#0108
+Soccer Clubs' Stocks Arbitrage
+Daily
+Equities
+42.00%
+50.00%
+stock pickingreversalarbitrageshort sellingalternative data
+#0109
+Accrual Volatility Anomaly
+Monthly
+Equities
+17.60%
+17.30%
+stock pickingequity long shortfundamental analysisaccruals effectfactor investingsmart beta
+#0110
+Speculators' Effect in Commodities
+Weekly
+Commodities
+8.35%
+17.17%
+rotational systemalternative datafactor investingsmart beta
+#0111
+Hedgers' Effect in Commodities
+Weekly
+Commodities
+11.40%
+18.09%
+rotational systemalternative datafactor investingsmart beta
+#0112
+Acceleration Effect Combined with Momentum in Stocks
+6 Months
+Equities
+18.24%
+29.70%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0113
+January Barometer
+Monthly
+Equities
+10.38%
+16.80%
+market timingseasonality
+#0114
+January Effect in Stocks
+Monthly
+Equities
+12.70%
+seasonalitystock picking
+#0115
+Short-Term Residual Reversal
+Monthly
+Equities
+11.35%
+9.01%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0116
+Insider Trading Combined with Share Repurchases
+Quarterly
+Equities
+16.00%
+stock pickinginsiders trading effectalternative datafactor investingsmart beta
+#0117
+Lottery Effect in Stocks
+Monthly
+Equities
+13.08%
+28.64%
+stock pickingequity long shortsentiment tradingfactor investingsmart beta
+#0118
+Time Series Momentum Effect
+Monthly
+EquitiesBondsCommoditiesCurrencies
+20.70%
+15.74%
+momentumfactor investingsmart beta
+#0119
+Google Search Effect
+Weekly
+Equities
+9.20%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0120
+Speculators' Effect in FX
+Weekly
+Currencies
+17.90%
+FX anomalyforex systemalternative datafactor investingsmart beta
+#0121
+Hedgers' Effect in FX
+Weekly
+Currencies
+16.10%
+FX anomalyforex systemalternative datafactor investingsmart beta
+#0122
+Momentum Factor Combined with Asset Growth Effect
+Monthly
+Equities
+16.77%
+13.84%
+momentumstock pickingequity long shortmomentum in stocksfundamental analysisfactor investingsmart beta
+#0123
+Options Skewness Predicts Consecutive Stocks Returns
+Weekly
+Equities
+9.19%
+11.40%
+stock pickingvolatility effectequity long shortfactor investingsmart beta
+#0124
+Industry Momentum Combined with Reversal
+Monthly
+Equities
+50.90%
+42.16%
+momentumstock pickingreversalfactor investingsmart beta
+#0125
+12 Month Cycle in Cross-Section of Stocks Returns
+Monthly
+Equities
+8.60%
+12.20%
+seasonalitystock pickingequity long shortfactor investingsmart beta
+#0126
+Commodity Risk Factor in Equities
+Monthly
+Equities
+12.49%
+16.50%
+stock pickingequity long shortfactor investingsmart beta
+#0127
+Accrual Anomaly ver.2
+Yearly
+Equities
+11.68%
+13.10%
+stock pickingequity long shortfundamental analysisaccruals effectfactor investingsmart beta
+#0128
+Innovative Efficiency Effect in Stocks
+Yearly
+Equities
+5.03%
+5.96%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0129
+Dollar Carry Trade
+Monthly
+Currencies
+5.60%
+8.53%
+carry tradeFX anomalyforex system
+#0130
+Investment Factor
+Yearly
+Equities
+3.54%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0131
+Bonds Market Timing
+Monthly
+Bonds
+10.58%
+5.25%
+market timingbond timing
+#0132
+Dynamic Commodity Timing Strategy
+Monthly
+Commodities
+11.80%
+18.00%
+market timing
+#0133
+Timing the Small Cap Effect
+Monthly
+Equities
+9.60%
+14.62%
+market timingequity long shortsmall capfactor investingsmart betafactor allocation
+#0134
+Equity Sector Timing with IPO Factor
+Monthly
+Equities
+18.05%
+sector pickingmarket timingalternative datafactor investingsmart beta
+#0135
+Volatility Effect in Commodities
+Weekly
+Commodities
+4.54%
+11.71%
+volatility effectfactor investingsmart beta
+#0136
+Residual Momentum Factor
+Monthly
+Equities
+9.18%
+15.27%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0137
+Trend-following in Futures Markets
+Daily
+EquitiesBondsCommoditiesCurrencies
+21.24%
+24.14%
+momentumtrend-following
+#0138
+Repurchase/New issue Effect
+Yearly
+Equities
+11.16%
+23.90%
+stock pickingequity long shortfactor investingsmart beta
+#0139
+Volatility Spread in Puts/Calls Predicts Stock Returns
+Weekly
+Equities
+29.60%
+20.86%
+stock pickingvolatility effectequity long shortfactor investingsmart beta
+#0140
+Ramadan Effect
+Monthly
+Equities
+6.70%
+market timingseasonality
+#0141
+Innovative Efficiency Effect in Stocks ver. 2
+Yearly
+Equities
+9.12%
+18.07%
+stock pickingequity long shortfactor investingsmart beta
+#0142
+Seasonality in Gold
+Monthly
+Commodities
+7.15%
+market timingseasonality
+#0143
+Momentum and Trend-following in Country Equity Indexes
+#0152
+Momentum Factor Effect in REITs
+Monthly
+REITs
+9.51%
+momentumstock pickingfactor investingsmart beta
+#0153
+Post-Earnings Announcement Drift in REITs
+Quarterly
+REITs
+21.00%
+13.25%
+stock pickingequity long shortfundamental analysisearnings announcementfactor investingsmart beta
+#0154
+Price Shocks Effect
+Monthly
+Equities
+18.30%
+stock pickingsentiment tradingfactor investingsmart beta
+#0155
+Momentum and Reversal Combined with Volatility Effect in Stocks
+Monthly
+Equities
+16.46%
+19.22%
+momentumstock pickingvolatility effectequity long shortmomentum in stocksfactor investingsmart beta
+#0156
+Reversal Combined with Volatility Effect in Stocks
+Monthly
+Equities
+10.74%
+8.70%
+stock pickingvolatility effectreversalequity long shortfactor investingsmart beta
+#0157
+Consumer Sentiment Effect
+Monthly
+Equities
+11.00%
+market timingsentiment trading
+#0158
+Leverage Effect in Stocks
+Yearly
+Equities
+6.32%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0159
+Value Effect in REITs
+Yearly
+REITs
+7.30%
+7.90%
+stock pickingvalueequity long shortfactor investingsmart beta
+#0160
+Long-Term PE Ratio Effect in Stocks
+Yearly
+Equities
+28.95%
+stock pickingvaluefundamental analysisfactor investingsmart beta
+#0161
+Lunar Cycle in Precious Metals
+Daily
+Commodities
+5.20%
+market timingseasonalityalternative data
+#0162
+Momentum Effect in Stocks in Small Portfolios
+Yearly
+Equities
+32.00%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0163
+Net Emotional Volatility Index Effect
+Daily
+Equities
+12.65%
+5.92%
+market timingsentiment trading
+#0164
+Short-Term Reversal in Equity Index Futures
+Weekly
+Equities
+29.60%
+reversalcountry pickingfactor investingsmart beta
+#0165
+Demographic Changes Predict Stock Market Returns
+Yearly
+Equities
+8.93%
+rotational systemcountry pickingalternative datafactor investingsmart beta
+#0166
+Momentum in FOREX Trading Strategies
+Daily
+Currencies
+9.10%
+10.00%
+momentumFX anomalyforex systemfactor allocation
+#0167
+Idiosyncratic Momentum in Stocks
+Monthly
+Equities
+12.35%
+13.25%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0168
+Commodities Timing based on a Monetary Conditions
+Daily
+Commodities
+20.46%
+13.86%
+asset class pickingmarket timing
+#0169
+Exploiting Option Information in the Equity Market
+Weekly
+Equities
+7.61%
+6.69%
+stock pickingequity long shortfactor investingsmart beta
+#0170
+US Holiday Effect in EU Markets
+Daily
+Equities
+6.52%
+market timingseasonality
+#0171
+Market Timing Filter Applied to a Momentum and Other Factor Strategies
+Monthly
+Equities
+21.58%
+18.69%
+momentummarket timingstock pickingvaluereversalmomentum in stocksfactor investingsmart betafactor allocation
+#0172
+Cold IPOs Effect
+Monthly
+Equities
+24.57%
+market timingstock pickingequity long shortalternative datafactor investingsmart beta
+#0173
+Volatility Term Structure Predicts Option Returns
+Monthly
+Equities
+19.56%
+21.13%
+volatility premium
+#0174
+Institutional Ownership Effect
+Quarterly
+Equities
+15.00%
+20.10%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0175
+Pairs Trading on Intraday Basis
+Intraday
+Equities
+10.23%
+4.98%
+equity long shortpairs tradingarbitrage
+#0176
+Shorting Stocks on the Option Expiration Day
+Daily
+Equities
+18.86%
+24.69%
+seasonalitystock pickingshort selling
+#0177
+Term Structure of CDS Predicts Equity Returns
+Monthly
+Equities
+27.57%
+23.84%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0178
+Abnormal Volume Effect in the Stock Market
+Daily
+Equities
+33.91%
+market timingstock pickingvolume effectfactor investingsmart beta
+#0179
+Market Timing Using Sharpe Ratios
+Monthly
+Equities
+14.18%
+15.38%
+market timing
+#0180
+Simple NAV Arbitrage within Country ETFs
+Daily
+Equities
+33.88%
+arbitrage
+#0181
+Catching "Falling Knife" Stocks
+Monthly
+Equities
+23.09%
+stock pickingvaluereversalfactor investingsmart beta
+#0182
+Dual Listed Stock Arbitrage
+Intraday
+Equities
+10.10%
+12.76%
+pairs tradingarbitrage
+#0183
+Optimized Currency Portfolios
+Monthly
+Currencies
+19.20%
+22.20%
+momentumcarry tradeFX anomalyforex systemreversalfactor investingsmart betafactor allocation
+#0184
+Timing Carry Trade
+Monthly
+Currencies
+12.60%
+10.00%
+market timingcarry tradeFX anomalyforex systemfactor investingsmart beta
+#0185
+Categorization Effect in Stocks
+Weekly
+Equities
+21.36%
+12.35%
+stock pickingequity long shortpairs tradingarbitragesmall capalternative datafactor investingsmart beta
+#0186
+Adaptive Moving Averages used for Market Timing
+Daily
+Equities
+14.60%
+17.41%
+market timing
+#0187
+CEO Interviews Effect
+Daily
+Equities
+32.08%
+13.28%
+stock pickingshort sellingalternative data
+#0188
+Short-term Adaptive Reversal in S&P 500 Index
+Daily
+Equities
+19.90%
+market timingreversal
+#0189
+Timing VIX ETNs
+Daily
+Equities
+30.80%
+23.49%
+market timingvolatility effect
+#0190
+Put-Call Spread Predicts Earnings Announcement Returns
+Daily
+Equities
+98.35%
+34.25%
+stock pickingequity long shortearnings announcementtrading earningsfactor investingsmart beta
+#0191
+Productivity of Cash Effect in the Stock Market
+Yearly
+Equities
+13.00%
+11.00%
+stock pickingvalueequity long shortsmall capfundamental analysisfactor investingsmart beta
+#0192
+Complexity Effect in Stocks
+Monthly
+Equities
+15.12%
+14.54%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0193
+Trendfollowing Effect within REITs
+Monthly
+REITs
+14.38%
+10.67%
+trend-followingmarket timingfactor investingsmart beta
+#0194
+Advertising Effect within Stocks
+6 Months
+Equities
+9.40%
+3.20%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0195
+Long Term Debt Factor within Stocks
+Yearly
+Equities
+10.50%
+6.50%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0196
+Effect of Change in Non-Current Operating Assets
+Yearly
+Equities
+16.10%
+7.26%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0197
+Default Risk Filter Applied on Momentum Effect within Stocks
+Monthly
+Equities
+25.78%
+22.28%
+momentummarket timingstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0198
+Exploiting Term Structure of VIX Futures
+Daily
+Equities
+19.67%
+volatility effectvolatility premium
+#0199
+ROA Effect within Stocks
+Monthly
+Equities
+12.15%
+13.36%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0200
+Classical Equity Anomalies Combined with Trendfollowing Filter
+Monthly
+Equities
+16.18%
+15.48%
+momentumtrend-followingequity long short
+#0201
+Instititutional Ownership Effect During Earnings Announcements
+Daily
+Equities
+87.00%
+stock pickingearnings announcementtrading earningsalternative datafactor investingsmart beta
+#0202
+Dividend Announcement Effect
+Monthly
+Equities
+9.27%
+6.74%
+stock pickingequity long shortfactor investingsmart beta
+#0203
+Value Premium in Large Cap Stocks
+Monthly
+Equities
+7.96%
+14.11%
+stock pickingvalueequity long shortfundamental analysisfactor investingsmart beta
+#0204
+Selling Options on Bond ETFs
+Monthly
+Bonds
+17.44%
+18.41%
+volatility effectvolatility premium
+#0205
+Switching between Value and Momentum in Stocks
+Monthly
+Equities
+15.31%
+11.40%
+momentummarket timingstock pickingvalueequity long shortmomentum in stocksfundamental analysisfactor investingsmart betafactor allocation
+#0206
+Trendfollowing Combined with Momentum in Commodity Futures
+Monthly
+Commodities
+14.70%
+19.33%
+momentumtrend-followingrotational systemfactor investingsmart beta
+#0207
+Value Factor - CAPE Effect within Countries
+Yearly
+Equities
+14.70%
+26.10%
+rotational systemvaluecountry pickingfactor investingsmart beta
+#0208
+Share Issuance Effect
+Yearly
+Equities
+10.56%
+12.25%
+stock pickingequity long shortfactor investingsmart beta
+#0209
+Volatility Of Volatility Effect in Stocks
+Monthly
+Equities
+10.56%
+12.20%
+stock pickingvolatility effectequity long shortfactor investingsmart beta
+#0210
+Adaptive Asset Allocation
+Monthly
+EquitiesBondsCommodities
+15.10%
+9.40%
+momentumasset class pickingtrend-followingrotational systemsmart beta
+#0211
+Market Timing Strategy Based on Principal Component Analysis
+Daily
+Equities
+22.19%
+12.33%
+market timing
+#0212
+Scheduled Economic Announcements Effect in Stocks
+Daily
+Equities
+7.20%
+market timingseasonality
+#0213
+Long-Term Reversal Combined with a Momentum Effect
+Monthly
+Equities
+15.94%
+28.89%
+momentumrotational systemreversalequity long shortcountry pickingfactor investingsmart beta
+#0214
+Time Series Momentum Combined with Volatility Filters in Futures Markets
+Daily
+EquitiesBondsCommoditiesCurrencies
+5.47%
+5.51%
+momentum
+#0215
+Time Series Momentum Combined with Volatility Filters in FOREX
+Daily
+Currencies
+4.63%
+5.00%
+momentumforex system
+#0216
+Active Collar Strategy
+Monthly
+Equities
+12.52%
+11.34%
+market timingvolatility effect
+#0217
+Option/Stock Volume Ratio Predicts Stock Returns
+Monthly
+Equities
+14.54%
+19.20%
+stock pickingequity long shortvolume effectfactor investingsmart beta
+#0218
+Change in Option/Stock Volume Ratio Predicts Stock Returns
+Monthly
+Equities
+14.65%
+15.50%
+stock pickingequity long shortvolume effectfactor investingsmart beta
+#0219
+FX Momentum Seasonality
+#0220
+Momentum and Trend Following in Global Asset Allocation
+Monthly
+EquitiesBondsCommoditiesREITs
+10.78%
+8.25%
+momentumasset class pickingtrend-followingrotational systemsmart beta
+#0221
+Timing Carry Trade v2
+Monthly
+Currencies
+9.16%
+9.07%
+market timingcarry tradeFX anomalyforex systemfactor investingsmart beta
+#0222
+One Day Momentum Effect in Stocks
+Intraday
+Equities
+33.15%
+momentumstock pickingequity long shortfactor investingsmart beta
+#0223
+Realized Skewness Predicts Equity Returns
+Weekly
+Equities
+9.69%
+11.53%
+stock pickingequity long shortfactor investingsmart beta
+#0224
+Profitability Factor Combined with Value Factor
+Yearly
+Equities
+7.70%
+9.82%
+stock pickingvalueequity long shortfundamental analysisfactor investingsmart beta
+#0225
+Improved Merger Arbitrage
+Monthly
+Equities
+13.35%
+equity long shortarbitragefactor investingsmart beta
+#0226
+Insiders' Silence
+Yearly
+Equities
+11.22%
+64.22%
+stock pickinginsiders trading effectshort sellingalternative datafactor investingsmart beta
+#0227
+Trend Factor within Stocks
+Monthly
+Equities
+10.43%
+10.21%
+trend-followingstock pickingequity long shortfactor investingsmart beta
+#0228
+Google Search Volume Combined with Extent of Press News Predicts Stocks' Returns
+Monthly
+Equities
+4.12%
+1.74%
+stock pickingequity long shortvolume effectalternative datafactor investingsmart beta
+#0229
+Earnings Quality Factor
+Yearly
+Equities
+7.95%
+5.91%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0230
+Mean Variance Carry Trade Strategy
+Monthly
+Currencies
+1.70%
+1.87%
+carry tradeFX anomalyforex systemfactor investingsmart beta
+#0231
+Comomentum Strategy
+Monthly
+Equities
+8.60%
+12.18%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0232
+Debt Growth Effect Combined with Asset Growth Effect
+Yearly
+Equities
+11.35%
+17.02%
+stock pickingfundamental analysisshort sellingfactor investingsmart beta
+#0233
+Using Straddles to Trade on Earnings Announcements
+Daily
+Equities
+40.75%
+64.67%
+earnings announcementtrading earnings
+#0234
+Carry Factor within Asset Classes
+Monthly
+EquitiesBondsCommoditiesCurrencies
+6.90%
+4.90%
+asset class pickingcarry tradefactor investingsmart beta
+#0235
+Scheduled Economic Announcements Effect in Bonds
+Daily
+Bonds
+7.30%
+4.98%
+market timingseasonality
+#0236
+Spin-off Anomaly
+Daily
+Equities
+19.40%
+market timingequity long shortfactor investingsmart beta
+#0237
+Dispersion Trading
+Monthly
+Equities
+15.39%
+13.86%
+volatility effectvolatility premiumfactor investingsmart beta
+#0238
+Reversal in Post-Earnings Announcement Drift
+Daily
+Equities
+40.32%
+stock pickingequity long shortfundamental analysisearnings announcementfactor investingsmart beta
+#0239
+Large Price Changes combined with Analyst Revisions
+Monthly
+Equities
+11.22%
+11.23%
+stock pickingfactor investingsmart beta
+#0240
+Sector Rotation via Credit Relative Value
+Weekly
+Equities
+12.40%
+17.20%
+rotational systemsector pickingfactor investingsmart beta
+#0241
+Trading VIX ETFs
+Daily
+Equities
+84.60%
+51.20%
+momentumvolatility effectvolatility premium
+#0242
+Filtered Short-Term Reversal
+Daily
+Equities
+9.77%
+18.60%
+market timingreversal
+#0243
+Momentum Combined with Insider Trading
+Monthly
+Equities
+15.45%
+momentumequity long shortmomentum in stocksinsiders trading effectalternative datafactor investingsmart beta
+#0244
+Long-Term PB Ratio Effect in Stocks Combined with Momentum
+Monthly
+Equities
+21.60%
+20.47%
+momentumstock pickingvaluemomentum in stocksfundamental analysisfactor investingsmart beta
+#0245
+Post-Split Drift Combined with PEAD Anomaly
+Daily
+Equities
+23.32%
+29.89%
+stock pickingequity long shortfactor investingsmart beta
+#0246
+Trading on the Dividend Paydate
+Daily
+Equities
+98.80%
+48.37%
+stock pickingalternative datafactor investingsmart beta
+#0247
+Value Effect within Countries v2
+Monthly
+Equities
+6.80%
+9.21%
+rotational systemvalueequity long shortcountry pickingfactor investingsmart beta
+#0248
+Momentum Combined with Value Effect within Countries
+Monthly
+Equities
+24.16%
+24.53%
+momentumrotational systemvalueequity long shortcountry pickingfactor investingsmart beta
+#0249
+Momentum Effect in Stocks Combined with Stop-Losses
+Daily
+Equities
+18.72%
+20.99%
+momentumstock pickingmomentum in stocksfactor investingsmart beta
+#0250
+Interest Rates Momentum Predicts FX Rates
+Intraday
+Currencies
+9.01%
+5.54%
+momentumFX anomalyforex systemfactor investingsmart beta
+#0251
+Intraday Momentum in Equities
+Intraday
+Equities
+4.39%
+4.49%
+momentummarket timingseasonalityfactor investingsmart beta
+#0252
+Closed-End Fund Mean Reversion Trading
+Monthly
+EquitiesBonds
+18.20%
+9.49%
+reversalequity long shortfund picking
+#0253
+Cross-Sectional Momentum in Futures
+6 Months
+EquitiesBondsCurrencies
+6.49%
+12.91%
+momentumfactor investingsmart beta
+#0254
+Federal Open Market Committee Meeting Effect on US Dollar
+Daily
+Currencies
+7.71%
+13.78%
+market timingseasonality
+#0255
+Turn of the Month Effect in Futures Momentum Strategy
+Daily
+EquitiesBondsCommoditiesCurrencies
+4.80%
+1.50%
+momentumtrend-followingmarket timingseasonality
+#0256
+Shorting Volatility During FOMC Meeting Days
+Intraday
+Equities
+10.00%
+9.62%
+market timingseasonalityvolatility effectvolatility premium
+#0257
+Cloning Hedge Fund Indexes
+Monthly
+Equities
+10.30%
+7.70%
+volatility effectvolatility premium
+#0258
+FX Value v2 - Real Exchange Rate Changes
+Monthly
+Currencies
+9.57%
+9.51%
+FX anomalyforex systemvaluefactor investingsmart beta
+#0259
+FX Value v3 - Real Exchange Rate Levels
+Weekly
+Currencies
+6.91%
+9.53%
+FX anomalyforex systemvaluefactor investingsmart beta
+#0260
+Trend Following in Commodity Calendar Spreads
+Daily
+Commodities
+3.73%
+4.09%
+momentumtrend-followingspread tradingfactor investingsmart beta
+#0261
+Trading Commodity Calendar Spreads
+Monthly
+Commodities
+6.21%
+2.01%
+pairs tradingspread trading
+#0262
+Timing Commodity Factor Portfolios
+Daily
+Commodities
+8.04%
+11.30%
+trend-followingmarket timingfactor investingsmart betafactor allocation
+#0263
+Economic Momentum in Currencies
+Monthly
+Currencies
+6.15%
+5.60%
+momentumFX anomalyforex systemalternative datafactor investingsmart beta
+#0264
+Dividend Risk Premium Strategy
+Daily
+Equities
+12.90%
+11.60%
+carry tradepairs tradingarbitragefactor investingsmart beta
+#0265
+Days to Cover Strategy
+Monthly
+Equities
+8.34%
+17.87%
+stock pickingequity long shortfactor investingsmart beta
+#0266
+Skewness Effect in Country Equity Indexes
+Monthly
+Equities
+13.76%
+25.66%
+equity long shortcountry pickingfactor investingsmart beta
+#0267
+Market Timing Using Lumber/Gold Ratio
+Weekly
+EquitiesBonds
+13.90%
+11.80%
+asset class pickingmarket timingsmall cap
+#0268
+Expected Skewness and Momentum in Stocks
+Monthly
+Equities
+14.30%
+31.06%
+momentumequity long shortmomentum in stocksfactor investingsmart beta
+#0269
+Intraday Currency Seasonality
+Intraday
+Currencies
+9.07%
+11.55%
+market timingseasonalityFX anomalyforex system
+#0270
+Turn of the Month Effect in the Cross-Section of Stock Returns
+Daily
+Equities
+17.18%
+seasonalitystock pickingequity long shortfactor investingsmart beta
+#0271
+Earnings Announcements Combined with Stock Repurchases
+Daily
+Equities
+25.20%
+11.11%
+stock pickingfundamental analysisearnings announcementtrading earningsfactor investingsmart beta
+#0272
+Overnight Stock Trading
+Daily
+Equities
+21.28%
+6.60%
+market timingseasonalitystock pickingequity long shortfactor investingsmart beta
+#0273
+Overreaction to Merger and Acquisition Announcements
+Daily
+Equities
+15.83%
+equity long shortarbitrage
+#0274
+Post-Earnings Announcement Drift Based on Price Signal Alone
+Daily
+Equities
+5.64%
+4.03%
+stock pickingequity long shortearnings announcementfactor investingsmart beta
+#0275
+Post-Earnings Announcement Drift for Friday Evening Announcers
+Daily
+Equities
+20.84%
+stock pickingequity long shortearnings announcement
+#0276
+Shorting Stocks During the Last Hour of Month
+Intraday
+Equities
+1.80%
+market timingseasonalityshort selling
+#0277
+Sequenced Insider Trading
+Monthly
+Equities
+22.13%
+14.26%
+stock pickingequity long shortinsiders trading effectalternative datafactor investingsmart beta
+#0278
+Trading Commodity ETFs versus Equity ETFs
+Daily
+EquitiesCommodities
+31.10%
+arbitragesentiment trading
+#0279
+Long-Term Reversal Combined with a Momentum Effect in Industry Portfolios
+Quarterly
+Equities
+9.90%
+19.49%
+sector pickingreversalequity long shortfactor investingsmart beta
+#0280
+Trading the VIX Futures Roll and Volatility Premiums with VIX Options
+Daily
+Equities
+22.50%
+volatility effectvolatility premium
+#0281
+Skewness Effect in Commodities
+Monthly
+Commodities
+9.51%
+11.64%
+volatility effectfactor investingsmart beta
+#0282
+Trading based on Higher Moments in Currency Markets
+Monthly
+Currencies
+11.07%
+8.00%
+FX anomalyforex system
+#0283
+Market Neutral Strategy Based on Share Buybacks
+Daily
+Equities
+9.66%
+7.21%
+stock pickingequity long shortfactor investingsmart beta
+#0284
+Timing the Small Cap Effect ver. 2
+Monthly
+Equities
+9.00%
+market timingequity long shortsmall capfactor investingsmart betafactor allocation
+#0285
+Spread (Basis) Momentum within Commodities
+Monthly
+Commodities
+18.38%
+19.98%
+momentumspread tradingfactor investingsmart beta
+#0286
+Spread (Basis) Momentum within Currencies
+Monthly
+Currencies
+8.06%
+9.95%
+momentumFX anomalyforex systemspread tradingfactor investingsmart beta
+#0287
+The FOMC Cycle Effect
+#0289
+Google Search Strategy Based on Limited Investor Attention
+Weekly
+Equities
+19.30%
+21.40%
+stock pickingalternative datafactor investingsmart beta
+#0290
+Consistent Momentum Strategy
+6 Months
+Equities
+16.08%
+25.33%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0291
+Options Convexity Predicts Consecutive Stock Returns
+Monthly
+Equities
+14.44%
+9.99%
+stock pickingvolatility effectequity long shortfactor investingsmart beta
+#0292
+Momentum Seasonality and Investor Preferences
+Quarterly
+Equities
+8.00%
+momentumseasonalityequity long shortmomentum in stocksfactor investingsmart beta
+#0293
+Momentum Effect in Anomalies v2
+Monthly
+Equities
+16.52%
+14.03%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart betafactor allocation
+#0294
+Seasonality Within Trend-Following Strategy in Commodities
+Monthly
+Commodities
+7.52%
+9.32%
+trend-followingseasonality
+#0295
+Seasonality Effect in Anomalies
+Monthly
+Equities
+17.88%
+16.92%
+seasonalitystock pickingequity long shortfactor investingsmart betafactor allocation
+#0296
+Management Diversity Strategy
+Yearly
+Equities
+6.55%
+7.38%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0297
+Combining Time-Series and Cross-Sectional Momentum
+Monthly
+Equities
+23.58%
+36.52%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0298
+Combining Fundamental and Transitory Component of Value Strategy
+Yearly
+Equities
+8.98%
+stock pickingvaluereversalequity long shortfactor investingsmart beta
+#0299
+Absolute Momentum Effect in Stocks
+Monthly
+Equities
+22.28%
+29.20%
+momentumequity long shortmomentum in stocksfactor investingsmart beta
+#0300
+Overnight Momentum Strategy
+Intraday
+Equities
+50.58%
+11.24%
+momentumseasonalitystock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0301
+Overnight-Intraday Daily Reversal in Commodities
+Intraday
+Commodities
+45.75%
+31.02%
+reversal
+#0302
+Overnight-Intraday Weekly Reversal in Currency Futures
+Weekly
+Currencies
+9.18%
+11.17%
+reversal
+#0303
+Overnight-Intraday Weekly Reversal in Interest Rate Futures
+Weekly
+Bonds
+6.88%
+8.44%
+reversal
+#0304
+Seasonality in Treasury Auctions Strategy
+Daily
+Bonds
+5.74%
+6.75%
+market timingseasonalitybond timing
+#0305
+Multi-Asset Market Breadth Momentum
+Monthly
+EquitiesBondsCommoditiesREITs
+10.50%
+7.90%
+momentumasset class pickingsmart beta
+#0306
+Trading VIX ETFs v2
+Daily
+Equities
+69.00%
+39.00%
+market timingvolatility effectvolatility premium
+#0307
+Reversal During Earnings-Announcements
+Daily
+Equities
+6.50%
+3.76%
+stock pickingreversalequity long shortearnings announcementtrading earnings
+#0308
+Short-Term (1 Month) Momentum in Currencies
+Weekly
+Currencies
+7.10%
+8.10%
+momentumFX anomalyforex systemfactor investingsmart beta
+#0309
+Subsidiary - Parent Equity Momentum
+Monthly
+Equities
+14.03%
+14.51%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0310
+Headquarter Location Momentum
+Monthly
+Equities
+5.20%
+9.01%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0311
+Currency Option Delta-Hedging Strategy
+Intraday
+Currencies
+31.48%
+10.00%
+FX anomalyforex systemvolatility premium
+#0312
+Low-Price Effect
+Monthly
+Equities
+18.30%
+19.24%
+stock pickingequity long shortfactor investingsmart beta
+#0313
+Nearness to 52-Week Low Strategy
+Monthly
+Equities
+7.67%
+11.44%
+stock pickingequity long shortfactor investingsmart beta
+#0314
+Sector Rotation Strategy Based on Multivariate Regression Analysis
+Monthly
+Equities
+7.04%
+10.06%
+rotational systemsector pickingfactor investingsmart beta
+#0315
+Stock Splits Strategy Based on Earnings Management
+Yearly
+Equities
+11.35%
+28.30%
+stock pickingreversalequity long shortaccruals effectfactor investingsmart beta
+#0316
+Combined Momentum and Counter Trend Strategy on US Equity Indexes
+Daily
+Equities
+12.20%
+trend-followingmarket timingreversal
+#0317
+Trading FOMC Announcements with Summary of Economic Projections
+Intraday
+Equities
+8.90%
+5.00%
+market timingseasonality
+#0318
+Option Trading Volume Predicts Equity Returns
+Weekly
+Equities
+7.74%
+10.03%
+equity long shortvolume effectfactor investingsmart beta
+#0319
+Combined Stock and CDS Momentum
+Monthly
+Equities
+21.56%
+24.09%
+momentumstock pickingreversalequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0320
+Natural Gas Futures Trading Based on Informed Traders Forecasts
+Intraday
+Commodities
+8.40%
+10.00%
+market timingalternative data
+#0321
+International Carry Investing on the Yield Curve
+Monthly
+Bonds
+5.91%
+carry tradefactor investingsmart beta
+#0322
+Rank Effect for Commodities
+Daily
+Commodities
+23.20%
+rotational systemreversalfactor investingsmart beta
+#0323
+Timing the Small Cap Effect ver. 3
+Monthly
+Equities
+5.42%
+7.81%
+market timingequity long shortsmall capfactor investingsmart betafactor allocation
+#0324
+Risk-Managed Industry Momentum
+Monthly
+Equities
+25.64%
+32.15%
+momentumrotational systemsector pickingfactor investingsmart beta
+#0325
+Abnormal Turnover Effect in the Stock Market
+Monthly
+Equities
+10.82%
+10.45%
+stock pickingequity long shortvolume effectfactor investingsmart beta
+#0326
+Volatility Investing Across Asset Classes
+Monthly
+EquitiesBondsCommoditiesCurrencies
+19.90%
+18.90%
+volatility effectvolatility premiumfactor investingsmart beta
+#0327
+Investor Sentiment and Momentum Effect in Currencies
+Monthly
+Currencies
+5.80%
+10.36%
+momentumFX anomalyforex systemsentiment tradingfactor investingsmart beta
+#0328
+Spread Trading with ADRs
+Daily
+Equities
+14.00%
+16.35%
+pairs tradingspread trading
+#0329
+Portfolio Hedging Using VIX Options
+Monthly
+EquitiesBonds
+8.63%
+8.44%
+market timingvolatility effect
+#0330
+Pre-Earnings Announcement Drift
+Daily
+Equities
+52.72%
+43.83%
+stock pickingequity long shortearnings announcementtrading earningsfactor investingsmart beta
+#0331
+Timing Betting-Against-Beta (BAB) Anomaly
+Monthly
+Equities
+22.35%
+16.99%
+market timingvolatility effectequity long shortbeta factorfactor investingsmart betafactor allocation
+#0332
+Contrast Effect During the Earnings Announcements
+Daily
+Equities
+15.00%
+stock pickingequity long shortearnings announcementtrading earningsfactor investingsmart beta
+#0333
+Earnings Announcement Seasonality Effect in Equities
+Daily
+Equities
+37.18%
+seasonalitystock pickingequity long shortearnings announcementtrading earningsfactor investingsmart beta
+#0334
+Volatility-Adjusted Momentum in Corporate Bonds
+Monthly
+Bonds
+3.18%
+3.06%
+momentumfactor investingsmart beta
+#0335
+Cross-Sectional One-Month Equity ATM Straddle Trading Strategy
+Monthly
+Equities
+34.58%
+12.70%
+volatility effectvolatility premium
+#0336
+Cross-Sectional Six-Month Equity ATM Straddle Trading Strategy
+Monthly
+Equities
+31.32%
+18.46%
+volatility effectvolatility premium
+#0337
+Cross-Sectional Six- Minus One-Month Equity ATM Straddle Calendar Trading Strategy
+Monthly
+Equities
+36.84%
+11.80%
+volatility effectvolatility premium
+#0338
+Timing of Option Returns
+Daily
+Equities
+8.69%
+3.11%
+volatility effectvolatility premium
+#0339
+Expected Investment Growth within the Cross-section of Stocks Returns
+Monthly
+Equities
+14.52%
+18.62%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0340
+Halloween Effect During the Mid-Term Election Year
+6 Months
+Equities
+13.24%
+market timingseasonality
+#0341
+Opening Range Breakout within Crude Oil
+Intraday
+Commodities
+9.77%
+momentumtrend-followingmarket timing
+#0342
+Global Cross-Asset Time Series Momentum in Bond and Equity Markets
+Monthly
+EquitiesBonds
+6.50%
+10.00%
+momentumtrend-followingsmart beta
+#0343
+Impact of Macro News on PEAD Strategy
+Monthly
+Equities
+12.28%
+equity long shortearnings announcement
+#0344
+Dynamic Momentum and Contrarian Trading
+Monthly
+Equities
+21.74%
+26.74%
+momentumequity long shortmomentum in stocksfactor investingsmart beta
+#0345
+Betting Against Correlation Effect
+Monthly
+Equities
+12.28%
+13.20%
+volatility effectequity long shortbeta factorfactor investingsmart beta
+#0346
+Commodity Option Implied Volatility Strategy
+Monthly
+Commodities
+12.66%
+18.48%
+rotational systemvolatility effectfactor investingsmart beta
+#0347
+Mispricing of Equity Options With Different Time To Maturity
+Monthly
+Equities
+9.40%
+market timingseasonalityvolatility effectvolatility premium
+#0348
+The Tax Day Trade
+Daily
+Equities
+2.50%
+market timingseasonality
+#0349
+Trading Options During Expiration Weekends
+Daily
+Equities
+21.26%
+market timingseasonalityvolatility effectvolatility premium
+#0350
+Effect of Corruption on FX Markets
+Yearly
+Currencies
+6.04%
+8.14%
+FX anomalyforex systemsentiment tradingfactor investingsmart beta
+#0351
+Returns Signal Momentum
+Monthly
+EquitiesBondsCommoditiesCurrencies
+11.90%
+12.30%
+momentumfactor investingsmart beta
+#0352
+Time Series Reversal of Momentum on Futures
+Monthly
+EquitiesBondsCommoditiesCurrencies
+24.40%
+20.90%
+momentumtrend-followingreversalfactor investingsmart beta
+#0353
+US Sector Rotation with Five-Factor Fama-French Alphas
+Monthly
+Equities
+11.07%
+15.83%
+rotational systemsector pickingfactor investingsmart beta
+#0354
+ETF Creation/Redemption Activity and Return Predictability
+Monthly
+EquitiesBondsCommodities
+11.96%
+19.84%
+reversalequity long shortarbitrage
+#0355
+The Crisis Alpha Portfolio
+Monthly
+Bonds
+7.29%
+5.04%
+momentumbond timingsmart beta
+#0356
+The Dollar Ahead of FOMC Target Rate Changes
+Daily
+Currencies
+7.17%
+7.28%
+market timingseasonalityFX anomalyforex system
+#0357
+Using Intensity of Book to Market to Identify Growth Premium
+#0357
+Using Intensity of Book to Market to Identify Growth Premium
+Quarterly
+Equities
+4.14%
+15.89%
+stock pickingequity long shortfundamental analysisgrowth stocksfactor investingsmart beta
+#0358
+Monthly Reversal and/or Momentum Based on Intraday Returns
+Monthly
+Equities
+5.12%
+9.21%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0359
+Connected-Stocks Momentum Portfolio
+Monthly
+Equities
+11.22%
+19.28%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0360
+Trend Following Trading Strategies for Currencies
+Daily
+CurrenciesCrypto
+12.25%
+22.90%
+momentumtrend-followingFX anomalyforex systemcryptocurrenciesfactor allocation
+#0361
+Idiosyncratic Commodity Momentum
+Monthly
+Commodities
+17.50%
+29.42%
+momentumtrend-followingfactor investingsmart beta
+#0362
+Small Industry Premia
+Monthly
+Equities
+14.03%
+12.09%
+sector pickingstock pickingequity long shortsmall capfactor investingsmart beta
+#0363
+Technology Momentum
+Monthly
+Equities
+8.60%
+18.17%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0364
+Trading the Crude Oil Term Structure
+Weekly
+Commodities
+5.40%
+7.10%
+pairs tradingarbitragespread trading
+#0365
+Timing S&P500 Using a Large Set of Forecasting Variables
+Monthly
+Equities
+16.60%
+16.60%
+market timing
+#0366
+Daily Box Office Earnings and Aggregate Stock Returns
+Daily
+Equities
+27.13%
+market timingsentiment tradingalternative data
+#0367
+Timing S&P500 Using Full vs. Partial Employment
+Monthly
+EquitiesBonds
+11.38%
+11.05%
+asset class pickingmarket timingseasonality
+#0368
+Betting Against Alpha
+Yearly
+Equities
+0.24%
+36.48%
+stock pickingequity long shortbeta factorfactor investingsmart beta
+#0369
+Earnings Acceleration Effect in Stocks
+Daily
+Equities
+23.87%
+13.81%
+momentumstock pickingequity long shortmomentum in stocksearnings announcementfactor investingsmart beta
+#0370
+Value-Growth Timing
+Monthly
+Equities
+6.42%
+20.62%
+valueequity long shortgrowth stocksfactor allocation
+#0371
+Supply Chain Based Equity Strategy
+Daily
+Equities
+34.84%
+58.68%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0372
+Trading Based on Levered ETFs Speculation Sentiment
+Monthly
+Equities
+12.28%
+19.49%
+equity long shortsentiment trading
+#0373
+Style Concentration and Stock Returns
+Quarterly
+Equities
+9.82%
+12.26%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0374
+Political Uncertainty and Commodity Prices
+Quarterly
+Commodities
+6.40%
+market timingseasonalitysentiment trading
+#0375
+Cross-Section of Stock Returns Predicted by Commitment of Traders Information
+Weekly
+Equities
+19.21%
+28.57%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0376
+Combining Fundamental FSCORE and Equity Short-Term Reversals
+Monthly
+Equities
+12.01%
+20.61%
+stock pickingvaluereversalequity long shortfundamental analysisfactor investingsmart beta
+#0377
+Trading Futures Using Basis Indicator
+Monthly
+EquitiesBondsCommoditiesCurrencies
+3.78%
+7.67%
+carry tradeterm spread
+#0378
+Time-Series Momentum Factor in Cryptocurrencies
+Weekly
+Crypto
+6.30%
+8.10%
+momentumcryptocurrencies
+#0379
+Carry Factor in Cryptocurrencies
+Weekly
+Crypto
+16.40%
+7.50%
+carry tradecryptocurrencies
+#0380
+Value Factor in Cryptocurrencies
+Weekly
+Crypto
+8.00%
+7.10%
+valuecryptocurrencies
+#0381
+Blended Factors in Cryptocurrencies
+Weekly
+Crypto
+38.30%
+13.20%
+momentumcarry tradevaluecryptocurrencies
+#0382
+The 52-Week High and Short-Term Reversal in Stock Returns
+Monthly
+Equities
+19.60%
+30.61%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0383
+Moving Average Strategies for Cryptocurrencies
+Daily
+Crypto
+10.03%
+4.97%
+trend-followingmarket timingcryptocurrencies
+#0384
+Time-Series Momentum and Carry
+Monthly
+EquitiesBondsCommoditiesCurrencies
+9.20%
+10.00%
+momentumcarry tradefactor investingsmart beta
+#0385
+Weather-Based Equity Trading Strategy
+Daily
+Equities
+16.78%
+23.31%
+seasonalitycountry pickingalternative datafactor investingsmart beta
+#0386
+Enhanced Betting Against Beta Strategy in Equities
+Monthly
+Equities
+24.15%
+27.61%
+stock pickingequity long shortbeta factorfactor investingsmart beta
+#0387
+Moving Averages Distance Strategy in Equities
+Monthly
+Equities
+8.35%
+18.31%
+trend-followingstock pickingequity long shortfactor investingsmart beta
+#0388
+Implied Skewness Strategy in Commodities
+Daily
+Commodities
+17.21%
+28.00%
+volatility effectfactor investingsmart beta
+#0389
+Cryptomarket Discounts
+Daily
+Crypto
+17.82%
+3.28%
+cryptocurrencies
+#0390
+Lottery Stocks and the 52-Week High
+Monthly
+Equities
+18.58%
+19.25%
+stock pickingequity long shortsentiment tradingfactor investingsmart beta
+#0391
+The Conservative Formula
+Quarterly
+Equities
+15.10%
+16.50%
+momentumstock pickingvolatility effectsmart beta
+#0392
+Intraday Market-Wide Ups/Downs and Returns
+Intraday
+Equities
+23.75%
+31.56%
+market timingsentiment trading
+#0393
+Oil Surprise Factor in Equities
+Quarterly
+Equities
+6.29%
+10.66%
+stock pickingequity long shortearnings announcementfactor investingsmart beta
+#0394
+Curvature Factor in Currencies
+Monthly
+Currencies
+2.64%
+6.70%
+carry tradeFX anomalyforex systemfactor investingsmart beta
+#0395
+Sales Seasonality Premium
+Monthly
+Equities
+8.73%
+12.36%
+seasonalitystock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0396
+When to Own Stocks and When to Own Gold
+Yearly
+EquitiesCommodities
+10.00%
+14.00%
+asset class pickingrotational systemmarket timingseasonalityfund picking
+#0397
+Accruals Momentum
+Yearly
+Equities
+9.94%
+11.10%
+momentumstock pickingequity long shortfundamental analysisaccruals effectfactor investingsmart beta
+#0398
+Lame-Duck CEOs
+Monthly
+Equities
+11.35%
+14.71%
+seasonalitystock pickingequity long shortsentiment tradingalternative datafactor investingsmart beta
+#0399
+When Short Sellers and Corporate Insiders Agree on Stock Pricing
+Quarterly
+Equities
+10.60%
+19.83%
+stock pickingequity long shortinsiders trading effectshort sellingalternative data
+#0400
+Accruals Effect Combined with Price Momentum
+Monthly
+Equities
+10.43%
+10.82%
+momentumstock pickingequity long shortmomentum in stocksaccruals effectfactor investingsmart beta
+#0401
+Carry On - Enhanced Carry Strategy
+Monthly
+Currencies
+2.03%
+2.47%
+carry tradeFX anomalyforex systemfactor investingsmart beta
+#0402
+International Volatility Arbitrage
+Monthly
+Equities
+16.38%
+8.93%
+arbitragevolatility premium
+#0403
+Cross-Sectional Seasonalities in International Government Bond Returns
+Monthly
+Bonds
+5.41%
+11.07%
+seasonalitybond timingfactor investingsmart beta
+#0404
+Alpha Momentum in Country and Industry Equity Indexes
+Monthly
+Equities
+6.30%
+20.02%
+momentumrotational systemequity long shortcountry pickingfactor investingsmart beta
+#0405
+Using VIX to Time Options Writing
+Monthly
+Equities
+10.88%
+11.36%
+rotational systemmarket timingvolatility premium
+#0406
+Cash-Based Operating Proﬁtability
+Yearly
+Equities
+5.00%
+11.00%
+stock pickingequity long shortfundamental analysisaccruals effectfactor investingsmart beta
+#0407
+Timing Betting Against Beta with Small Stocks
+Monthly
+Equities
+22.42%
+19.87%
+market timingstock pickingequity long shortsmall capbeta factorfactor investingsmart beta
+#0408
+Cointegrated Cryptocurrency Portfolios
+Daily
+Crypto
+42.68%
+pairs tradingcryptocurrencies
+#0409
+Trading Volume in Cryptocurrency Markets and Reversals
+Daily
+Crypto
+41.18%
+7.84%
+reversalvolume effectcryptocurrencies
+#0410
+The Impact of Turnovers on Short-Term Momentum and Reversal
+Monthly
+Equities
+9.51%
+momentumstock pickingreversalequity long shortmomentum in stocksvolume effectfactor investingsmart beta
+#0411
+Halloween Effect during Low and High CAPE Months
+6 Months
+Equities
+12.24%
+17.78%
+market timingseasonality
+#0412
+Buy-Side Competition and Momentum Profits
+Monthly
+Equities
+14.27%
+22.98%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0413
+12 Month Seasonal Reversals
+Monthly
+Equities
+5.54%
+8.07%
+seasonalityreversalequity long shortfactor investingsmart beta
+#0414
+Patent-to-Market Equity Factor
+Yearly
+Equities
+5.91%
+11.70%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0415
+Sovereign CDS Predicts FX Market Return
+Monthly
+Currencies
+4.84%
+5.92%
+FX anomalyforex systemalternative datafactor investingsmart beta
+#0416
+Using Baltic Dry Index to Trade Tanker Shipping Companies
+Monthly
+Equities
+3.86%
+market timingseasonalitystock picking
+#0417
+Analyst Days
+Daily
+Equities
+18.30%
+24.82%
+stock pickingsentiment tradingalternative datafactor investingsmart beta
+#0418
+Momentum and the Firm Fundamental Cycle
+Quarterly
+Equities
+8.80%
+6.82%
+momentumstock pickingequity long shortmomentum in stocksfundamental analysisfactor investingsmart beta
+#0419
+Payday Anomaly
+Daily
+Equities
+2.57%
+4.31%
+market timingseasonality
+#0420
+Geographical Country Momentum
+Monthly
+Equities
+12.69%
+19.83%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0421
+Earnings Response Elasticity
+Daily
+Equities
+8.50%
+17.15%
+stock pickingequity long shortearnings announcementfactor investingsmart beta
+#0422
+The Value Uncertainty Premium
+Monthly
+Equities
+12.01%
+14.62%
+stock pickingvalueequity long shortfundamental analysisfactor investingsmart beta
+#0423
+Industry Herding and Momentum
+Monthly
+Equities
+14.43%
+30.70%
+momentumsector pickingequity long shortmomentum in stockssentiment tradingfactor investingsmart beta
+#0424
+Long-Run Reversal in Commodity Returns
+#0426
+1 Month Momentum in Bonds
+Monthly
+Bonds
+6.04%
+9.69%
+momentumrotational systemfactor investingsmart beta
+#0427
+1 Month Momentum in International Equities
+Monthly
+Equities
+16.21%
+20.38%
+momentumrotational systemcountry pickingfactor investingsmart beta
+#0428
+1 Month Momentum in Commodities
+Monthly
+Commodities
+21.12%
+20.86%
+momentumrotational systemfactor investingsmart beta
+#0429
+CAPE Sector Picking Strategy
+Monthly
+Equities
+14.23%
+17.98%
+rotational systemsector pickingvaluesmart beta
+#0430
+Volatility-Weighted Short-Term Reversal Strategy in Emerging Market Equities
+Monthly
+Equities
+6.14%
+9.10%
+rotational systemcountry pickingsmart beta
+#0431
+Intraday Momentum in the Indian Equity Market
+Intraday
+Equities
+12.36%
+12.81%
+momentumequity long shortmomentum in stocks
+#0432
+Investment-Momentum Strategy
+6 Months
+Equities
+8.99%
+11.66%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0433
+Computing Power Factor in Cryptocurrencies
+Weekly
+Crypto
+15.60%
+10.82%
+cryptocurrencies
+#0434
+Network Size Factor in Cryptocurrencies
+Weekly
+Crypto
+15.60%
+10.82%
+cryptocurrencies
+#0435
+Price Overreactions in the Forex
+Intraday
+Currencies
+4.78%
+6.30%
+momentumFX anomalyforex system
+#0436
+A Multi Strategy Approach to Trading Foreign Exchange Futures
+Monthly
+Currencies
+6.58%
+13.16%
+momentumcarry tradeFX anomalyforex systemreversalfactor investingfactor allocation
+#0437
+Optimalized Subportfolio Momentum
+Monthly
+Equities
+19.80%
+23.25%
+momentumrotational systemsector pickingmomentum in stocksfactor investingsmart beta
+#0438
+US Equity Tail Risk and Currency Risk Premia
+Monthly
+Currencies
+4.57%
+8.16%
+FX anomalyforex systemvolatility effectbeta factorfactor investingsmart beta
+#0439
+The Equity Differential Factor in Currencies
+Monthly
+Currencies
+1.90%
+3.10%
+FX anomalyforex systemfactor investingsmart beta
+#0440
+The Value Spread and Asset Allocation in Global Equity Markets
+Monthly
+Equities
+5.91%
+6.37%
+rotational systemvaluecountry pickingfactor investingsmart beta
+#0441
+Front-Running S&P GSCI Index
+Daily
+Commodities
+11.10%
+18.05%
+market timingseasonalityarbitrage
+#0442
+Intraday Momentum in Crude Oil ETF
+Intraday
+Commodities
+1.85%
+0.21%
+momentummarket timingseasonality
+#0443
+Taylor Rule and FX Returns
+Monthly
+Currencies
+6.16%
+7.61%
+FX anomalyforex systemalternative datafactor investingsmart beta
+#0444
+Value Factor After Negative Market Return
+Monthly
+Equities
+3.68%
+3.45%
+market timingstock pickingequity long shortfactor investingsmart betafactor allocation
+#0445
+Hazard Fear in Commodity Markets
+Weekly
+Commodities
+9.28%
+10.30%
+sentiment tradingalternative datafactor investingsmart beta
+#0446
+Fundamental Strength and the 52-Week High Anomaly
+6 Months
+Equities
+12.68%
+21.06%
+momentumstock pickingvalueequity long shortmomentum in stocksfundamental analysissentiment tradingfactor investingsmart beta
+#0447
+Logistic Regression and Momentum-Based Trading Strategy
+Daily
+Equities
+8.60%
+14.00%
+momentummarket timingmachine learning
+#0448
+Short Selling the Issuer's Stock in the Convertible Bond Arbitrage
+Daily
+Equities
+2.25%
+4.47%
+arbitrageshort selling
+#0449
+Flight to Quality Factor in Fixed Income
+Daily
+Bonds
+2.80%
+8.20%
+bond timingfactor investing
+#0450
+Unemployment Gap Factor in Fixed Income
+Monthly
+Bonds
+1.30%
+10.10%
+bond timingfactor investing
+#0451
+Growth Gap Factor in Fixed Income
+Quarterly
+Bonds
+1.00%
+9.99%
+bond timingfactor investing
+#0452
+Reversal - Yield Change Factor in Fixed Income
+Monthly
+Bonds
+1.70%
+10.00%
+bond timingfactor investing
+#0453
+Machine Learning Adaptive Portfolio Asset Allocation
+Monthly
+EquitiesBondsCommoditiesREITs
+10.07%
+10.13%
+asset class pickingmarket timingmachine learning
+#0454
+Time Series Momentum Strategies Using Deep Neural Networks
+Daily
+EquitiesBondsCommoditiesCurrencies
+14.10%
+15.40%
+momentumfactor investingsmart betamachine learning
+#0455
+Nonlinear Support Vector Machines and Stock Picking
+Quarterly
+Equities
+21.92%
+12.79%
+stock pickingequity long shortfundamental analysisfactor investingsmart betamachine learning
+#0456
+Timing High and Low Volatility Equity Factor Strategy
+Monthly
+Equities
+17.20%
+17.70%
+stock pickingvolatility effectequity long shortfactor investingsmart beta
+#0457
+Momentum Stock Picking Strategy Using RSI Indicator
+Daily
+Equities
+2.29%
+momentumtrend-followingstock pickingmomentum in stocksfactor investingsmart beta
+#0458
+End-of-Month Treasury Returns
+Daily
+Bonds
+3.96%
+7.65%
+market timingseasonalitybond timing
+#0459
+Machine Learning and Currency Carry Strategy
+Monthly
+Currencies
+8.06%
+12.80%
+carry tradeFX anomalyforex systemfactor investingsmart betamachine learning
+#0460
+ESG Level Factor Investing Strategy
+Yearly
+Equities
+3.25%
+stock pickingequity long shortalternative datafactor investingsmart betaESG investing
+#0461
+ESG Factor Momentum Strategy
+Monthly
+Equities
+2.23%
+2.50%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart betaESG investing
+#0462
+Market Breadth in Global Equities
+Monthly
+Equities
+20.76%
+21.69%
+rotational systemcountry picking
+#0463
+Price Gap Strategy in the US Stock Market
+Daily
+Equities
+5.90%
+market timing
+#0464
+Brand Value Asset Pricing Factor
+Monthly
+Equities
+11.95%
+16.73%
+stock pickingalternative datafactor investingsmart beta
+#0465
+Equity Momentum Leads Corporate Bonds
+Monthly
+Bonds
+3.50%
+4.30%
+momentumbond timingfactor investingsmart beta
+#0466
+Trend-Following and Spillover Eﬀect
+Weekly
+EquitiesBondsCurrencies
+3.20%
+4.80%
+momentumtrend-followingsmart beta
+#0467
+Bitcoin Intraday Momentum
+Intraday
+Crypto
+28.62%
+30.26%
+momentummarket timingsentiment tradingcryptocurrencies
+#0468
+Dynamic Momentum Strategy
+Monthly
+Equities
+6.11%
+10.00%
+momentummarket timingmomentum in stocks
+#0469
+Conglomerates Post-Earnings Announcement Drift
+Daily
+Equities
+16.40%
+stock pickingfundamental analysisearnings announcementfactor investingsmart beta
+#0470
+Macroeconomic Announcement Beta Strategy
+Daily
+Equities
+10.37%
+8.79%
+market timingseasonalitystock pickingequity long shortbeta factor
+#0471
+Macroeconomic Announcement Beta Reversal
+Daily
+Equities
+7.76%
+9.02%
+market timingseasonalitystock pickingreversalequity long shortbeta factor
+#0472
+Jump-Only Momentum and Reversal in Currency Markets
+Monthly
+Currencies
+8.83%
+9.10%
+momentumFX anomalyforex systemreversal
+#0473
+Cross-Asset Skewness Effect
+Monthly
+EquitiesBondsCommoditiesCurrencies
+3.50%
+4.86%
+volatility effectfactor investingsmart beta
+#0474
+Return Cross-Predictability in Firms with Similar Employee Satisfaction
+Monthly
+Equities
+12.95%
+15.11%
+momentumstock pickingequity long shortalternative datafactor investingsmart beta
+#0475
+Offshore Sales Networks
+Monthly
+Equities
+14.99%
+23.03%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0476
+Speculator Spreading Pressure and the Commodity Futures Risk Premium
+Monthly
+Commodities
+16.84%
+25.25%
+term spreadspread tradingfactor investingsmart beta
+#0477
+Generalised Risk-Adjusted Momentum in Commodities
+Monthly
+Commodities
+10.10%
+17.40%
+momentumvolatility effectfactor investingsmart beta
+#0478
+Generalised Risk-Adjusted Momentum in Equity Indexes
+Monthly
+Equities
+12.70%
+19.90%
+momentumvolatility effectfactor investingsmart beta
+#0479
+Generalised Risk-Adjusted Momentum in Stocks
+Monthly
+Equities
+30.30%
+23.00%
+momentumstock pickingvolatility effectequity long shortmomentum in stocksfactor investingsmart beta
+#0480
+Machine Learning-Based Financial Statement Analysis
+Daily
+Equities
+47.47%
+18.00%
+stock pickingequity long shortfundamental analysisearnings announcementmachine learning
+#0481
+Holding Artificial VIX in a Portfolio
+Monthly
+Equities
+10.10%
+15.20%
+volatility effect
+#0482
+Inteligent Currency Multistrategy
+Monthly
+Currencies
+3.96%
+3.46%
+momentumcarry tradeFX anomalyforex systemvaluefactor investingsmart beta
+#0483
+Forecasting Index Changes in the German DAX Family
+Daily
+Equities
+5.61%
+6.76%
+stock picking
+#0484
+The Serial Dependence of the Commodity Futures Returns
+Monthly
+Commodities
+15.15%
+16.24%
+machine learning
+#0485
+Toxical Releases and Stock's Performance
+Yearly
+Equities
+4.51%
+10.50%
+stock pickingequity long shortalternative dataESG investing
+#0486
+Credit Rating Announcements from Issuer- versus Investor-Paid Rating Agencies and Stock Returns
+Monthly
+Equities
+22.04%
+13.20%
+stock pickingequity long shortalternative datafactor investing
+#0487
+Mean-Variance Market Timing in the FX Market
+Monthly
+Currencies
+7.44%
+8.12%
+market timingFX anomalyforex system
+#0488
+Stock Picking of ETF Constituents
+Daily
+Equities
+18.00%
+stock pickingbeta factor
+#0489
+Combining VIX Futures Term Structure Strategy and S&P500 Index
+Daily
+Equities
+23.58%
+19.92%
+market timingvolatility effectvolatility premium
+#0490
+Lazy Stock Prices
+Monthly
+Equities
+18.58%
+26.72%
+stock pickingequity long shortfundamental analysisalternative datafactor investingsmart beta
+#0491
+Pre-Election Drift In the Stock Market
+Daily
+Equities
+2.46%
+market timingseasonality
+#0492
+The Impact of Linkedin Data about Employees on Stock Returns
+Monthly
+Equities
+5.41%
+4.88%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0493
+Overlapping Momentum Portfolios
+#0505
+Systematic Investing in Emerging Market Debt
+Monthly
+Bonds
+8.40%
+7.90%
+momentumcarry tradevaluebond timingfactor investingfactor allocation
+#0506
+Volatility Risk Premium in Commodities
+Monthly
+Commodities
+6.10%
+5.20%
+volatility effectvolatility premium
+#0507
+Volatility Risk Premium in Currencies
+Monthly
+Currencies
+1.20%
+1.70%
+FX anomalyforex systemvolatility effectvolatility premium
+#0508
+Exploring Core Earnings with Alternative Data
+Yearly
+Equities
+8.40%
+13.36%
+stock pickingequity long shortfundamental analysisalternative datafactor investingsmart beta
+#0509
+S&P500 Futures Return During the EU-Open Period
+Intraday
+Equities
+2.58%
+4.71%
+market timingseasonality
+#0510
+Factor Momentum
+Monthly
+Equities
+10.49%
+15.28%
+momentumequity long shortfundamental analysisfactor investingsmart betafactor allocation
+#0511
+Cheap Options Are Expensive
+Monthly
+Equities
+32.32%
+13.32%
+volatility effectvolatility premium
+#0512
+Savings Rate Beta and Performance of Stocks
+Monthly
+Equities
+7.96%
+7.19%
+market timingstock pickingequity long shortsentiment tradingfactor investingsmart beta
+#0513
+Predicting Intraday Returns with Machine Learning methods
+Intraday
+Equities
+194.32%
+24.96%
+market timingstock pickingequity long shortmachine learning
+#0514
+Retail Trading and Momentum Profitability
+Monthly
+Equities
+14.04%
+19.22%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0515
+Bear Market Risk and Hedge Fund Returns
+Monthly
+Equities
+10.95%
+8.58%
+volatility effectvolatility premiumfund picking
+#0516
+Interest Rate Differentials and the Dynamic Asymmetry in USD/EUR pair
+Daily
+Currencies
+5.32%
+10.00%
+carry tradeFX anomalyforex system
+#0517
+Predicting Bond Returns with Equity Return
+Monthly
+Bonds
+3.80%
+10.00%
+bond timing
+#0518
+Predicting Bond Returns with Commodity Index
+Monthly
+Bonds
+4.40%
+10.00%
+bond timing
+#0519
+Predicting Bond Returns with a Combined Model
+Monthly
+Bonds
+8.70%
+10.00%
+momentumtrend-followingbond timing
+#0520
+Lottery Stocks and Past Performance
+Monthly
+Equities
+28.78%
+23.38%
+stock pickingequity long shortfactor investingsmart beta
+#0521
+Global Dollar Risk Strategy
+Monthly
+Currencies
+4.26%
+7.69%
+FX anomalyforex system
+#0522
+ESG, Price Momentum and Stochastic Optimization
+Monthly
+Equities
+17.47%
+13.49%
+momentumstock pickingmomentum in stocksalternative datafactor investingsmart betaESG investing
+#0523
+DRIPs and Falling Stock Prices
+Daily
+Equities
+27.01%
+34.14%
+stock pickingequity long shortarbitrage
+#0524
+Deviations of Fundamentals and Machine Learning
+Monthly
+Equities
+9.87%
+12.45%
+stock pickingequity long shortfundamental analysisfactor investingsmart betamachine learning
+#0525
+Double-Sorting all Possible Strategies
+Monthly
+Equities
+38.64%
+28.00%
+momentumtrend-followingstock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0526
+Principal Portfolios
+Monthly
+Equities
+7.20%
+10.00%
+momentumvalueequity long shortmomentum in stocksfundamental analysisfactor investingsmart betafactor allocation
+#0527
+Employee Satisfaction, ESG and Stock Returns
+Monthly
+Equities
+5.83%
+stock pickingequity long shortalternative datafactor investingESG investing
+#0528
+Equity Factors and Corporate Bonds
+Monthly
+Bonds
+6.61%
+11.27%
+valuefundamental analysisbond timingfactor investingsmart betafactor allocation
+#0529
+Identifying Smart Money with Options
+Daily
+Equities
+13.87%
+8.10%
+market timingstock pickingvolume effect
+#0530
+Jump Risk in Stocks
+Monthly
+Equities
+8.90%
+17.21%
+stock pickingequity long shortfactor investingsmart beta
+#0531
+Global Bond Portfolio Predicts Government Bonds Returns in Individual Countries
+Monthly
+Bonds
+3.90%
+5.26%
+market timingbond timing
+#0532
+Minimum Idiosyncratic Returns in Stocks
+Monthly
+Equities
+7.83%
+15.38%
+stock pickingequity long shortsmall capsmart beta
+#0533
+FOMC Cycle and Credit Risk
+Weekly
+Bonds
+8.89%
+14.87%
+market timingseasonality
+#0534
+Time Series Factor Momentum
+Monthly
+Equities
+12.00%
+14.29%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart betafactor allocation
+#0535
+Idiosyncratic Liquidity in Stocks
+Monthly
+Equities
+11.09%
+11.30%
+stock pickingequity long shortliquidity risk premiumfactor investingsmart beta
+#0536
+Machine Learning Stock Picking
+Weekly
+Equities
+18.70%
+24.20%
+market timingstock pickingfundamental analysisfactor investingsmart betamachine learning
+#0537
+The Positive Similarity of Company Filings and Stock Returns
+Monthly
+Equities
+5.47%
+6.48%
+stock pickingequity long shortfundamental analysisalternative datafactor investingsmart betamachine learning
+#0538
+Oil Intraday Momentum
+Intraday
+Commodities
+21.36%
+momentummarket timing
+#0539
+Historical and Implied Volatility in FX Options
+Monthly
+Currencies
+19.08%
+24.14%
+FX anomalyvolatility premium
+#0540
+Semivariance and Time Series Momentum in Futures
+Daily
+Commodities
+19.11%
+10.80%
+momentumtrend-following
+#0541
+News and Non-news Returns in Stocks
+Daily
+Equities
+20.98%
+16.18%
+stock pickingequity long shortsentiment tradingalternative datafactor investing
+#0542
+Committee Portfolio Selection
+Monthly
+EquitiesBondsREITs
+19.60%
+8.45%
+asset class pickingrotational systemmarket timingmachine learning
+#0543
+Dividend Stocks and Rising or Falling Interest Rates
+Monthly
+Equities
+7.34%
+22.23%
+market timingstock pickingequity long shortfactor investingsmart beta
+#0544
+Impact of intangible assets on B/M
+Yearly
+Equities
+10.95%
+15.22%
+stock pickingvalueequity long shortfundamental analysisfactor investingsmart beta
+#0545
+Predictability in USD/CNH FX pair
+Daily
+Currencies
+26.10%
+4.00%
+FX anomalyforex system
+#0546
+Implied Volatility Spreads and Expected Market Returns in S&P500
+Daily
+EquitiesBonds
+11.09%
+14.43%
+market timingvolatility effect
+#0547
+Return Predictability in Firms with Complex Ownership Network
+Monthly
+Equities
+13.08%
+11.15%
+momentumstock pickingequity long shortalternative data
+#0548
+The Intraday Momentum in China
+Monthly
+Equities
+36.87%
+23.50%
+momentummarket timingstock pickingequity long shortmomentum in stocks
+#0549
+Basis Momentum Commodity Premia in China
+Monthly
+Commodities
+7.93%
+10.06%
+momentumtrend-following
+#0550
+Carry Commodity Premia in China
+Monthly
+Commodities
+8.07%
+9.94%
+carry trade
+#0551
+Momentum Commodity Premia in China
+Monthly
+Commodities
+8.99%
+12.05%
+momentum
+#0552
+Betting against beta in China
+Monthly
+Equities
+12.54%
+11.98%
+stock pickingequity long shortbeta factorsmart beta
+#0553
+Cross-sectional Effects of Bases in Equity Indexes Futures
+Monthly
+Equities
+5.84%
+6.97%
+equity long shortliquidity risk premium
+#0554
+Size factor in China
+Monthly
+Equities
+13.08%
+15.66%
+equity long shortsmall capfactor investingsmart beta
+#0555
+Value factor in China
+Monthly
+Equities
+14.57%
+12.99%
+stock pickingvalueequity long shortsmart beta
+#0556
+Long-Term Institutional Trades and the Cross-Section of Returns
+Quarterly
+Equities
+8.24%
+11.04%
+stock pickingreversalequity long short
+#0557
+Profitability Factor in Chinese Equities
+Monthly
+Equities
+39.45%
+18.24%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0558
+Quality Strategy in the Indian Market
+Quarterly
+Equities
+13.23%
+12.28%
+stock pickingfactor investingsmart beta
+#0559
+Jump Risk in Commodities
+Monthly
+Commodities
+4.63%
+14.89%
+factor investingsmart beta
+#0560
+The Cross-Section of Non-Professional Analyst Skill
+Monthly
+Equities
+12.42%
+18.69%
+stock pickingequity long shortalternative data
+#0561
+Large cap US Corporate Bond Short Term Reversal
+Weekly
+Bonds
+12.18%
+3.70%
+reversalbond timing
+#0562
+Betting On and Against the Right Semibetas
+Daily
+Equities
+9.76%
+9.30%
+stock pickingequity long shortbeta factorfactor investingsmart beta
+#0563
+Currency Factor Momentum
+Monthly
+Currencies
+4.90%
+6.42%
+FX anomalyforex systemfactor investingsmart betafactor allocation
+#0564
+Intraday Momentum in Fixed Income
+Intraday
+Bonds
+2.16%
+1.33%
+momentummarket timingseasonalityfactor investingsmart beta
+#0565
+The Ex-dividend Date in the European Market
+Daily
+Equities
+1.80%
+market timingseasonality
+#0566
+Multi Asset Pairs Momentum
+Monthly
+EquitiesBondsCommoditiesREITs
+5.30%
+8.10%
+momentumasset class picking
+#0567
+Low-risk Anomaly Index
+Monthly
+Equities
+9.25%
+29.40%
+volatility effectequity long shortbeta factorsmart beta
+#0568
+Momentum effect in Chinese B-shares
+Monthly
+Equities
+14.72%
+16.59%
+momentummomentum in stockssmart beta
+#0569
+Intraday Time-series Momentum in Chinese Futures
+Intraday
+Commodities
+11.92%
+momentummarket timing
+#0570
+Corporate Bond Value Strategy
+Monthly
+Bonds
+4.94%
+5.81%
+valuebond timingsmart beta
+#0571
+Post Seasoned Equity Offering Returns in China
+6 Months
+Equities
+12.36%
+32.67%
+market timingseasonalityequity long shortshort selling
+#0572
+The Low Volatility Anomaly in Equity Sectors
+Monthly
+Equities
+6.96%
+12.55%
+stock pickingvolatility effectsmart beta
+#0573
+Momentum and High Accruals
+Monthly
+Equities
+11.22%
+15.03%
+momentumstock pickingequity long shortmomentum in stocksaccruals effectfactor investingsmart beta
+#0574
+Oil Volatility Affects Industry Momentum in China
+Monthly
+Equities
+62.88%
+38.23%
+momentummarket timingvolatility effectfactor investingsmart betafactor allocation
+#0575
+Momentum and Low Risk Effects in India
+Monthly
+Equities
+10.84%
+momentumstock pickingvolatility effectequity long shortmomentum in stocksfactor investingsmart beta
+#0576
+Boosted Regression Trees in Corporate Bonds
+Monthly
+Bonds
+4.42%
+2.37%
+momentumliquidity risk premiumbond timingmachine learning
+#0577
+Surprise in Short Interest
+Monthly
+Equities
+3.87%
+8.19%
+stock pickingequity long shortshort sellingsmart beta
+#0578
+Combining Smart Factors Momentum and Market Portfolio
+Monthly
+Equities
+11.91%
+10.46%
+momentumrotational systemstock pickingvalueequity long shortfactor investingsmart betafactor allocation
+#0579
+Variance Scaled Momentum in Emerging Markets
+Monthly
+Equities
+17.21%
+9.74%
+momentumequity long shortmomentum in stocks
+#0580
+Capturing Energy Risk Premia
+Monthly
+Commodities
+12.38%
+13.75%
+momentumtrend-followingvaluefactor allocation
+#0581
+Equity Index and Risk-free Asset Allocation Using Neural Networks
+Quarterly
+EquitiesBonds
+11.71%
+19.34%
+asset class pickingmarket timingmachine learning
+#0582
+Carbon Risk in the Cross Section of Corporate Bond Returns
+Yearly
+Bonds
+1.57%
+1.80%
+alternative datasmart betaESG investing
+#0583
+Bond Returns Around Italian and German Treasury Auctions
+Intraday
+Bonds
+2.01%
+0.92%
+market timingbond timing
+#0584
+Return Seasonality and Information Cycle
+Monthly
+Equities
+12.95%
+14.74%
+seasonalityearnings announcement
+#0585
+Trend Factor in China
+Monthly
+Equities
+15.40%
+19.66%
+trend-followingequity long shortvolume effectsmart betafactor allocation
+#0586
+Genetic Programming Predicts Stock Returns
+Monthly
+Equities
+9.25%
+12.50%
+stock pickingequity long shortmachine learning
+#0587
+Investor Meetings in China Predicts Stock Returns
+Monthly
+Equities
+8.08%
+7.07%
+stock pickingequity long shortalternative data
+#0588
+Cross-Border M&A and Currency Returns
+Monthly
+Currencies
+4.59%
+5.43%
+FX anomalyforex system
+#0589
+Order Imbalances at Closing Auctions
+Intraday
+Equities
+13.77%
+1.90%
+stock pickingequity long shortalternative data
+#0590
+Order Imbalances at Closing Auctions and Subsequent Reversals
+Weekly
+Equities
+10.07%
+3.91%
+stock pickingreversalequity long shortalternative data
+#0591
+Machine Learning and Earnings Announcements
+Daily
+Equities
+11.63%
+8.16%
+equity long shortfundamental analysisearnings announcementalternative datamachine learning
+#0592
+Volatility effect in the Chinese A-share market
+Monthly
+Equities
+10.60%
+21.20%
+volatility effectequity long shortsmart beta
+#0593
+Value in Cryptocurrencies
+Weekly
+Crypto
+193.70%
+106.90%
+valuecryptocurrenciesfactor investing
+#0594
+Size in Cryptocurrencies
+Weekly
+Crypto
+134.20%
+70.31%
+cryptocurrenciesfactor investing
+#0595
+Notional Value Effect in Futures Markets
+Daily
+EquitiesBondsCommoditiesCurrencies
+3.38%
+4.74%
+liquidity risk premiumsmart beta
+#0596
+Editor Preference and Stock Returns
+Monthly
+Equities
+12.68%
+17.60%
+stock pickingequity long shortalternative datamachine learning
+#0597
+Idiosyncratic Tail Risk
+Monthly
+Equities
+7.58%
+10.85%
+stock pickingequity long short
+#0598
+Lottery and Hot Potato Stocks
+Monthly
+Equities
+13.53%
+12.48%
+stock pickingreversalequity long shortsmart beta
+#0599
+Barbell Strategy
+Quarterly
+EquitiesBonds
+8.62%
+6.85%
+asset class pickingmarket timing
+#0600
+Break Risk Factor
+Monthly
+Equities
+2.92%
+10.33%
+equity long shortfactor investing
+#0601
+Learning to Rank and Cross-sectional Momentum
+Monthly
+Equities
+35.90%
+16.60%
+momentumequity long shortmomentum in stocksmachine learning
+#0602
+Pure Growth Strategy
+Yearly
+Equities
+11.01%
+17.78%
+stock pickinggrowth stockssmart beta
+#0603
+Slope Carry
+Monthly
+Bonds
+4.75%
+9.31%
+carry tradebond timing
+#0604
+Reversal on Straddles
+Monthly
+Equities
+49.71%
+36.80%
+reversal
+#0605
+Momentum on Straddles
+Monthly
+Equities
+114.83%
+41.56%
+momentummomentum in stocks
+#0606
+Climate Change Exposure and the Cross Section of Stock Returns
+Monthly
+Equities
+5.92%
+13.96%
+stock pickingequity long shortalternative datasmart betaESG investing
+#0607
+Equity Momentum Spillover to Currencies
+Weekly
+Currencies
+2.20%
+7.10%
+momentumFX anomalymomentum in stocks
+#0608
+Intraday Reversal in China
+Intraday
+Equities
+126.34%
+12.02%
+stock pickingreversalequity long shortfactor investing
+#0609
+Intraday Reversal in US
+Intraday
+Equities
+22.42%
+5.41%
+stock pickingreversalequity long shortfactor investing
+#0610
+Presidential Economic Approval Rating and the Cross-Section of Stock Returns
+Monthly
+Equities
+14.18%
+18.01%
+stock pickingequity long shortsmart beta
+#0611
+Idiosyncratic Volatility in China
+Monthly
+Equities
+14.02%
+23.52%
+volatility effectequity long shortfactor investingsmart beta
+#0612
+Abnormal Turnover in China
+Monthly
+Equities
+17.18%
+22.16%
+stock pickingequity long shortvolume effectsmart beta
+#0613
+Seasonal Difference in China
+Monthly
+Equities
+11.35%
+17.06%
+seasonalitystock pickingequity long short
+#0614
+Climate sentiment, carbon prices and Emission minus Clean Portfolio
+Monthly
+Equities
+9.36%
+12.71%
+equity long shortsentiment tradingalternative dataESG investing
+#0615
+Machine Learning and Mutual Fund Characteristics
+Monthly
+Equities
+6.32%
+12.85%
+stock pickingfundamental analysisfund pickingfactor investingmachine learningfactor allocation
+#0616
+Output Gap Predicts FX Returns
+Monthly
+Currencies
+4.92%
+6.83%
+FX anomalyalternative data
+#0617
+Earnings Announcement Beta
+Monthly
+Equities
+7.19%
+15.63%
+market timingequity long shortearnings announcementbeta factorsmart beta
+#0618
+Bond Yield Changes and the Cross Section of Equity Indices
+Monthly
+Equities
+7.83%
+15.31%
+market timingequity long short
+#0619
+Trend Factor in Corporate Bonds
+Monthly
+Bonds
+16.76%
+7.58%
+trend-followingbond timing
+#0620
+Long Term Time-series Momentum in India
+Weekly
+Equities
+16.02%
+15.10%
+momentumtrend-followingequity long shortmomentum in stocksfactor investingsmart beta
+#0621
+Cross-sectional Intraday Sector Momentum in India
+Intraday
+Equities
+27.46%
+17.48%
+momentumtrend-followingequity long shortmomentum in stocksfactor investing
+#0622
+Intraday Time-series Momentum in India
+Intraday
+Equities
+12.83%
+12.95%
+momentumtrend-followingequity long shortmomentum in stocksfactor investing
+#0623
+Quality Factor in Stocks
+Monthly
+Equities
+12.20%
+12.32%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0624
+Reference Prices and Bad News
+Daily
+Equities
+15.32%
+9.49%
+stock pickingequity long shortalternative data
+#0625
+Global Imbalance Currency Factor
+Monthly
+Currencies
+4.40%
+6.43%
+FX anomalyforex systemfundamental analysis
+#0626
+Image Recognition in Stock Price Charts Predicts Stock Returns
+Weekly
+Equities
+12.11%
+6.96%
+trend-followingmarket timingreversalequity long shortmachine learning
+#0627
+Hedging Portfolio
+Monthly
+EquitiesBondsCommoditiesCurrencies
+8.03%
+13.25%
+trend-followingmarket timingequity long shortdiversification
+#0628
+Social Media Sentiment Factor
+Monthly
+Equities
+3.70%
+5.98%
+equity long shortsentiment tradingalternative datafactor investingsmart beta
+#0629
+Residual Credit Spread Predicts Corporate Bond Returns
+Monthly
+Bonds
+6.04%
+4.36%
+valuefundamental analysisbond timing
+#0630
+Machine Learning in Commodities
+Monthly
+Commodities
+6.81%
+8.88%
+machine learning
+#0631
+US Climate Policy News and the Cross-section of Stocks
+Monthly
+Equities
+12.15%
+16.79%
+equity long shortalternative datasmart betamachine learningESG investing
+#0632
+Classification of Stocks as Anomaly Longs
+Monthly
+Equities
+23.87%
+17.38%
+equity long shortfactor investingmachine learning
+#0633
+Liquidity Growth Factor
+Monthly
+Equities
+7.18%
+11.29%
+stock pickingequity long shortliquidity risk premiumvolume effectfactor investingsmart beta
+#0634
+Chronological Return Ordering
+Monthly
+Equities
+12.01%
+12.69%
+trend-followingstock pickingequity long shortsmart beta
+#0635
+Constituent Stock News Predict ETF Returns
+Intraday
+Equities
+21.12%
+9.82%
+equity long shortalternative datamachine learning
+#0636
+Machine Learning and Stock Anomalies in China
+Monthly
+Equities
+28.62%
+14.30%
+equity long shortfactor investingsmart betamachine learningfactor allocation
+#0637
+Age and Wealth Factors in Norwegian Stocks
+Yearly
+Equities
+11.68%
+21.02%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0638
+Short Selling Activity and Momentum
+Monthly
+Equities
+15.66%
+17.80%
+momentumstock pickingequity long shortmomentum in stocksshort sellingfactor investingsmart beta
+#0639
+Inventory Mispricing Predicts Oil Returns
+Intraday
+Commodities
+6.70%
+10.00%
+market timingalternative data
+#0640
+Climate Beta and Mutual Funds
+Monthly
+Equities
+2.55%
+2.27%
+fund pickingbeta factoralternative dataESG investing
+#0641
+The Size Effect in Indian Market
+Monthly
+Equities
+10.30%
+25.64%
+equity long shortsmall capfactor investingsmart beta
+#0642
+Cashflow to Price in Indian Market
+Monthly
+Equities
+16.49%
+28.83%
+stock pickingvalueequity long shortfactor investingsmart beta
+#0643
+Dynamic Crude Oil Allocation in a Balanced Portfolio
+Daily
+EquitiesBondsCommodities
+10.00%
+10.00%
+asset class pickingrotational systemmarket timingdiversification
+#0644
+Cross-asset Time-series Momentum (Equities and Crude Oil)
+Monthly
+EquitiesBonds
+9.96%
+15.75%
+momentumtrend-followingmarket timing
+#0645
+Statistical Arbitrage With CNN and Transformer Networks
+Daily
+Equities
+5.50%
+5.00%
+equity long shortpairs tradingarbitragemachine learning
+#0646
+Post-Earnings-Annoucement Drift Using NLP on Earnings Calls
+Quarterly
+Equities
+16.53%
+5.06%
+equity long shortearnings announcementalternative datamachine learning
+#0647
+Equity Duration
+Monthly
+Equities
+5.80%
+16.50%
+stock pickingequity long shortbeta factorsmart beta
+#0648
+Mean Absolute Daily Return in Cryptos
+Weekly
+Crypto
+0.91%
+1.33%
+volatility premiumcryptocurrencies
+#0649
+Scaled Volume in Cryptos
+Weekly
+Crypto
+0.61%
+1.02%
+volume effectcryptocurrencies
+#0650
+Volatility Effect in Cryptos
+Weekly
+Crypto
+0.10%
+1.45%
+volatility premiumcryptocurrencies
+#0651
+Predicting Informed Trading with Machine Learning
+Monthly
+Equities
+5.42%
+5.57%
+equity long shortinsiders trading effectalternative datamachine learning
+#0652
+Machine Learning Stock Analyst
+Monthly
+Equities
+7.95%
+10.65%
+equity long shortfundamental analysisalternative datamachine learning
+#0653
+Similar Stock Short-term Momentum
+Monthly
+Equities
+11.93%
+14.43%
+momentumequity long shortmomentum in stocksfundamental analysis
+#0654
+Momentum without the Crash Component
+Monthly
+Equities
+15.58%
+20.02%
+momentumequity long shortmomentum in stocksfactor investingsmart beta
+#0655
+Price Pressure During Top Dividend Days
+Daily
+Equities
+2.33%
+7.31%
+market timing
+#0656
+Machine Learning for Extracting Pessimism from Newspaper Pictures and Text
+Daily
+EquitiesBonds
+15.06%
+15.82%
+market timingalternative datamachine learning
+#0657
+Portfolio Optimization with Nonlinear Risk Budgeting using Neural Network
+Monthly
+EquitiesBondsCommodities
+12.33%
+8.84%
+asset class pickingmachine learning
+#0658
+Betting Against Uncertainty Beta in Australia
+Monthly
+Equities
+17.46%
+13.03%
+equity long shortbeta factoralternative datasmart beta
+#0659
+Robust Quality in Stocks
+Quarterly
+Equities
+5.00%
+6.40%
+stock pickingequity long shortfactor investingsmart beta
+#0660
+ESG in Currencies
+Monthly
+Currencies
+3.62%
+7.03%
+FX anomalyESG investing
+#0661
+Market Sentiment and an Overnight Anomaly
+Daily
+Equities
+15.58%
+7.33%
+trend-followingmarket timingsentiment tradingalternative datamachine learning
+#0662
+How to Use Lexical Density of Company Filings
+Monthly
+Equities
+8.16%
+10.40%
+equity long shortalternative datamachine learning
+#0663
+R&D Expenditures and Stock Returns
+Yearly
+Equities
+4.67%
+8.20%
+stock pickingequity long shortsmart beta
+#0664
+Return Asymmetry Effect in Commodity Futures
+Monthly
+Commodities
+4.36%
+7.53%
+smart beta
+#0665
+Style-Integrated Portfolios of Commodity Futures
+Monthly
+Commodities
+9.05%
+9.00%
+factor investingsmart betafactor allocation
+#0666
+When Retail Investors Learn from Insiders
+Weekly
+Equities
+5.33%
+2.59%
+equity long shortinsiders trading effectalternative data
+#0667
+Idiosyncratic Asymmetry Factor in China
+Monthly
+Equities
+10.20%
+15.75%
+equity long shortsmart beta
+#0668
+Idiosyncratic Asymmetry in US Stocks
+Monthly
+Equities
+2.25%
+6.03%
+equity long shortsmart beta
+#0669
+Volatility Risk Premium in Currencies 2
+Monthly
+Currencies
+4.95%
+8.15%
+FX anomalyforex systemvolatility effectvolatility premiumfactor investing
+#0670
+Machine Learning Pairs Trading Strategy
+Monthly
+Equities
+24.80%
+9.20%
+momentumequity long shortpairs tradingmomentum in stocksfundamental analysissmart betamachine learning
+#0671
+ESG Premium in Options
+Monthly
+Equities
+9.12%
+3.06%
+alternative dataESG investing
+#0672
+Growth Potential and Options Returns
+Monthly
+Equities
+17.62%
+8.13%
+stock pickingfundamental analysisgrowth stocks
+#0673
+Mispricing and Idiosyncratic Volatility Effect in Stocks
+Monthly
+Equities
+21.80%
+16.00%
+volatility effectequity long shortfactor investingsmart beta
+#0674
+Inflation Volatility Risk and Corporate Bonds
+Monthly
+Bonds
+3.91%
+13.93%
+beta factorsmart beta
+#0675
+Investor Ambiguity in Equities
+Monthly
+Equities
+5.03%
+10.77%
+stock pickingequity long shortsmart beta
+#0676
+Short-Term Reversal and High Uncertainty Periods
+Monthly
+Equities
+17.36%
+20.61%
+reversalequity long shortalternative datasmart beta
+#0677
+Betting Against Uncertainty Beta in US Hedge Funds
+Monthly
+Equities
+8.89%
+14.24%
+fund pickingalternative datasmart beta
+#0678
+Systematic Trading of Municipal Bonds
+Daily
+Bonds
+2.06%
+1.38%
+fundamental analysismachine learning
+#0679
+Carbon Emmision Intensity in Stocks
+Monthly
+Equities
+9.10%
+stock pickingequity long shortalternative dataESG investing
+#0680
+Emotion Beta and US Equities
+Monthly
+Equities
+6.68%
+13.06%
+stock pickingequity long shortsentiment tradingbeta factoralternative datasmart beta
+#0681
+Predictable Price Pressure Caused by Option Makers and Leveraged ETFs
+Intraday
+Equities
+6.21%
+1.98%
+market timingstock pickingequity long short
+#0682
+Undervalued Stocks in China
+Monthly
+Equities
+11.48%
+20.94%
+momentumstock pickingequity long shortmomentum in stocksliquidity risk premiumearnings announcementaccruals effectfactor investingsmart beta
+#0683
+Overvalued Stocks in China
+Monthly
+Equities
+15.94%
+21.30%
+stock pickingvolatility effectvaluereversalequity long shortvolume effectfactor investingsmart beta
+#0684
+Volatility Arbitrage Based on Breakeven Volatility
+Daily
+Equities
+6.80%
+4.50%
+volatility premiumfundamental analysismachine learning
+#0685
+Boosted Trees and Cryptocurrency Return Prediction
+Daily
+Crypto
+21.89%
+9.42%
+trend-followingrotational systemcryptocurrenciesalternative datamachine learning
+#0686
+Stock Issuance Effect
+Yearly
+Equities
+6.17%
+4.29%
+equity long shortfundamental analysissmart beta
+#0687
+Intangible Factor in US Equities
+Yearly
+Equities
+4.66%
+8.87%
+stock pickingvalueequity long shortfundamental analysisfactor investingsmart beta
+#0688
+Relative Value Factor in US
+Monthly
+Equities
+11.00%
+9.32%
+stock pickingvalueequity long shortfactor investing
+#0689
+Short Sellers and Cross-section of Country Indexes
+Weekly
+Equities
+13.22%
+32.75%
+country pickingshort selling
+#0690
+Implied Asset Return Factor
+Monthly
+Equities
+6.69%
+13.12%
+equity long shortgrowth stocksfactor investing
+#0691
+Implied Asset Volatility Factor
+Monthly
+Equities
+6.17%
+7.89%
+volatility effectequity long shortvolatility premiumfactor investing
+#0692
+Employee Satisfaction Factor
+Yearly
+Equities
+16.07%
+17.49%
+stock pickingalternative dataESG investing
+#0693
+Quarterly Investment Spikes Predict Stock Returns
+Monthly
+Equities
+3.91%
+7.91%
+stock pickingequity long shortfactor investingsmart beta
+#0694
+Carry in Corporate Bonds
+Monthly
+Bonds
+3.00%
+4.29%
+carry tradefactor investing
+#0695
+Size Factor in Corporate Bonds
+Monthly
+Bonds
+0.50%
+1.67%
+factor investing
+#0696
+Fair Spread Value Factor in Corporate Bonds
+Monthly
+Bonds
+2.10%
+2.10%
+valuefactor investingmachine learning
+#0697
+Multifactor Corporate Bond Strategy
+Monthly
+Bonds
+2.80%
+1.87%
+valuefactor investingmachine learningfactor allocationdiversification
+#0698
+Liquidity Volatility in Stocks
+Monthly
+Equities
+4.92%
+5.81%
+stock pickingequity long shortliquidity risk premiumfactor investingsmart beta
+#0699
+Stock and Bond Returns Predict Currency Returns
+Monthly
+Currencies
+1.45%
+7.34%
+FX anomalyforex system
+#0700
+Expected Options Return Predictability Using Machine Learning
+Monthly
+Equities
+27.55%
+5.54%
+market timingfundamental analysisalternative datamachine learning
+#0701
+Rebalancing Premium in Cryptocurrencies
+Daily
+Crypto
+7.65%
+2.62%
+short sellingcryptocurrenciesdiversification
+#0702
+Not-sold Insider Holdings Effect
+Monthly
+Equities
+5.41%
+10.55%
+stock pickinginsiders trading effectalternative data
+#0703
+Machine Learning in News Articles Predicts Stock Returns
+Daily
+Equities
+9.00%
+7.26%
+market timingstock pickingequity long shortalternative datamachine learning
+#0704
+Debt-Equity Spread in Equities
+Monthly
+Equities
+6.56%
+11.27%
+stock pickingequity long short
+#0705
+Debt-Equity Spread in Bonds
+Monthly
+Bonds
+5.28%
+6.09%
+fundamental analysisbond timing
+#0706
+Using Machine Learning to Identify Mispricing in European Stock Markets
+Monthly
+Equities
+7.44%
+10.61%
+stock pickingvalueequity long shortfundamental analysismachine learning
+#0707
+Benchmarks Portfolios with Decreasing Carbon Footprints
+Yearly
+Equities
+8.93%
+16.10%
+alternative dataESG investing
+#0708
+Anti-Matthew Effect
+Yearly
+Equities
+10.80%
+21.29%
+stock pickingequity long shortfundamental analysis
+#0709
+Short-selling Factor in Corporate Bonds
+Monthly
+Bonds
+7.20%
+7.40%
+bond timingshort selling
+#0710
+Quantile Curves and the VRP
+Monthly
+Equities
+32.92%
+10.39%
+volatility effectvolatility premiummachine learning
+#0711
+Extrapolation in China
+Weekly
+Equities
+43.72%
+17.37%
+stock pickingequity long shortsentiment
+#0712
+Sentiment Beta in China
+Monthly
+Equities
+5.79%
+11.35%
+stock pickingequity long shortsentiment tradingsmart beta
+#0713
+Synthetic Lending Rates Predict Subsequent Market Return
+Daily
+Equities
+15.47%
+19.52%
+market timingsentiment tradingshort sellingalternative data
+#0714
+Illiquidity Factor in China
+Monthly
+Equities
+10.31%
+11.22%
+stock pickingequity long shortliquidity risk premiumfactor investing
+#0715
+Investment Effect in China
+6 Months
+Equities
+10.95%
+9.38%
+stock pickingequity long shortfactor investingsmart beta
+#0716
+Accruals Seasonality
+Monthly
+Equities
+6.76%
+7.62%
+stock pickingequity long shortearnings announcementfactor investing
+#0717
+Predicting the Delta-Hedged Option Returns Using LASSO
+Monthly
+Equities
+30.00%
+6.89%
+fundamental analysisalternative datamachine learning
+#0718
+Geopolitical Risk and Commodities
+Monthly
+Commodities
+8.21%
+8.62%
+sentiment tradingbeta factoralternative datasentiment
+#0719
+Cross-sectional Momentum in Large Cryptos
+Weekly
+Crypto
+2.85%
+1.83%
+momentumcryptocurrencies
+#0720
+Reversal in Small Cryptos
+Weekly
+Crypto
+20.56%
+8.58%
+reversalcryptocurrencies
+#0721
+Growth of Addresses with Balance Factor in Cryptos
+Weekly
+Crypto
+2.10%
+1.96%
+fundamental analysiscryptocurrencies
+#0722
+Price-based Value in Cryptocurrencies
+Weekly
+Crypto
+3.00%
+2.87%
+valuecryptocurrencies
+#0723
+The Realized Jumps Predict Cryptocurrency Returns
+Daily
+Crypto
+54.81%
+12.36%
+volatility effectcryptocurrencies
+#0724
+Stocks of Underperforming Funds and Idiosyncratic Volatility
+Monthly
+Equities
+20.27%
+19.14%
+stock pickingvolatility effectequity long shortsmart beta
+#0725
+Implied Volatility Effect in Corporate Bonds
+Monthly
+Bonds
+7.44%
+7.70%
+bond timingfactor investing
+#0726
+Technical Indicators Predict Cross-Sectional Expected Stock Returns
+Monthly
+Equities
+41.91%
+11.78%
+momentumtrend-followingstock pickingequity long shortmomentum in stocksvolume effect
+#0727
+VIX Put-Call Volume Ratio
+Daily
+Equities
+50.02%
+43.80%
+market timingvolatility effectshort selling
+#0728
+Payroll News Timing in FX
+Intraday
+EquitiesCurrencies
+7.50%
+10.00%
+market timingFX anomalyforex systemfundamental analysis
+#0729
+Reversal Effect in India
+Monthly
+Equities
+47.74%
+36.21%
+reversalequity long short
+#0730
+Volatility Decomposition and Mutual Fund Returns
+Monthly
+Equities
+14.52%
+32.33%
+volatility effectfund pickingsmart beta
+#0731
+Stock Trading Rule that Produces Higher Returns with Lower Risk
+Monthly
+EquitiesBonds
+6.78%
+trend-followingrotational system
+#0732
+Predicting Performance Using Consumer Big Data
+Monthly
+Equities
+9.29%
+14.29%
+stock pickingequity long shortalternative data
+#0733
+Hedging Pressure Predicts Commodity Option Returns
+Monthly
+Commodities
+119.10%
+105.45%
+liquidity risk premiumalternative data
+#0734
+Empirical Asset Pricing via Machine Learning
+Monthly
+Equities
+21.55%
+14.30%
+equity long shortcountry pickingmachine learning
+#0735
+Butterfly implied returns
+Monthly
+Equities
+2.67%
+7.27%
+stock pickingequity long shortsmart beta
+#0736
+Expected profitability in UK Stocks
+Monthly
+Equities
+3.49%
+2.58%
+stock pickingequity long shortvolatility premium
+#0737
+When Hedge and Non-Hedge Funds Disagree
+Quarterly
+Equities
+6.93%
+7.29%
+stock pickingequity long shortalternative data
+#0738
+Mean Variance Factor Timing
+Monthly
+Equities
+56.27%
+17.05%
+factor investingsmart betafactor allocation
+#0739
+Betting Against Beta in India
+Monthly
+Equities
+18.88%
+16.02%
+volatility effectbeta factorfactor investingsmart beta
+#0740
+Low Value Factor in India
+Monthly
+Equities
+16.47%
+22.65%
+valuefactor investingsmart beta
+#0741
+Combination of the Long-term and the Short-term Reversal in China
+Monthly
+Equities
+13.48%
+24.20%
+reversalequity long shortsmart beta
+#0742
+Risk-Reversal Options Strategy
+Monthly
+Equities
+8.90%
+11.10%
+volatility effectsmart beta
+#0743
+Gordon Growth Fair Value Model
+Monthly
+Equities
+14.63%
+11.89%
+stock pickingvaluefundamental analysisalternative data
+#0744
+The Halloween Effect Within Long-term Reversal
+Monthly
+Equities
+7.26%
+12.16%
+market timingreversalequity long short
+#0745
+Value and Profitability in Chinese Equities
+Monthly
+Equities
+8.73%
+9.90%
+valueequity long shortfundamental analysisfactor investingsmart beta
+#0746
+Combined Value and Profitability in US and Chinese Equities
+Monthly
+Equities
+13.22%
+15.93%
+valuefundamental analysisfactor investingsmart beta
+#0747
+Market Uncertainty Resolution Following the Unemployment Announcements
+Daily
+Bonds
+2.85%
+0.75%
+market timing
+#0748
+Bear Beta Factor Investing Strategy
+Monthly
+Equities
+12.55%
+23.57%
+equity long shortbeta factorfactor investing
+#0749
+Climate Policy Uncertainty and the Cross-Section of Stock Returns
+Monthly
+Equities
+7.04%
+9.30%
+equity long shortESG investing
+#0750
+Return range predicts stock returns
+Monthly
+Equities
+61.40%
+40.17%
+volatility effectequity long short
+#0751
+Consumer Spending and the Cross-Section of Stock Returns
+Monthly
+Equities
+13.12%
+9.98%
+sector pickingequity long shortalternative data
+#0752
+Do Stock Returns Really Decrease With Default Risk?
+Yearly
+Equities
+13.42%
+16.57%
+stock pickingequity long shortcountry picking
+#0753
+Overnight Seasonality in Bitcoin
+Intraday
+Crypto
+33.00%
+20.93%
+seasonalitycryptocurrencies
+#0754
+Betting Against Correlation in S&P500 Stocks
+Monthly
+Equities
+7.32%
+27.48%
+equity long shortbeta factor
+#0755
+Mean-reversion and Trend-Following Based on MIN and MAX in BTC
+Intraday
+Crypto
+98.43%
+47.75%
+momentumreversalcryptocurrencies
+#0756
+The 5-Month Prediction Pattern in the US Stock Market Returns
+Monthly
+Equities
+10.50%
+11.02%
+market timingseasonalitymomentum in stocksgrowth stocks
+#0757
+Market Timing with Merton Rule for Earnings Yield
+Monthly
+EquitiesBonds
+10.02%
+9.10%
+market timingfundamental analysisfactor investing
+#0758
+Credit Risk Factor in Bonds
+Monthly
+Bonds
+4.41%
+6.27%
+factor investing
+#0759
+Cross-Stock Return Predictability
+Monthly
+Equities
+5.54%
+7.39%
+momentumtrend-followingequity long short
+#0760
+The U.S. Dollar and Variance Risk Premia Imbalances
+Monthly
+Currencies
+4.10%
+8.20%
+FX anomalyvolatility premium
+#0761
+Gold to Oil Ratio Predicts Aggregate Stock Returns
+Monthly
+EquitiesBonds
+7.02%
+9.70%
+asset class pickingmarket timing
+#0762
+Oil Beta Uncertainty and Global Stock Returns
+Monthly
+Equities
+10.17%
+15.38%
+rotational systemequity long shortbeta factor
+#0763
+Conditional FX Correlation Risk
+Monthly
+Currencies
+2.91%
+8.32%
+FX anomalyforex system
+#0764
+Overconfidence Factor in China
+Monthly
+Equities
+16.49%
+11.78%
+equity long shortfactor investingsmart beta
+#0765
+Credit-Informed Tactical Asset Allocation
+Daily
+Equities
+18.10%
+22.50%
+asset class pickingmarket timingequity long short
+#0766
+Sentiment Factor in the Cross-Section of Commodity Futures
+Monthly
+Commodities
+7.26%
+9.60%
+sentiment tradingalternative datafactor investing
+#0767
+Institutional Ownership Enhances Macro Factor Returns
+Quarterly
+Equities
+8.21%
+14.50%
+equity long shortbeta factorfactor investing
+#0768
+Retail Ownership Enhances Non-Macro Factor Returns
+Quarterly
+Equities
+10.16%
+16.00%
+equity long shortbeta factorfactor investing
+#0769
+Disposition Effect in China
+Yearly
+Equities
+20.41%
+36.70%
+equity long shortfactor investingsmart beta
+
+
+#0770
+Coreversal in Chinese Equities
+Monthly
+Equities
+12.42%
+13.75%
+market timingreversalequity long shortarbitragefactor investing
+#0771
+Enduring Momentum in Stocks
+6 Months
+Equities
+26.31%
+38.21%
+momentumequity long shortmomentum in stocks
+#0772
+Geopolitical Risk and the Cross-Section of Cryptocurrency Returns
+Weekly
+Crypto
+187.05%
+39.80%
+cryptocurrenciessmart beta
+#0773
+Changes in Ownership Breadth Predict Performance of Equity Factors
+Monthly
+Equities
+8.34%
+17.03%
+insiders trading effect
+#0774
+Afternoon Reversal Trading Strategy
+Monthly
+Equities
+9.85%
+8.44%
+reversalequity long short
+#0775
+Hierarchical Stock Momentum
+Monthly
+Equities
+10.58%
+12.87%
+momentummomentum in stocksmachine learningdiversification
+#0776
+Max Pain Strategy - Stock Return Predictability at Options Expiration
+Weekly
+Equities
+4.91%
+7.97%
+market timingequity long short
+#0777
+Combined Momentum and Nearness to 52-week High
+Monthly
+Equities
+31.30%
+31.08%
+momentumequity long shortfactor investing
+#0778
+Absolute Delta Beta Strategy in Chinese Equities
+Monthly
+Equities
+8.23%
+54.87%
+equity long shortbeta factorfactor investingsmart beta
+#0779
+Factor Momentum in the Chinese Stock Market
+Monthly
+Equities
+7.02%
+8.78%
+momentumfactor investing
+#0780
+ESG Exclusion Premium Factor
+Monthly
+Equities
+9.00%
+11.67%
+equity long shortfactor investingsmart betaESG investing
+#0781
+Enhanced Returns of LGBT CEOs
+Daily
+Equities
+16.35%
+34.88%
+stock pickingESG investingsentiment
+#0782
+High-to-Price Factor in Commodities
+Monthly
+Commodities
+9.69%
+17.16%
+momentum
+#0783
+Cash Hedged Momentum
+Monthly
+Equities
+13.11%
+20.17%
+momentumstock pickingequity long shortmomentum in stocksfundamental analysisbeta factorfactor investingsmart beta
+#0784
+Option Volatility Spread Factor Predicts Option Returns
+Monthly
+Equities
+12.82%
+6.78%
+volatility effect
+#0785
+Intraday VIX Betas Predict Stocks Returns
+Monthly
+Equities
+9.77%
+12.30%
+stock pickingvolatility effectreversalequity long shortbeta factorfactor investingsmart beta
+#0786
+Option Trading and Returns versus the 52-Week High
+Monthly
+Equities
+8.47%
+11.05%
+equity long shortvolatility premium
+#0787
+Option Trading and Returns versus the 52-Week Low
+Monthly
+Equities
+8.34%
+7.40%
+equity long shortvolatility premium
+#0788
+Quality at Reasonable Price
+Yearly
+Equities
+18.60%
+6.60%
+fundamental analysisfactor investing
+#0789
+Salience Theory and Cryptocurrency Returns
+Monthly
+Crypto
+280.10%
+45.30%
+reversalsentiment tradingcryptocurrencies
+#0790
+International Trade Momentum
+Monthly
+Equities
+20.67%
+20.05%
+momentumequity long shortalternative datafactor investing
+#0791
+Institutional Equity Momentum in China
+Monthly
+Equities
+21.60%
+24.22%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart betasentiment
+#0792
+Retail Equity Reversal in China
+Monthly
+Equities
+27.83%
+26.68%
+stock pickingreversalequity long shortfactor investingsmart betasentiment
+#0793
+Sovereign CDS Currency Factor
+Monthly
+Currencies
+5.00%
+5.74%
+FX anomalyforex systemsentiment
+#0794
+24-Hour Reversal in Cryptocurrencies
+Intraday
+Crypto
+53.80%
+15.28%
+reversal
+#0795
+Lunar Monthly Effect in Chinese Stocks
+Monthly
+Equities
+4.46%
+5.08%
+market timingseasonality
+#0796
+Inflation Hedging Using Online Prices
+Daily
+Bonds
+2.60%
+2.40%
+rotational systemmarket timingsentiment tradingbond timingsentiment
+#0797
+Improved Post-Earnings Announcement Drift with NLP Analysis
+Weekly
+Equities
+5.89%
+7.75%
+stock pickingearnings announcementtrading earningsfactor investingsmart beta
+#0798
+Cash Holdings Effect and Net Operating Assets
+Monthly
+Equities
+9.25%
+17.26%
+stock pickingequity long shortaccruals effectfactor investingsmart beta
+#0799
+Machine Learning Volatility Targeting of Equity Indices
+Weekly
+EquitiesBonds
+14.49%
+23.04%
+asset class pickingmarket timingmachine learning
+#0800
+Conservative Formula in India
+Quarterly
+Equities
+16.80%
+22.60%
+momentumvolatility effectmomentum in stocks
+#0801
+High Disagreement Predicts Hedge Fund Returns
+Monthly
+Equities
+10.49%
+22.68%
+fund picking
+#0802
+Fibonacci Supports and Resistances in Cross-Sectional Stock Trading
+Weekly
+Equities
+37.35%
+41.85%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0803
+Momentum and (Un)Informed Flows in FX market
+Daily
+Currencies
+11.74%
+11.53%
+momentumFX anomalyforex system
+#0804
+Skewness and 52-Week Highs in China
+Monthly
+Equities
+13.08%
+11.49%
+reversalequity long shortfactor investingsmart beta
+#0805
+Turn of the Month Effect in Cryptocurencies
+Daily
+Crypto
+29.83%
+24.71%
+market timingseasonalitycryptocurrencies
+#0806
+Employee Sentiment and Stock Returns
+Monthly
+Equities
+7.50%
+10.00%
+stock pickingsentiment tradingalternative datafactor investingsentiment
+#0807
+Production Complementarity Peer Momentum
+Monthly
+Equities
+9.90%
+19.34%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0808
+Market Timing with Relative Sentiment
+Weekly
+Equities
+12.11%
+12.88%
+market timingsentiment tradingalternative datasentiment
+#0809
+Value Effect in Unprofitable Firms
+Monthly
+Equities
+14.84%
+36.55%
+stock pickingvalueequity long shortfundamental analysisfactor investingsmart beta
+#0810
+Integrating ESG into Fixed Income Portfolios
+Monthly
+Bonds
+4.23%
+3.93%
+bond timingalternative datafactor investingsmart betaESG investing
+#0811
+Intraday Closing Momentum in Futures
+Intraday
+EquitiesBondsCommoditiesCurrencies
+5.47%
+3.42%
+momentummarket timingseasonality
+#0812
+Patent Intensity Factor in Equities
+Monthly
+Equities
+6.97%
+15.61%
+stock pickingequity long shortalternative datafactor investing
+#0813
+Option Gamma Predicts Stock Returns
+Monthly
+Equities
+8.99%
+11.23%
+stock pickingvolatility effectequity long shortvolatility premiumfactor investingsmart beta
+#0814
+Post Earnings Announcement Drift in China
+Daily
+Equities
+4.69%
+7.66%
+seasonalitystock pickingequity long shortfundamental analysissentiment tradingearnings announcementfactor investingsmart betasentiment
+#0815
+Arbitraging Levered ETFs
+Monthly
+Equities
+4.92%
+2.56%
+pairs tradingarbitragespread trading
+#0816
+Momentum Based on Fractional-Difference Filter
+Daily
+Equities
+20.30%
+22.10%
+momentumreversalequity long shortmomentum in stocks
+#0817
+Text-Based Recession Detection Strategy
+Monthly
+Equities
+8.78%
+13.52%
+market timingsentiment tradingalternative datamachine learningsentiment
+#0818
+ETF Flows Predict Subsequent ETF Performance
+Intraday
+EquitiesBondsCommoditiesREITsCurrencies
+9.58%
+8.48%
+arbitrageliquidity risk premiumvolume effectalternative data
+#0819
+Arbitrage Comovement Effect in ETFs
+Monthly
+EquitiesBondsCommoditiesREITsCurrencies
+8.07%
+8.80%
+arbitragealternative data
+#0820
+Enhanced Betting Against Beta with Stochastic Dominance
+Monthly
+Equities
+9.01%
+10.57%
+stock pickingequity long shortbeta factorfactor investingsmart beta
+#0821
+Accrual Effect in Family Firms
+Yearly
+Equities
+18.70%
+stock pickingequity long shortaccruals effectfactor investingsmart beta
+#0822
+Negative ESG Premium in Chinese Stock Market
+Yearly
+Equities
+8.99%
+13.35%
+stock pickingequity long shortalternative datafactor investingsmart betaESG investing
+#0823
+Machine Learning and the Cross-Section of Cryptocurrency Returns
+Weekly
+Crypto
+11.09%
+cryptocurrenciesmachine learning
+#0824
+Diversified Machine Learning in Emerging Markets
+Monthly
+Equities
+2.80%
+5.32%
+stock pickingfundamental analysisfactor investingsmart betamachine learning
+#0825
+Hedging Factor in Cryptocurrencies
+Weekly
+Crypto
+4.68%
+market timingcryptocurrenciesalternative datasentiment
+#0826
+News Sentiment and Equity Returns - BERT ML Model
+Daily
+Equities
+53.34%
+41.35%
+stock pickingequity long shortsentiment tradingalternative datafactor investingsmart betamachine learningsentiment
+#0827
+A Machine Learning Approach to Stock Returns Prediction in China
+Monthly
+Equities
+26.68%
+23.88%
+stock pickingequity long shortmomentum in stocksfundamental analysisfactor investingsmart betamachine learning
+#0828
+Time-Series Momentum Portfolios with Deep Multi-Task Learning
+Monthly
+EquitiesBondsCommoditiesCurrencies
+7.90%
+9.75%
+momentummachine learning
+#0829
+Environmental Machine Learning Strategy in Equities
+Monthly
+Equities
+16.08%
+12.86%
+equity long shortfactor investingsmart betamachine learningESG investing
+#0830
+Size Factor vs. Monetary Policy Regime
+Monthly
+Equities
+6.27%
+10.13%
+market timingsmall capfactor investingfactor allocation
+#0831
+Fund Flows Predict Emerging Markets FX Returns
+Weekly
+Currencies
+8.89%
+8.22%
+FX anomalyforex systemalternative data
+#0832
+Presidential Fiscal News and Cross-section of Stock Returns
+Monthly
+Equities
+6.17%
+15.05%
+stock pickingequity long shortsentiment tradingalternative datafactor investingsmart betasentiment
+#0833
+Skewness factor in Chinese Equities
+Monthly
+Equities
+22.58%
+23.03%
+equity long shortfactor investingsmart beta
+#0834
+VIX Beta Factor in Chinese Equities
+Monthly
+Equities
+27.88%
+19.95%
+volatility effectequity long shortvolatility premiumfactor investing
+#0835
+Reversal After Voluntary Disclosures
+Quarterly
+Equities
+12.20%
+68.77%
+stock pickingequity long shortgrowth stocks
+#0836
+Relative Sentiment and Machine Learning for Tactical Asset Allocation
+Monthly
+Equities
+15.90%
+11.04%
+market timingcountry pickingsentiment tradingmachine learningsentiment
+#0837
+Patent Innovation Factor in Stocks
+Monthly
+Equities
+5.54%
+11.83%
+stock pickingequity long shortalternative datafactor investingsmart betamachine learning
+#0838
+Overnight Reversal and the Asymmetric Reaction to News
+Intraday
+Equities
+47.52%
+36.27%
+stock pickingreversalequity long shortsentiment tradingalternative datamachine learningsentiment
+
+
+#0849
+Keller's & Keunig's Defensive Asset Allocation
+Monthly
+EquitiesBondsCommoditiesREITs
+16.00%
+momentumasset class pickingtrend-following
+#0850
+Keller's & van Putten's Generalized Momentum and Flexible Asset Allocation
+Monthly
+EquitiesBondsCommoditiesREITsCurrencies
+14.20%
+8.50%
+momentumasset class pickingtrend-followingfactor investingfactor allocation
+#0851
+Adaptive Asset Allocation v.2
+Monthly
+EquitiesBondsCommoditiesREITs
+8.02%
+7.61%
+momentumasset class pickingtrend-following
+#0852
+Lethargic Asset Allocation
+Monthly
+EquitiesBondsCommoditiesREITs
+10.50%
+8.50%
+momentumasset class pickingtrend-followingmarket timingbond timing
+#0853
+Resilient Asset Allocation
+Monthly
+EquitiesBondsCommoditiesREITs
+12.30%
+8.90%
+momentumasset class pickingtrend-followingmarket timingbond timing
+#0854
+Bold Asset Allocation
+Monthly
+EquitiesBondsCommoditiesREITs
+14.60%
+8.50%
+momentumasset class pickingtrend-followingmarket timingbond timing
+#0855
+Avoid Equity Bear Markets with a Market Timing Strategy
+Monthly
+Equities
+6.59%
+11.87%
+trend-followingmarket timingterm spread
+#0856
+Forecasted Unemployment Beta Predicts the Cross-Section of Stock Returns
+Monthly
+Equities
+5.54%
+16.10%
+equity long shortfactor investing
+#0857
+Crypto Perpetual Futures Arbitrage
+Monthly
+Crypto
+7.58%
+4.40%
+market timingarbitragecryptocurrencies
+#0858
+Contrarian VIX strategy
+Monthly
+Equities
+10.80%
+5.59%
+market timingvolatility premium
+#0859
+Earnings Delays and Advances Predict Stock Returns
+Daily
+Equities
+8.00%
+6.68%
+stock pickingequity long shortearnings announcementtrading earnings
+#0860
+Machine learning Analysts’ Sentiment Industry Factor
+Monthly
+Equities
+8.21%
+15.97%
+sector pickingalternative datamachine learning
+#0861
+Bond ETF arbitrage with Machine Learning
+Daily
+Bonds
+17.64%
+5.31%
+reversalarbitragebond timingmachine learning
+#0862
+Switching Between Momentum and Reversal Strategies Based on Market Volatility
+Monthly
+Equities
+19.00%
+20.91%
+momentumstock pickingvolatility effectreversalequity long shortmomentum in stocksfactor allocation
+#0863
+Persistence of Abnormal Trading Volume Effect
+Monthly
+Equities
+20.27%
+15.69%
+stock pickingvolume effectfactor investing
+#0864
+Short Covering Factor
+Monthly
+Equities
+6.55%
+7.17%
+stock pickingreversalequity long shortliquidity risk premiumshort sellingalternative datafactor investingsmart beta
+#0865
+Pairs Trading with Wavelet Transform
+Daily
+Equities
+36.90%
+10.00%
+stock pickingequity long shortpairs trading
+#0866
+Narrative-Based Asset Allocation
+Daily
+Equities
+18.13%
+14.38%
+asset class pickingstock pickingequity long shortsentiment tradingalternative datamachine learningsentiment
+#0867
+Cross Industry Dispersion Factor
+Monthly
+Equities
+6.04%
+13.67%
+sector pickingstock pickingequity long shortbeta factor
+#0868
+Industry-Relative Stock Beta in Chinese Equities
+Monthly
+Equities
+12.55%
+19.04%
+stock pickingequity long shortbeta factor
+#0869
+Market Timing Corporate Bonds with Machine learning - Random Forests
+Monthly
+Bonds
+19.70%
+11.45%
+bond timingmachine learning
+#0870
+Timing Carry Trade with Central Banks’ Announcements
+Daily
+Currencies
+4.47%
+4.88%
+market timingseasonalitycarry tradeFX anomalyforex system
+#0871
+Traditional Carry in Cryptocurrencies
+Weekly
+Crypto
+46.71%
+60.68%
+carry tradecryptocurrencies
+#0872
+Machine Learning - Random Forests Predicts Cross Section of Corporate Bonds
+Monthly
+Bonds
+24.70%
+7.24%
+machine learning
+#0873
+Timing the Factor Zoo via Deep Learning: Evidence from China
+Daily
+Equities
+59.00%
+42.00%
+equity long shortfactor investingsmart betamachine learningfactor allocation
+#0874
+Commodity Pairs Trading in China using Machine Learning
+Daily
+Commodities
+13.84%
+7.64%
+pairs tradingarbitrage
+#0875
+Trend-Based Machine Learning Crypto Strategy
+Weekly
+Crypto
+12.60%
+18.26%
+momentumtrend-followingcryptocurrenciesmachine learning
+#0876
+Momentum (and Value) Enhanced by Institutional Prediction
+Monthly
+Equities
+5.58%
+12.56%
+stock pickingequity long shortfundamental analysisalternative datafactor investingsmart betamachine learningsentiment
+#0877
+Weighted Frequency of Losses
+Monthly
+Equities
+11.90%
+12.34%
+stock pickingequity long shortfactor investingsmart beta
+#0878
+Factor Ownership Predicts Factor Returns
+Monthly
+Equities
+16.22%
+17.08%
+stock pickingequity long shortfundamental analysisfactor investingsmart betafactor allocationdiversification
+#0879
+Implied Put-Call Volatility Spread in US Equities
+Monthly
+Equities
+6.29%
+5.09%
+stock pickingvolatility effectequity long shortfactor investingsmart beta
+#0880
+Co-Skewness Enhanced Momentum
+Monthly
+Equities
+23.18%
+14.87%
+market timingstock pickingreversalequity long shortmomentum in stockssmart betafactor allocation
+#0881
+How Satellite Launches Influence Stock Returns
+Daily
+Equities
+17.20%
+20.26%
+market timingseasonalitystock pickingequity long shortsentiment tradingalternative datafactor investingsmart betafactor allocationsentiment
+#0882
+Opening Range Breakout (ORB) Strategy in QQQ
+Intraday
+Equities
+31.00%
+27.68%
+trend-followingmarket timing
+#0883
+High-Momentum in Liquid Cryptocurrencies
+Weekly
+Crypto
+13.61%
+6.49%
+momentumcryptocurrenciesfactor investing
+#0884
+Predicting Stock Outperformance by Machine Learning
+Monthly
+Equities
+15.25%
+12.48%
+stock pickingequity long shortfactor investingmachine learning
+#0885
+Network Diversification for a Robust Portfolio Allocation
+Monthly
+EquitiesBondsCommoditiesREITs
+4.92%
+4.95%
+asset class pickingmachine learning
+#0886
+Announcement-Adjusted Industry-Relative Reversal Factor
+Monthly
+Equities
+13.76%
+10.30%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0887
+Pairs Trading in Cryptocurrencies
+Daily
+Crypto
+70.40%
+39.76%
+pairs tradingarbitragecryptocurrencies
+#0888
+Financial Integration and Currency Returns
+Monthly
+Currencies
+5.28%
+11.00%
+FX anomalyforex systemalternative datafactor investingsentiment
+#0889
+Improved Cross-Asset Time-Series Momentum I-XTSM
+Quarterly
+EquitiesBonds
+20.82%
+28.96%
+market timing
+#0890
+Customer Momentum
+Monthly
+Equities
+13.49%
+24.09%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0891
+Technical Analysis Sentiment Predicts Stock Returns
+Yearly
+Equities
+10.16%
+9.60%
+stock pickingequity long shortsentiment tradingalternative datafactor investingsmart betasentiment
+#0892
+Shorting Companies With the Most Overpaid CEOs
+Yearly
+Equities
+5.41%
+8.55%
+stock pickingsentiment tradingshort sellingESG investingsentiment
+#0893
+Intangibles-Adjusted Profitability Factor
+Monthly
+Equities
+4.16%
+8.47%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0894
+Term Spread and Term Premium Predict US Government Bonds Returns
+Monthly
+Bonds
+8.08%
+7.45%
+market timingbond timing
+#0895
+Listen Closely: Using Vocal Cues to Predict Future Earnings
+Yearly
+Equities
+17.03%
+stock pickingearnings announcementalternative datamachine learningsentiment
+#0896
+Expected Change in Liquidity Forecasts Stocks' Returns
+Monthly
+Equities
+9.64%
+14.20%
+stock pickingequity long shortliquidity risk premiumfactor investingmachine learning
+#0897
+Using Wavelet Transformation to Predict S&P 500 Performance
+Monthly
+Equities
+3.82%
+18.17%
+market timingmachine learning
+#0898
+Convenience Yield Risk Factor Predicts Commodity Futures Returns
+Monthly
+Commodities
+6.93%
+15.07%
+rotational systemvolatility effectfactor investing
+#0899
+Conditional Currency Momentum Portfolios
+Monthly
+Currencies
+5.03%
+9.59%
+momentumFX anomalyforex systemfactor allocation
+#0900
+Gamma Factor Premium
+Monthly
+Equities
+34.09%
+17.89%
+market timingstock pickingequity long shortfactor investingfactor allocationdiversification
+#0901
+The High Resolution Term Structure of Stock Return Predictability
+Monthly
+Equities
+18.30%
+22.06%
+market timingseasonalitystock pickingequity long shortfactor investingsmart beta
+#0902
+Arbitrage Opportunities from MSCI Index Reconstitutions In Asian Stock Markets
+Daily
+Equities
+10.10%
+seasonalitystock pickingequity long shortarbitrage
+#0903
+Technical Sentiment Index in Cryptocurrencies
+Weekly
+Crypto
+37.02%
+26.67%
+cryptocurrenciesalternative datamachine learning
+#0904
+Fundamental Sentiment Index in Cryptocurrencies
+Weekly
+Crypto
+37.20%
+30.49%
+cryptocurrenciesmachine learning
+#0905
+Exploring the Factor ZOO with a Machine-Learning Portfolio
+Monthly
+Equities
+30.00%
+12.00%
+stock pickingequity long shortfundamental analysisfactor investingsmart betamachine learningfactor allocationdiversification
+#0906
+Using ChatGPT to Forecast Stock Price Movements
+Daily
+Equities
+110.00%
+28.94%
+stock pickingequity long shortsentiment tradingalternative datamachine learningsentiment
+#0907
+Estimating Hedge Funds’ Returns Out of Sample
+Yearly
+Equities
+8.00%
+15.38%
+fund pickingbeta factoralternative data
+#0908
+Tail Risk Hedging with Cheap Options
+Monthly
+Equities
+7.64%
+12.62%
+market timingvolatility effectfactor allocationdiversification
+#0909
+Deep Momentum
+Monthly
+Equities
+36.00%
+19.35%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart betamachine learning
+#0910
+The Term Structure of Machine Learning Alpha
+Quarterly
+Equities
+5.17%
+9.97%
+momentumstock pickingvalueequity long shortmomentum in stocksfundamental analysisfactor investingsmart betamachine learningfactor allocation
+#0911
+Multi Risk Premia Strategy
+Quarterly
+EquitiesBondsCommoditiesCurrencies
+8.53%
+6.62%
+momentumcarry tradevaluefactor investingfactor allocationdiversification
+#0912
+Forward Variance Factor Predicts Stock Returns
+Monthly
+Equities
+3.48%
+8.29%
+market timingvolatility effect
+#0913
+Double Bottom Country Trading Strategy
+Daily
+Equities
+7.79%
+16.57%
+rotational systemreversalcountry picking
+#0914
+Bitcoin Leads Altcoins on Intraday Basis
+Intraday
+Crypto
+10.21%
+3.36%
+momentumcryptocurrencies
+#0915
+On-Chain Cashflows and the Cross-Section of Cryptocurrency Returns
+Daily
+Crypto
+10.95%
+16.99%
+cryptocurrenciesalternative datafactor investing
+#0916
+Intangibles Intensity in 10-K Reports
+Yearly
+Equities
+3.61%
+12.38%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0917
+Low-Risk Anomaly in India
+Monthly
+Equities
+42.63%
+33.56%
+stock pickingvolatility effectequity long shortfactor investingsmart beta
+#0918
+Seasonality in Equity Long-Short Factor Strategies
+Monthly
+Equities
+2.92%
+5.51%
+seasonalitystock pickingequity long shortfundamental analysisfactor investingsmart betafactor allocation
+#0919
+Improved Dispersion Trading
+Daily
+Equities
+8.30%
+10.00%
+volatility effectarbitragevolatility premium
+#0920
+Financial Uncertainty Explains Cryptocurrency Returns
+Monthly
+Crypto
+20.70%
+10.69%
+sentiment tradingcryptocurrenciesfactor investingsmart betasentiment
+#0921
+Measuring Firm Quality Using Machine Learning
+Monthly
+Equities
+29.53%
+31.75%
+stock pickingequity long shortfundamental analysisfactor investingsmart betamachine learning
+#0922
+Price-Based Quantitative Strategy for Country Valuation
+Quarterly
+Equities
+2.39%
+14.78%
+rotational systemvaluereversalcountry pickingfactor investingsmart beta
+#0923
+Intraday Market Return Predictability Based on the Factor ZOO
+Intraday
+Equities
+17.45%
+16.78%
+stock pickingequity long shortliquidity risk premiumfactor investingsmart betamachine learning
+#0924
+Profitability Context and the Cross-Section of Stock Returns
+Monthly
+Equities
+6.80%
+10.46%
+stock pickingequity long shortfundamental analysisalternative datafactor investingsmart betamachine learning
+#0925
+Option Factor Momentum
+Monthly
+Equities
+13.62%
+14.93%
+momentumvolatility effectvolatility premiumfactor investingfactor allocation
+#0926
+Overnight Effect during High Volatility Days in Bitcoin
+Intraday
+Crypto
+37.26%
+24.63%
+market timingseasonalityvolatility effectcryptocurrencies
+#0927
+Mean-Reversion within Cluster Industries
+Monthly
+Equities
+6.40%
+6.50%
+sector pickingreversalfundamental analysisfactor investingsmart betamachine learning
+#0928
+Using Machine Learning to Predict Stock Earnings
+Daily
+Equities
+51.00%
+fundamental analysisearnings announcementtrading earningsmachine learning
+#0929
+Machine Learning ESG Strategy
+Monthly
+Equities
+16.10%
+12.85%
+stock pickingequity long shortalternative datafactor investingsmart betamachine learningESG investing
+#0930
+Influence of Liquidity, Institutional Ownership & Lottery Effect on Stocks
+Yearly
+Equities
+10.56%
+9.85%
+stock pickingequity long shortliquidity risk premiumsentiment tradingfactor investingsmart betasentiment
+#0931
+Forecasting Crude Oil Prices
+Monthly
+Commodities
+4.65%
+19.38%
+market timingsentiment
+#0932
+Timing Betting-Against-Beta (BAB) Anomaly v.2
+Monthly
+Equities
+12.80%
+10.00%
+market timingstock pickingvolatility effectequity long shortbeta factorfactor investingsmart betafactor allocationsentiment
+#0933
+The Effect of Market Returns on Factor Returns
+Monthly
+Equities
+14.57%
+10.65%
+stock pickingreversalequity long shortfundamental analysisfactor investingsmart betadiversification
+#0934
+Aggregate Call Order Imbalance Strategy
+Monthly
+Equities
+4.79%
+4.52%
+market timingvolatility effectvolume effect
+#0935
+Characteristics Similarity of the Return-Sorted Portfolios
+Monthly
+Equities
+8.47%
+10.60%
+momentumstock pickingvalueequity long shortmomentum in stocksfundamental analysisfactor investingsmart betadiversification
+#0936
+Aggregate Momentum Spillover Factor Predicts Stock Returns
+Monthly
+Equities
+4.13%
+6.56%
+momentummarket timingmachine learning
+#0937
+Headquarter Location Effect
+Monthly
+Equities
+8.52%
+14.41%
+stock pickingequity long shortalternative datafactor investingsmart beta
+#0938
+Daily Momentum in Chinese Equities
+Daily
+Equities
+57.96%
+31.03%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0939
+Monthly Reversal in Chinese Equities
+Monthly
+Equities
+13.09%
+22.25%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0940
+Multireference Alignment for Lead-Lag Detection in Stocks
+Daily
+Equities
+9.83%
+10.92%
+stock pickingequity long shortfactor investingsmart betamachine learning
+#0941
+Intraday Stock Market Predictability with Machine Learning
+Intraday
+Equities
+10.40%
+10.00%
+stock pickingequity long shortarbitragemachine learning
+#0942
+MACD-V: Volatility Normalised Momentum
+Daily
+Equities
+13.68%
+market timing
+#0943
+Mercury Retrograde Astrology Trading Strategy in Chinese Market
+Daily
+Equities
+22.12%
+40.28%
+market timing
+#0944
+Overnight-Intraday Reversal in Futures
+Intraday
+Equities
+59.98%
+10.87%
+reversal
+#0945
+Military Expenditures and Performance of the Stock Markets
+Yearly
+Equities
+2.02%
+2.91%
+country pickingalternative data
+#0946
+Industry-adjusted Reversal
+Monthly
+Equities
+4.85%
+9.86%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0947
+Abnormal Overnight Earnings Return Factor in China
+Daily
+Equities
+9.17%
+9.86%
+stock pickingequity long shortfundamental analysisearnings announcementtrading earningsfactor investing
+#0948
+Illiquid Bitcoin Options
+Daily
+Crypto
+186.15%
+301.63%
+volatility effectvolatility premiumcryptocurrencies
+#0949
+The 52-Week High Effect in India
+Monthly
+Equities
+20.39%
+30.22%
+momentumtrend-followingstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#0950
+Skewness Risk Premia and the Cross-Section of Currency Returns
+Monthly
+Currencies
+5.64%
+7.03%
+FX anomalyforex system
+#0951
+Hedging Momentum Crashes
+Monthly
+Equities
+16.93%
+20.33%
+momentumstock pickingvolatility effectmomentum in stocksfactor investingsmart betafactor allocation
+#0952
+Cash Operating Profitability Predicts Earnings Announcement Returns
+Daily
+Equities
+68.81%
+50.57%
+stock pickingequity long shortfundamental analysisearnings announcementtrading earnings
+#0953
+Stock Momentum Volatility Switching Strategy
+Monthly
+Equities
+13.83%
+21.09%
+momentumstock pickingvolatility effectequity long shortmomentum in stocksfactor investingsmart betafactor allocation
+#0954
+Directional Momentum
+Monthly
+Equities
+9.64%
+17.85%
+momentumstock pickingequity long shortmomentum in stocksfactor investing
+#0955
+Machine Forecast Disagreement
+Monthly
+Equities
+14.57%
+16.97%
+stock pickingequity long shortfundamental analysisfactor investingsmart betamachine learning
+#0956
+News-Linked Momentum in China
+Monthly
+Equities
+17.26%
+15.49%
+stock pickingequity long shortalternative datafactor investingsentiment
+#0957
+Sparse Macroeconomic Risks and the Cross-Section of Stock Returns
+Monthly
+Equities
+14.57%
+30.72%
+rotational systemstock pickingequity long shortbeta factorfactor investingsmart betamachine learning
+#0958
+Green Revenues Predict Stock Returns
+Yearly
+Equities
+4.60%
+1.90%
+stock pickingequity long shortalternative datafactor investingESG investing
+#0959
+Volume Weighted Average Price (VWAP) as Precise Trend-Following Indicator for Day-Traders
+Intraday
+Equities
+43.00%
+18.00%
+trend-followingmarket timingvolume effect
+#0960
+Anchoring Bias Factor in Chinese Stocks
+Monthly
+Equities
+13.89%
+17.37%
+stock pickingreversalequity long shortfactor investingsmart beta
+#0961
+Salient Theory Predicts US Stocks in the Cross Section
+Monthly
+Equities
+8.18%
+25.57%
+stock pickingequity long shortfactor investingsmart beta
+#0962
+Delta Hedged Short Straddle BTC Strategy
+Intraday
+Crypto
+39.00%
+30.00%
+volatility effectvolatility premiumcryptocurrencies
+#0963
+Why Do US Stocks Outperform EM and EAFE Regions?
+Monthly
+Equities
+7.14%
+19.50%
+momentumasset class pickingtrend-followingcountry pickingfund pickingspread trading
+#0964
+Harvesting Volatility Risk Premia and Crisis Alpha via ETFs
+Daily
+EquitiesBondsCommodities
+22.20%
+24.13%
+momentumasset class pickingtrend-followingmarket timingvolatility effectvolatility premiumfactor allocationdiversification
+#0965
+Exploration of Long Short ETF Momentum Strategies
+Monthly
+EquitiesBondsCommoditiesREITsCurrencies
+8.08%
+10.54%
+momentumasset class pickingtrend-followingrotational systemfactor investingsmart betadiversification
+#0966
+Investment Carry
+Weekly
+Currencies
+6.42%
+9.40%
+carry tradeFX anomalyforex system
+#0967
+Shortable Stocks Factor in Emerging Market Equities
+Monthly
+Equities
+15.73%
+17.46%
+stock pickingequity long shortliquidity risk premiumshort sellingvolume effectbeta factorfactor investingfactor allocation
+#0968
+Night Minus Day Return of Factor Portfolios
+Intraday
+Equities
+94.73%
+21.72%
+stock pickingequity long shortarbitrageliquidity risk premiumfactor investingfactor allocation
+#0969
+Pragmatic Asset Allocation Model for Semi-Active Investors
+Quarterly
+EquitiesBondsCommodities
+10.73%
+11.38%
+momentumasset class pickingtrend-followingrotational systemfund pickingfactor investingsmart betadiversification
+#0970
+Systematic Innovation Factor in Stocks
+Yearly
+Equities
+18.24%
+26.12%
+stock pickinggrowth stocksalternative datafactor investingsmart beta
+#0971
+International Market Timing With Moving Average Distance
+Monthly
+Equities
+20.26%
+20.14%
+momentumcountry picking
+#0972
+Google Trends Predict When to Bet Against Beta
+Monthly
+Equities
+7.85%
+6.25%
+stock pickingequity long shortbeta factoralternative datafactor investingfactor allocationsentiment
+#0973
+Network Momentum across Asset Classes
+Monthly
+EquitiesBondsCommoditiesCurrencies
+7.00%
+5.20%
+momentumtrend-followingmachine learningdiversification
+#0974
+Trend-Following Strategy in Cryptocurrencies
+Daily
+Crypto
+44.90%
+32.50%
+momentumtrend-followingcryptocurrencies
+#0975
+DUAL - Negative Correlation Among Stocks Characteristics Display Reversal in Stocks
+Monthly
+Equities
+12.68%
+19.80%
+stock pickingreversalequity long shortfundamental analysisfactor investingsmart beta
+#0976
+TWIN - Positive Correlation Among Stocks Characteristics Display Momentum in Stocks
+Monthly
+Equities
+12.95%
+18.88%
+momentumstock pickingequity long shortmomentum in stocksfundamental analysisfactor investingsmart beta
+#0977
+Political Risk in Country Equity Indexes
+Yearly
+Equities
+5.86%
+12.21%
+country pickingalternative datafactor investingsmart beta
+#0978
+Political Risk in Country Bond Indexes
+Yearly
+Bonds
+3.61%
+7.08%
+bond timingalternative datafactor investingsmart beta
+#0979
+Political Risk in Currencies
+Yearly
+Currencies
+4.50%
+6.52%
+FX anomalyforex systemalternative datafactor investingsmart beta
+#0980
+Factor Momentum in Commodity Futures
+Monthly
+Commodities
+4.27%
+9.50%
+momentumfactor investingfactor allocation
+#0981
+Cross-ETF Loan Arbitrage Strategy
+Daily
+EquitiesBondsCommoditiesREITsCurrencies
+5.50%
+1.45%
+arbitrage
+#0982
+Market Power and the Profitability Premium
+Yearly
+Equities
+6.42%
+20.31%
+stock pickingequity long shortfundamental analysisfactor investingsmart beta
+#0983
+Combined Momentum and Short Interest in Stocks
+Monthly
+Equities
+8.20%
+10.00%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#0984
+Systematic Hedging of the Cryptocurrency Portfolio
+Daily
+Crypto
+46.37%
+34.31%
+trend-followingmarket timingcryptocurrencies
+#0985
+Timing Convertible Bonds
+Monthly
+Bonds
+4.10%
+8.30%
+market timingvolatility effect
+
+
+#0987
+Economic Trend in Futures
+Monthly
+EquitiesBondsCommoditiesCurrencies
+13.30%
+12.20%
+momentumtrend-following
+#0988
+Media Emotion Intensity and Commodity Futures Pricing
+Monthly
+Commodities
+13.51%
+21.44%
+sentiment tradingalternative datasentiment
+#0989
+Diversified Multi-Asset Multi-Factor Strategies through the Cycles
+Monthly
+EquitiesBondsCommoditiesCurrencies
+23.29%
+9.30%
+momentumtrend-followingrotational systemseasonalitycarry tradevaluereversalfactor investingfactor allocationdiversification
+#0990
+Market-Neutral Multi-Asset Carry Strategies
+Monthly
+Currencies
+5.60%
+4.10%
+carry tradeFX anomalyforex system
+#0991
+Cryptocurrency Market Dynamics Around Bitcoin Futures Expiration Events
+Daily
+Crypto
+22.51%
+13.87%
+market timingseasonalitycryptocurrencies
+#0992
+Buy the Dip after Slow Decrease from 52W High in S&P 500
+Daily
+Equities
+5.55%
+market timing
+#0993
+Actively Using Passive Sectors to Generate Alpha Using the VIX
+Daily
+Equities
+12.04%
+16.96%
+rotational systemsector pickingseasonalityvolatility effectfund picking
+#0994
+Trended Momentum
+Monthly
+Equities
+11.34%
+13.48%
+momentumtrend-followingstock pickingequity long shortmomentum in stockssmart betafactor allocation
+#0995
+Pre-Refunding Announcement Gains in U.S. Treasuries
+Daily
+Bonds
+0.94%
+1.70%
+market timingseasonalitybond timing
+#0996
+Macroeconomic Momentum in the Cross-Sectional Equity Market Indices
+Monthly
+Equities
+3.60%
+4.14%
+momentumrotational systemcountry pickingfundamental analysisfund pickingalternative data
+#0997
+Clustering Based Multi-Pairs Trading
+Daily
+Equities
+10.99%
+10.77%
+stock pickingequity long shortpairs tradingarbitragemachine learning
+#0998
+Google Trends Sentiment as a Predictor for Cryptocurrency Returns
+Monthly
+Crypto
+74.58%
+61.98%
+momentumtrend-followingmarket timingsentiment tradingcryptocurrenciessentiment
+#0999
+Bottom-Up LASSO Strategy Using 10K Reports to Predict Stocks' Performance
+Monthly
+Equities
+5.91%
+8.10%
+stock pickingequity long shortalternative datafactor investingsmart betamachine learning
+#1000
+Sentiment trading with large language models
+Daily
+Equities
+137.50%
+45.00%
+stock pickingequity long shortsentiment tradingalternative datamachine learningsentiment
+#1001
+AI Predicts Stock Returns with Company Filings
+Monthly
+Equities
+10.24%
+10.24%
+stock pickingequity long shortsentiment tradingalternative datafactor investingsmart betamachine learningsentiment
+#1002
+Presidential Cycles and USD Exchange Rate
+Monthly
+Currencies
+5.43%
+rotational systemseasonalityFX anomalyforex systemsentiment tradingsentiment
+#1003
+Same-Weekday Momentum
+Daily
+Equities
+27.57%
+17.13%
+momentumstock pickingequity long shortmomentum in stocksfactor investingsmart beta
+#1004
+Using Internal Bar Strength for Trading Country ETFs
+Intraday
+Equities
+39.04%
+10.00%
+pairs tradingarbitragecountry picking
+#1005
+Overnight Post-Earnings Announcement Drift
+Intraday
+Equities
+21.45%
+stock pickingreversalearnings announcementtrading earnings
+#1006
+Options Portfolio Selection with Position Limits
+Monthly
+Equities
+21.05%
+14.52%
+volatility effectvolatility premium
+#1007
+Intraday Residual Reversal in the U.S. Stock Market
+Intraday
+Equities
+88.82%
+45.71%
+stock pickingreversalequity long short
+#1008
+Momentum at Carry Strategy
+Monthly
+Currencies
+4.16%
+8.03%
+momentumcarry tradeFX anomalyforex system
+#1009
+Market Timing Using Options on Leveraged ETFs as Predictors
+Monthly
+Equities
+20.84%
+28.65%
+market timingvolatility effect
+#1010
+Cross-Country Factor Momentum
+Monthly
+Equities
+1.94%
+4.13%
+momentumequity long shortfactor investingfactor allocation
+#1011
+Social-Link Momentum
+Monthly
+Equities
+6.24%
+17.17%
+momentumstock pickingequity long shortmomentum in stocksalternative datafactor investingsmart beta
+#1012
+ChatGPT Using Twitter Data Generates Stock Tickers to Buy and Sell for Day Trading
+Intraday
+Equities
+51.33%
+63.40%
+stock pickingequity long shortsentiment tradingalternative datamachine learningsentiment
+#1013
+Cointegration-Based Strategies in Forex Pair Trading
+Daily
+Currencies
+0.93%
+0.63%
+FX anomalyforex systempairs trading
+#1014
+Cross-Market Intraday Time-Series Momentum
+Intraday
+Equities
+20.00%
+momentummomentum in stocksfactor investingfactor allocation
+#1015
+Senators’ Disclosure and Stock Returns
+Monthly
+Equities
+7.52%
+7.94%
+stock pickingequity long shortalternative datafactor investingsentiment
+#1016
+Intraday Momentum Strategy for S&P500 ETF
+Intraday
+Equities
+19.60%
+14.30%
+momentumtrend-followingmarket timing
+#1017
+QuantPedia's Composite Seasonality in MesoSim
+Daily
+Equities
+12.07%
+6.16%
+market timingseasonalityvolatility effectvolatility premium
+#1018
+Cryptocurrency Volume-Weighted Time Series Momentum
+Daily
+Crypto
+26.65%
+12.22%
+momentumvolume effectcryptocurrencies
+#1019
+Volatility-Managed Volatility Trading
+Monthly
+Equities
+12.30%
+15.60%
+market timingvolatility effectvolatility premium
+#1020
+Momentum and Investors’ Lottery-Like Preference
+Monthly
+Equities
+34.49%
+32.01%
+stock pickingequity long shortfactor investingsentiment
+#1021
+Timing the Factor Zoo in the US
+Monthly
+Equities
+17.99%
+14.68%
+stock pickingequity long shortfactor investingfactor allocation
+#1022
+Pairs Trading Strategy With Connected Stocks
+Monthly
+Equities
+13.35%
+19.02%
+stock pickingequity long shortpairs tradingalternative data
+#1023
+Front-Running the Goldman Roll
+Daily
+Commodities
+3.78%
+4.78%
+seasonalityarbitragespread trading
+#1024
+Investigation of Lead-Lag Effect in Easily-Mistyped Tickers
+Monthly
+Equities
+9.61%
+18.97%
+momentumstock pickingequity long shortalternative datasentiment
+#1025
+QuantConnect Mean Reversion Intraday Strategy
+Intraday
+Equities
+92.65%
+52.70%
+market timingreversal
+#1026
+Combining Systematic Trend-Following and Global Macro Strategies
+Monthly
+EquitiesBondsCommoditiesCurrencies
+17.87%
+10.28%
+momentumtrend-followingrotational systemfundamental analysisfactor investingfactor allocationdiversification
+#1027
+Hedge Funds Exploiting Climate Concerns
+Yearly
+Equities
+7.11%
+8.00%
+fund pickingalternative dataESG investingfactor allocation
+#1028
+Sentiment Analysis of Bloomberg Markets Wrap Using ChatGPT
+Daily
+Equities
+1.20%
+1.40%
+market timingsentiment tradingmachine learningsentiment
+#1029
+52-Week High Bond Alpha Strategy
+Monthly
+Bonds
+5.97%
+4.58%
+momentumliquidity risk premiumfundamental analysisbond timingfactor investing
+#1030
+Crypto Skewness Strategy
+Monthly
+Crypto
+35.41%
+28.23%
+cryptocurrenciesfactor investingdiversification
+#1031
+Seasonal Electricity Futures Strategy
+6 Months
+Commodities
+5.30%
+11.80%
+rotational systemmarket timingseasonalityspread trading
+#1032
+MACD Trend Following in Chinese Commodities
+Daily
+Commodities
+26.07%
+14.15%
+momentumfactor investingdiversification
+#1033
+Improving Option Writing Performance with Put-Call Ratios
+Monthly
+Equities
+20.41%
+21.92%
+market timingvolatility effectvolatility premiumalternative data
+#1034
+Maximizing Portfolio Predictability with Machine Learning
+Monthly
+Equities
+15.06%
+15.23%
+equity long shortfactor investingmachine learningdiversification
+#1035
+Mixing Financial Stress with GPT-4 News Sentiment Analysis for Optimal Risk-On/Risk-Off Decisions
+Daily
+Equities
+6.08%
+7.50%
+market timingsentiment tradingalternative datamachine learningsentiment
+#1036
+Forecasting Real Oil Returns Using a Deep Forest Ensemble Approach
+Daily
+Commodities
+71.10%
+76.50%
+market timingmachine learning
+#1037
+Leading Stocks and the Stock Market Expected Returns
+Monthly
+Equities
+4.11%
+6.51%
+market timingmachine learning
+#1038
+Presidential Cycle and Performance of the Stock Market
+3 Years
+Equities
+12.33%
+8.97%
+rotational systemmarket timingseasonalityfund pickingalternative data
+#1039
+Euro Momentum Strategy
+Monthly
+Equities
+9.99%
+13.12%
+momentumtrend-followingequity long shortcountry pickingfactor investing
+#1040
+Price-to-Utility Ratio in Bitcoin
+Daily
+Crypto
+55.76%
+14.95%
+market timingvaluecryptocurrenciessentiment
+#1041
+Macroeconomic Announcement Days and Machine Learning
+Daily
+Equities
+17.84%
+19.84%
+seasonalitystock pickingequity long shortfundamental analysisfactor investingmachine learningfactor allocationsentiment
+#1042
+Turnaround Tuesday in High-Yield Bond Market
+Daily
+Bonds
+2.63%
+2.34%
+market timingseasonalityreversalbond timing
+#1043
+Lunch Effect in the U.S. Stock Market Indices
+Intraday
+Equities
+5.17%
+8.03%
+market timingreversalliquidity risk premiumsentiment tradingshort selling
+#1044
+ARIMA Gold-Bitcoin Optimizer
+Daily
+CommoditiesCrypto
+24.49%
+21.57%
+asset class pickingrotational systemmarket timingpairs tradingcryptocurrenciessentiment
+#1045
+LSTM-ARIMA as a Hybrid Approach in Algorithmic Investment Strategies
+Daily
+Equities
+11.82%
+11.96%
+momentumtrend-followingrotational systemmarket timingmachine learning
+#1046
+Dynamic Asset Allocation with Asset-Specific Regime Forecasts
+Daily
+EquitiesBondsCommoditiesREITs
+8.90%
+8.70%
+momentumasset class pickingtrend-followingmachine learningdiversification
+#1047
+Idiosyncratic Earnings Hedge Strategy
+Yearly
+Equities
+15.30%
+12.64%
+stock pickingequity long shortfundamental analysisearnings announcementfactor investingsmart beta
+#1048
+News Sentiment and Commodity Futures Investing
+Weekly
+Commodities
+10.25%
+18.39%
+sentiment tradingalternative datafactor investingsentiment
+#1049
+Intermediate Uncertainty Crypto Strategy
+Weekly
+Crypto
+94.19%
+38.98%
+sentiment tradingbeta factorcryptocurrenciesalternative datafactor investingsentiment
+#1050
+FX Option Volume Ratio Predicts EUR USD Exchange Rate
+Monthly
+Currencies
+4.11%
+11.10%
+FX anomalyforex systemsentiment tradingvolume effectalternative data
+#1051
+Insights from the Geopolitical Sentiment Index made with Google Trends
+Monthly
+Equities
+3.60%
+9.34%
+reversalequity long shortsmall capsentiment tradingspread tradingalternative datafactor investingsentiment
+#1052
+Dynamic Hedging with Commodities
+Monthly
+EquitiesBondsCommodities
+9.44%
+9.36%
+asset class pickingdiversification
+#1053
+How to Improve Commodity Momentum Using Intra-Market Correlation
+Monthly
+Commodities
+13.97%
+16.54%
+momentumrotational systemreversalfactor investingfactor allocation
+#1054
+Enhancing the High-Volume Return Premium
+Monthly
+Equities
+8.60%
+5.66%
+stock pickingequity long shortliquidity risk premiumvolume effectfactor investing
+#1055
+Manager Uncertainty and the Cross-Section of Stock Returns
+Quarterly
+Equities
+5.25%
+10.50%
+stock pickingequity long shortsentiment tradingalternative datafactor investingsentiment
+#1056
+Stocks Lead Corporate Bonds ETFs
+Daily
+Bonds
+10.36%
+bond timingspread tradingalternative datafactor investingmachine learning
+#1057
+Weighted Production Price Index Effect in Stocks
+Monthly
+Equities
+17.72%
+22.33%
+stock pickingequity long shortfundamental analysisalternative datafactor investing
+#1058
+Decision Tree Intraday Strategy
+Intraday
+Equities
+19.33%
+3.32%
+momentumtrend-followingstock pickingequity long shortmomentum in stocksmachine learning
+#1059
+Teach Machine Asset Pricing
+Monthly
+Equities
+35.44%
+momentumstock pickingvalueequity long shortfundamental analysisfactor investingmachine learning
+#1060
+Stronger Momentum Strategy in Non-Dividend Stocks
+Monthly
+Equities
+18.39%
+14.75%
+momentumstock pickingequity long shortmomentum in stocksfactor investing
+#1061
+Predicting Anomalies
+Quarterly
+Equities
+3.00%
+stock pickingequity long shortfundamental analysisfactor investing
+#1062
+The Pre-Holiday Effect in Commodities
+Daily
+Commodities
+10.14%
+11.25%
+market timingseasonality
+#1063
+Machine Learning Trading Strategies in FX Markets
+Quarterly
+Currencies
+12.90%
+8.81%
+carry tradeFX anomalyforex systemalternative datafactor investingmachine learning
+#1064
+Leveraged ETF Arbitrage Between SPY and TQQQ
+Intraday
+Equities
+25.90%
+10.16%
+reversalequity long shortpairs tradingarbitragespread trading
+#1065
+Enhanced ETF Sector Momentum Strategy
+Monthly
+Equities
+9.16%
+12.83%
+momentumtrend-followingsector pickingfactor investingsmart betafactor allocation
+#1066
+Bitcoin as a Leading Indicator for Stock Market
+Intraday
+Equities
+15.96%
+15.50%
+rotational systemmarket timingsentiment tradingsentiment
+#1067
+Factor Pockets
+Monthly
+Equities
+39.73%
+21.98%
+stock pickingequity long shortfundamental analysisfactor investingmachine learningfactor allocation
+#1068
+Exponential FX Mean Reversion Strategy
+Monthly
+Currencies
+2.98%
+8.62%
+FX anomalyforex systemreversalfactor investing
+#1069
+Holiday Momentum for Amazon
+Daily
+Equities
+1.39%
+1.40%
+market timingseasonalitysentiment tradingsentiment
+#1070
+Threshold Overnight Comovement Strategy for FXI ETF
+Daily
+Equities
+14.34%
+stock pickingpairs tradingarbitragecountry picking
+#1071
+Interday Cross-Sectional Momentum
+Intraday
+Equities
+5.70%
+2.53%
+momentumstock pickingequity long shortmomentum in stocksfactor investing
+#1072
+Leveraging the Low-Volatility Effect
+Monthly
+Equities
+1.90%
+11.20%
+momentumstock pickingvolatility effectequity long shortmomentum in stocksfundamental analysisbeta factorfactor investing
+#1073
+How To Profitably Trade Bitcoin’s Overnight Sessions
+Daily
+Crypto
+68.38%
+28.43%
+momentumasset class pickingtrend-followingmarket timingseasonalitycryptocurrencies
+#1074
+Google Trends Predict Grain Prices
+Monthly
+Commodities
+14.60%
+44.24%
+market timingsentiment tradingalternative datasentiment
+#1075
+Antifragile Asset Allocation
+Monthly
+EquitiesBondsCommoditiesREITsCurrencies
+18.57%
+7.70%
+momentumasset class pickingtrend-followingrotational systemsector pickingsmart beta
+#1076
+Impact of EIA Inventory Announcements on Crude Oil Prices
+Intraday
+Commodities
+4.14%
+1.51%
+momentumtrend-followingmarket timing
+#1077
+Predicting the Holdings of Top Mutual Funds
+Quarterly
+Equities
+6.45%
+6.10%
+stock pickingequity long shortfundamental analysisalternative datafactor investingmachine learning
+#1078
+Peer Option Momentum
+Monthly
+Equities
+83.94%
+23.87%
+momentumstock pickingvolatility effectvolatility premiumfactor investing
+#1079
+Commodities Seasonal Front-Run Strategy
+Monthly
+Commodities
+7.62%
+9.43%
+asset class pickingmarket timingseasonality
+#1080
+Stock-Bond Correlations and the Expected Country Stock Returns
+Monthly
+Equities
+7.06%
+13.61%
+country pickingbeta factorfactor investing
+#1081
+Price-to-Low Effect in Cryptocurrencies
+Weekly
+Crypto
+161.20%
+150.21%
+momentumreversalcryptocurrenciesfactor investing
+#1082
+Global Hairy Premium Strategy
+Monthly
+Bonds
+2.74%
+0.98%
+liquidity risk premiumterm spreadbond timingspread tradingfactor investing
+#1083
+Adjusted Momentum Strategies in Indian Stocks
+Monthly
+Equities
+11.47%
+24.50%
+momentumstock pickingvolatility effectequity long shortmomentum in stocksfactor investingsmart beta
+#1084
+Inflation Risk Premium in Stocks During FOMC Announcements
+Monthly
+Equities
+9.52%
+16.88%
+stock pickingequity long shortfundamental analysisfactor investingsmart betafactor allocation
+#1085
+Micro Alphas
+Monthly
+Equities
+16.16%
+19.89%
+market timingmachine learningsentiment
+#1086
+Hierarchical Futures Pair Trading Strategy
+Daily
+Commodities
+12.22%
+2.81%
+pairs tradingarbitragespread tradingmachine learning
+#1087
+Inflation Gamble Stocks
+Monthly
+Equities
+14.45%
+20.20%
+stock pickingvolatility effectequity long shortbeta factorfactor investingsentiment
+#1088
+End of Day Reversal in the Cross-Section of Stocks
+Intraday
+Equities
+8.48%
+3.90%
+seasonalitystock pickingreversalequity long shortliquidity risk premium
+#1089
+Risk Premiums in the Cryptocurrency Market
+6 Months
+Crypto
+88.56%
+volatility effectbeta factorcryptocurrenciesfactor investing
+#1090
+Refining ETF Asset Momentum Strategy
+Monthly
+EquitiesBondsCommoditiesREITsCurrencies
+9.36%
+14.25%
+momentumasset class pickingtrend-followingrotational systemshort sellingfactor investingsmart betafactor allocation
+#1091
+Aggregate Sales Growth Predicts Stock Index Returns
+Monthly
+Equities
+4.41%
+6.21%
+market timingfundamental analysis
+#1092
+Google Trends Unemployment Market Timing Strategy
+Monthly
+Equities
+44.50%
+market timingsentiment tradingsentiment
+#1093
+Downside Risk Premium in US Stocks
+Quarterly
+Equities
+6.29%
+15.40%
+stock pickingequity long shortliquidity risk premiumbeta factoralternative datafactor investing
+#1094
+Intraday Drift in Crude Oil Price
+Intraday
+EquitiesCommodities
+6.29%
+18.14%
+rotational systemmarket timingseasonality
+#1095
+Front-Running Sector ETF Seasonality Strategy
+Monthly
+Equities
+10.99%
+16.81%
+rotational systemsector pickingseasonalityfactor investing
+#1096
+Risky Words and Returns
+Monthly
+Equities
+7.44%
+11.93%
+stock pickingequity long shortalternative datafactor investingmachine learningsentiment
+#1097
+Intraday Option Momentum
+Intraday
+Equities
+22.71%
+3.67%
+momentumseasonalityvolatility effectvolatility premium
+#1098
+Seasonality Patterns in the Crisis Hedge Portfolios
+Monthly
+BondsCommoditiesCurrencies
+5.87%
+8.91%
+asset class pickingseasonalityfactor investingsmart betafactor allocation
+#1099
+Margin Debt Levels Predict S&P 500 Returns
+Monthly
+EquitiesBonds
+16.74%
+16.78%
+market timingsentiment tradingalternative datasentiment
+#1100
+Time-Series Reversal in S&P 500 Using EOM Signal
+Monthly
+EquitiesBonds
+4.69%
+10.35%
+rotational systemmarket timingseasonalityreversal
+#1101
+December Effect in Option Returns
+Daily
+Equities
+10.90%
+14.78%
+market timingseasonalityvolatility effectvolatility premium
+#1102
+Front-Running Rebalancing Signals
+Daily
+EquitiesBonds
+9.92%
+9.20%
+asset class pickingrotational systemmarket timingseasonalityreversalarbitrageliquidity risk premiumbond timingspread trading
+#1103
+Dangers of Relying on OHLC Prices – the Case of Overnight Drift in GDX ETF
+Intraday
+EquitiesCommodities
+8.58%
+16.90%
+rotational systemmarket timingseasonality
+#1104
+Idiosyncratic Reversal Effect Strategy
+Monthly
+Equities
+9.81%
+11.15%
+stock pickingreversalequity long shortfactor investingsmart beta
+#1105
+Diversified Portfolio Protection Strategy
+Monthly
+EquitiesBondsCommodities
+1.70%
+momentumtrend-followingrotational systemstock pickingvolatility effectequity long shortfactor investingfactor allocationdiversification
+#1106
+Using Inflation Data for Systematic Gold and Treasury Investment Strategies
+Monthly
+BondsCommodities
+8.23%
+8.40%
+momentumasset class pickingtrend-followingmarket timingbond timingalternative datadiversification
+#1107
+Market Making in Crypto
+Intraday
+Crypto
+45.84%
+58.77%
+arbitragecryptocurrenciesmachine learning
+#1108
+The Aggregated Equity Risk Premium
+Monthly
+EquitiesBonds
+6.93%
+16.12%
+market timingfundamental analysismachine learning
+#1109
+Election-Driven Arbitrage Strategy
+Daily
+Equities
+97.32%
+44.88%
+seasonalitystock pickingarbitragealternative data
+#1110
+Reducing Option-Writing Risk with IV Rank and Strike Clusters
+Daily
+Equities
+6.96%
+14.62%
+market timingvolatility effectvolatility premium
+#1111
+Switching Regimes Factor Strategy
+Monthly
+Equities
+8.20%
+10.00%
+momentumtrend-followingrotational systemstock pickingequity long shortfactor investingfactor allocation
+#1112
+Resurrecting the Value Effect - Tech vs. Non-Tech Sub-Universes
+Yearly
+Equities
+6.93%
+11.48%
+stock pickingvalueequity long shortfundamental analysisgrowth stocksfactor investingsmart betafactor allocation
+#1113
+The Impact of the Inflation on the Performance of the US Dollar
+Monthly
+Currencies
+1.96%
+5.84%
+market timingcarry tradeFX anomalyforex systemfundamental analysisfactor investing
+#1114
+IPOs Negative Returns After Options Listing
+Weekly
+Equities
+10.43%
+5.47%
+stock pickingshort sellingvolume effectfactor investing
+#1115
+Margin Debt Market Timing Strategy
+Monthly
+EquitiesBonds
+8.80%
+8.47%
+trend-followingmarket timingsentiment tradingalternative datasentiment
+#1116
+Intraday Option Reversals
+Intraday
+Equities
+62.75%
+26.81%
+market timingvolatility effectreversalvolatility premium
+#1117
+Forecasting Corporate Bond Index Returns with Firm Characteristics and Macro Variables
+Quarterly
+Bonds
+5.93%
+6.45%
+fundamental analysisbond timingalternative datafactor investingmachine learning
+#1118
+Betting on Credit Betas
+Monthly
+Bonds
+2.07%
+4.08%
+bond timingbeta factorfactor investingsmart beta
+#1119
+Informative Price Pressure During Pre-FOMC Days
+Yearly
+Equities
+15.48%
+market timingseasonalityreversal
+#1120
+Righ-Tail vs. Left Tail Stock Picking Strategy in China
+Monthly
+Equities
+17.46%
+14.49%
+equity long shortfactor investingsentiment tradingsentimentstock picking
+#1121
+Similar-Attention Stocks Effect in Chinese Stocks
+Monthly
+Equities
+30.30%
+4.39%
+reversalsentimentsentiment tradingstock pickingequity long short
+#1124
+Seasonal Front-Running in Country ETFs
+Monthly
+Equities
+9.92%
+19.18%
+country pickingfactor investingrotational systemseasonalitysmart beta
+#1125
+Piotroski's F-Score in the Chinese Stock Market
+Monthly
+Equities
+6.42%
+9.21%
+fundamental analysisfactor investingequity long shortsmart betastock pickingvalue
+#1126
+Pre-ECB Drift Strategy
+Daily
+Equities
+3.63%
+5.16%
+market timingseasonality
+#1127
+Short-Term Correlated Stress Reversal Trading
+Daily
+Equities
+6.48%
+8.89%
+market timingreversal
+#1128
+Industry-Based Long-Only Trend-Following
+Daily
+Equities
+7.70%
+13.70%
+momentumtrend-followingsector pickingmarket timing
+#1129
+Overnight Volume Shock Strategy
+Intraday
+Equities
+16.03%
+16.03%
+volume effectliquidity risk premiumstock pickingequity long shortmachine learning
+#1130
+Auctions, Macro-Economic Announcements, and Abnormal Returns
+Daily
+Currencies
+2.39%
+FX anomalycarry tradeliquidity risk premiummarket timingseasonality
+#1131
+Catching Crypto Trends
+Daily
+Crypto
+18.00%
+9.00%
+cryptocurrenciestrend-followingmomentumrotational system
+#1132
+Intraday, Overnight and Macro-Economic Announcement Effect in FX Carry
+Intraday
+Currencies
+10.47%
+19.00%
+carry tradeFX anomalyseasonalitymarket timingforex system
+#1133
+Second-minus-First Spreading Returns Strategy
+Weekly
+Commodities
+7.62%
+5.36%
+factor investingmomentumreversalspread tradingrotational system
+#1134
+Reversal in Low Abnormal Volatility Portfolios
+Monthly
+Equities
+14.25%
+21.80%
+equity long shortfactor investingmomentumreversalstock pickingvolatility effect
+#1135
+Time Series Momentum in China
+Monthly
+EquitiesCommoditiesBonds
+16.24%
+18.51%
+trend-followingmomentumdiversificationasset class picking
+#1136
+Twitter Follower Growth
+Daily
+Equities
+12.30%
+5.91%
+alternative dataequity long shortfactor investinggrowth stocksmomentumsentimentsentiment tradingstock picking
+#1137
+Generative AI and Fundamentals-Based Exchange Rate Forecasting
+Monthly
+Currencies
+4.35%
+7.33%
+alternative datacarry tradeforex systemfundamental analysisFX anomalymachine learning
+#1138
+The Intersection of Expected Returns
+Monthly
+Equities
+9.74%
+14.98%
+accruals effectequity long shortfactor investingmomentum in stocksreversalstock pickingvaluevolatility effectfundamental analysis
+#1139
+Market Timing Nifty 50 Index using S&P500 daily performance
+Daily
+Equities
+94.00%
+momentumsentimentmarket timingtrend-following
+#1140
+U.S. Presidential Election Results Impact the Size Premium
+Yearly
+Equities
+30.15%
+27.64%
+small capfactor investingmarket timingstock pickingseasonalitysentimentsentiment trading
+#1141
+Short-term Reversal Factor in REITs
+Monthly
+REITs
+10.43%
+11.88%
+factor investingreversalequity long short
+#1142
+Quality Factor in REITs
+Monthly
+REITs
+6.42%
+13.00%
+factor investingfundamental analysisequity long short
+#1143
+The Wikipedia Effect
+Weekly
+Equities
+6.50%
+6.00%
+alternative dataequity long shortfactor investingmomentumsentimentstock picking
+#1144
+The Implications of Investor Attention for Price and Earnings Momentum
+Monthly
+Equities
+14.99%
+27.14%
+momentummomentum in stocksearnings announcementsentimentsentiment tradingstock pickingfundamental analysis
+#1145
+Multifractal Crypto Strategy
+Intraday
+Crypto
+68.20%
+29.27%
+cryptocurrenciesvolatility effectmachine learningmomentummarket timingsentiment tradingtrend-following
+#1146
+First Month of a Quarter Positively Predicts the Second Month's Return
+Monthly
+Equities
+8.32%
+22.49%
+market timing
+#1147
+A Dual Approach For VIX ETNs Trading
+Daily
+Equities
+16.30%
+16.40%
+volatility premiummarket timingvolatility effect
+#1148
+Pre-Announcement Drift Strategy in Foreign Central Banks
+Daily
+Equities
+3.06%
+4.60%
+market timingseasonality
+#1149
+Mispricing as a Short-Term Excess Return
+Monthly
+Equities
+23.48%
+17.95%
+machine learningreversalstock pickingliquidity risk premiumequity long short
+#1150
+Congressional Effect
+Daily
+Equities
+5.30%
+market timingseasonality
+#1151
+High Trend Strategy
+Monthly
+EquitiesBondsCommoditiesREITs
+12.51%
+8.18%
+asset class pickingmarket timingtrend-following
+#1152
+Tech Conference Return Drift Strategy
+Daily
+Equities
+6.67%
+6.88%
+alternative datagrowth stocksmarket timingstock picking
+#1153
+Investment Base Pairs Futures Strategies
+Monthly
+EquitiesCommoditiesBondsCurrencies
+10.40%
+factor investingmomentumpairs tradingvaluecarry tradediversificationasset class pickingspread trading
+#1154
+Trading Theta: A Strategy Exploiting Time Decay
+Daily
+Equities
+20.04%
+arbitrageequity long shortfactor investingvolatility effectvolatility premium
+#1155
+Insider Trading Signal Forecasts Anomaly Returns
+Quarterly
+Equities
+31.22%
+26.13%
+insiders trading effectmomentumsentimentstock pickingfactor investingfactor allocationfundamental analysisequity long shortsentiment trading
+#1156
+Lottery Effect in Cryptocurrencies
+Weekly
+Crypto
+28.08%
+66.86%
+cryptocurrenciessentimentsentiment tradingreversal
+#1157
+Return Dispersion Dynamic Momentum Strategy
+Monthly
+Equities
+12.68%
+13.26%
+momentummomentum in stocksreversalfactor investingmarket timingstock pickingrotational systemfactor allocationequity long short
+#1158
+Fundamental Growth Index Strategy
+Yearly
+Equities
+12.40%
+16.50%
+fundamental analysisgrowth stocksfactor investingstock picking
+#1159
+Momentum and Skewness in Currency Returns
+Monthly
+Currencies
+2.28%
+3.51%
+momentumFX anomalyvolatility effecttrend-followingforex system
+#1160
+Geo-Informed Equity Signals
+Weekly
+Equities
+25.22%
+25.78%
+alternative datacountry pickingfactor investingmachine learningmomentum
+#1161
+The Fourth-Quarter Earnings Effect
+Monthly
+Equities
+16.27%
+34.68%
+earnings announcementequity long shortfundamental analysisreversalseasonalitytrading earnings
+#1162
+Relief Factor in the Cross-Section of Stocks
+Monthly
+Equities
+10.39%
+13.66%
+reversalfactor investingstock pickingequity long short
+#1163
+Cultural Calendars and the Gold Drift: Are Holidays Moving GLD ETF?
+Daily
+Commodities
+2.34%
+3.31%
+asset class pickingmarket timingseasonality
+#1164
+Statistical Arbitrage in Rank Space
+Intraday
+Equities
+35.68%
+10.87%
+arbitrageequity long shortfactor investingmachine learningpairs tradingreversalstock picking
+#1165
+Statistical Arbitrage via Multi-View Spectral Clustering on Mixed Frequency Data
+Daily
+EquitiesCurrenciesCommoditiesBonds
+6.80%
+8.19%
+arbitrageasset class pickingequity long shortfactor investingforex systemmachine learningpairs tradingspread trading
+#1166
+Genetic Mimicking Portfolios for ETF Arbitrage
+Daily
+Bonds
+29.12%
+9.40%
+arbitragemachine learningbond timingliquidity risk premiumspread trading
+#1167
+Nearness to the 52-Week High in Cryptocurrencies
+Weekly
+Crypto
+92.29%
+77.54%
+cryptocurrenciesliquidity risk premiumfactor investing
+#1168
+How to Trade LETFs
+Daily
+CommoditiesEquitiesBonds
+58.99%
+101.70%
+arbitragemarket timingreversal
+#1169
+Learning to Rank Momentum Strategies
+Daily
+EquitiesCommoditiesBondsCurrencies
+53.00%
+15.00%
+asset class pickingfactor investingmachine learningmomentumtrend-following
+#1170
+Leveraged BTC Funding Carry Algorithm
+Intraday
+Crypto
+16.05%
+2.43%
+arbitragecryptocurrenciesliquidity risk premiumspread trading
+#1171
+Sunspot Wheat Timing Strategy
+Quarterly
+Commodities
+5.27%
+14.83%
+alternative datamarket timingseasonalityshort selling
+#1172
+Can We Finally Use ChatGPT As Quant Analyst?
+Daily
+EquitiesCommoditiesBonds
+9.58%
+12.79%
+asset class pickingfactor investingmachine learningmomentumtrend-following
+#1173
+Crypto ETF Spread Mean-Reversion
+Monthly
+Crypto
+5.66%
+9.91%
+cryptocurrenciesspread tradingreversalbeta factorpairs trading
+#1174
+Buying the Worst-Performing S&P 500 Equities
+Yearly
+Equities
+26.93%
+30.26%
+factor investingreversalstock pickingvalue
+#1175
+Quantum Momentum Linkages
+Daily
+Equities
+13.50%
+10.00%
+machine learningmomentummomentum in stocksfundamental analysisequity long shortstock picking
+#1176
+OHLCT Multi-Scale CNN Strategy
+Daily
+Equities
+43.16%
+machine learningstock pickingsentiment trading
+#1177
+Visual Firm Insight Strategy
+Monthly
+Equities
+26.00%
+8.30%
+alternative dataequity long shortfactor investingmachine learningsector pickingstock pickingpairs tradingfundamental analysis
+#1178
+Analyst Network Momentum Strategy
+Monthly
+Equities
+29.44%
+7.07%
+alternative dataequity long shortfactor investingmachine learningmomentummomentum in stocksstock picking
+#1179
+Narrative Momentum Investing
+Monthly
+Equities
+8.84%
+10.71%
+alternative databeta factorequity long shortfactor investingmomentumsentimentsentiment tradingstock pickingtrend-following
+#1180
+Hybrid LSTM-ARIMA Strategy
+Daily
+Equities
+11.82%
+11.96%
+machine learningfactor investingmomentumtrend-following
+#1181
+Path-Dependent Turnover Reduction Strategy
+Daily
+Equities
+11.90%
+4.40%
+momentumfactor investingmachine learningequity long shortstock picking
+#1182
+Unsupervised Clustered Pairs Trading Strategy
+Daily
+Equities
+4.66%
+4.57%
+pairs tradingarbitragestock pickingmachine learning
+#1183
+Risk-Targeting Option Portfolio Strategy
+Monthly
+Equities
+4.80%
+1.19%
+volatility premiumdiversificationvolatility effect
+#1184
+Idiosyncratic Profitability Hedge Strategy
+Monthly
+Equities
+8.21%
+20.11%
+equity long shortfactor investingfundamental analysisstock picking
+#1185
+Predictability Clusters Strategy
+Monthly
+Equities
+8.99%
+14.74%
+machine learningfactor investingstock pickingfundamental analysisequity long short
+#1186
+April Inflow Strategy
+Daily
+Equities
+1.71%
+2.97%
+seasonalitymarket timing
+#1187
+Crisis Stock Picking Alpha Strategy
+Monthly
+Equities
+35.32%
+19.96%
+diversificationfactor investingmomentumstock pickingvolatility effect
+#1188
+Deep Learning Options Trader
+Daily
+Equities
+26.60%
+20.00%
+machine learningvolatility effectvolatility premium
+#1189
+Tube Oscillator Strategy
+Intraday
+EquitiesCurrencies
+59.90%
+12.69%
+trend-followingforex systemmomentummarket timingvolatility effect
+#1190
+Analyst-Driven Skewness Strategy
+Monthly
+Equities
+10.03%
+7.90%
+alternative datafundamental analysismachine learningsentimentstock pickingvolatility effectsentiment trading
+#1191
+Relative Signed Jump Factor in Commodities
+Monthly
+Commodities
+6.29%
+14.83%
+volatility effectfactor investing
+#1192
+Defense First - A Multi-Asset Tactical Model for Adaptive Downside Protection
+Monthly
+EquitiesCommoditiesBondsCurrencies
+10.87%
+8.50%
+momentumrotational systemtrend-followingasset class picking
+#1193
+Grid Trading Strategy for BTC
+Intraday
+Crypto
+35.00%
+cryptocurrenciesmarket timingvolatility effectvolatility premium
+#1194
+Tactical Allocation for Vanguard Investors
+Monthly
+EquitiesBondsCommodities
+6.16%
+4.09%
+momentumfund pickingdiversificationmarket timingrotational systemtrend-following
+#1195
+Elastic Momentum Factor in Cryptocurrencies
+Weekly
+Crypto
+46.90%
+9.34%
+cryptocurrenciesmomentumvolatility effectfactor investing
+#1196
+Robust Skewness Multi-Asset Strategy
+Monthly
+EquitiesCommoditiesBondsCurrencies
+5.78%
+10.00%
+asset class pickingdiversificationfactor investingreversal
+#1197
+An Information Factor
+Monthly
+Equities
+14.30%
+11.20%
+insiders trading effectequity long shortfactor investingfundamental analysisstock pickingalternative data
+#1198
+Bitcoin Trading with Quantum Belief Networks
+Daily
+Crypto
+130.50%
+22.60%
+cryptocurrenciesmachine learningsentiment trading
+#1199
+Volatility-Adjusted Leverage Strategy
+Daily
+Equities
+29.81%
+37.48%
+volatility effectmarket timingtrend-followingsentiment tradingsentiment
+#1200
+Using Short interest on Leveraged ETFs for Timing the Stock Index Returns
+Monthly
+Equities
+22.56%
+market timingsentiment
+#1201
+One-Month Factor Momentum Strategy
+Monthly
+Equities
+2.11%
+4.49%
+momentumfactor investingequity long shortsmart betafactor allocation
+#1202
+Bitcoin Pre-Holiday Momentum Strategy
+Daily
+Crypto
+8.62%
+10.96%
+cryptocurrenciesmarket timingseasonalitysentimentmomentumsentiment trading
+#1203
+Bitcoin ETFs in Conventional Multi-Asset Portfolios
+Daily
+EquitiesCommoditiesBondsCrypto
+18.72%
+14.10%
+asset class pickingcryptocurrenciesdiversificationmarket timingmomentumtrend-followingrotational system
+#1204
+VIXY Tail Hedge Strategy
+Daily
+Equities
+18.39%
+15.52%
+diversificationmarket timingvolatility effectsentimentsentiment trading
+#1205
+Investor Memory and Stock Returns
+Monthly
+Equities
+10.16%
+12.40%
+sentimentsentiment tradingreversalliquidity risk premiumstock pickingequity long shortsmart betafactor investing
+#1206
+Revaluation Alpha
+Monthly
+Equities
+4.53%
+7.96%
+factor allocationfactor investingmomentumsmart beta
+#1207
+Volatility Decay and Arbitrage in Leveraged ETFs
+Daily
+Equities
+3.60%
+7.70%
+arbitragebeta factorpairs tradingshort sellingvolatility effect
+#1208
+Leveraged ETFs in Asset Allocation: Opportunity or Trap?
+Monthly
+EquitiesCommoditiesBonds
+8.88%
+9.69%
+asset class pickingdiversificationmarket timingmomentumtrend-following
+#1209
+Santa Claus Rally
+Daily
+Equities
+1.40%
+seasonalitymarket timing
+#1210
+The End-Of-Month Effect in Value-Growth and Real-Estate-Equity Spreads
+Daily
+EquitiesREITs
+3.27%
+5.43%
+equity long shortfactor allocationfactor investingmarket timingspread tradingvaluegrowth stocksseasonality
+#1211
+Alpha in Analysts
+Monthly
+Equities
+11.30%
+24.07%
+equity long shortstock pickingfundamental analysisfactor investingsentiment tradingalternative data
+#1212
+Post-FOMC Drift in the Equity Options Market
+Daily
+Equities
+1.45%
+market timingsentimentvolatility effectsentiment trading
+#1213
+Factor Momentum in REITs
+Monthly
+REITs
+5.68%
+4.20%
+factor investingmomentumsmart betareversalvaluesmall cap
+#1214
+Clustering-Based Lead-Lag Portfolio Strategy
+Intraday
+Equities
+23.35%
+15.00%
+arbitrageequity long shortfactor investingmomentumreversalstock pickingmachine learning
+#1215
+Short Volatility Strategy Execution with Large Language Models
+Daily
+Equities
+8.20%
+5.13%
+volatility premiumsentimentsentiment tradingmachine learningstock pickingalternative data
+#1216
+Attention Factors for Statistical Arbitrage
+Daily
+Equities
+7.93%
+3.62%
+arbitrageequity long shortfactor investingmachine learningmomentumpairs tradingspread tradingstock pickingfundamental analysis
+#1217
+Disagreement on Tail
+Monthly
+Equities
+12.12%
+27.54%
+machine learningstock pickingsentimentvolatility effectfundamental analysisfactor investing
+#1218
+Negative Overnight Return in China
+Intraday
+Equities
+12.40%
+equity long shortliquidity risk premiummarket timingstock picking
+#1219
+Lazy Man's Country Momentum Strategy
+6 Months
+Equities
+13.09%
+16.88%
+momentumcountry pickingfactor investing
+#1220
+Low-volatility strategies with stop-losses for highly liquid cryptocurrencies
+Monthly
+Crypto
+9.00%
+10.00%
+cryptocurrenciesvolatility effectmarket timing
+#1221
+Large Moves in the Foreign Exchange Market
+Daily
+Currencies
+53.42%
+20.01%
+FX anomalyforex systemvolatility effectmarket timingsentimentvolatility premium
+#1222
+Box Index Strategy
+Monthly
+Equities
+11.51%
+14.23%
+alternative datasector pickingmarket timingtrend-followingmomentumrotational system
+#1223
+Tech Momentum Alpha
+Monthly
+Equities
+5.05%
+15.78%
+momentumsector pickingequity long shortmarket timingtrend-following
+#1224
+Holiday Market Boost Strategy
+Daily
+EquitiesCommodities
+7.66%
+seasonalitysector pickingmarket timingstock picking
+#1225
+Characteristics-Managed Momentum
+Monthly
+Equities
+11.90%
+12.80%
+momentummachine learningmomentum in stocksstock picking
+#1226
+Social Media and Crude Oil Market
+Daily
+Commodities
+48.25%
+51.75%
+alternative datasentimentsentiment tradingmarket timing
+#1227
+Bond Factor Momentum
+Monthly
+Bonds
+9.00%
+10.46%
+factor investingmomentumbond timingmarket timingfactor allocation
+#1228
+Multi-Timeframe Bitcoin Trend Strategy
+Intraday
+Crypto
+14.82%
+13.80%
+cryptocurrenciestrend-followingmomentummarket timing
+#1229
+Gold Silver Pair Trading Using Machine Learning
+Daily
+Commodities
+11.20%
+15.80%
+pairs tradingmachine learningspread tradingarbitrage
+#1230
+Intraday First Hour Reversal
+Intraday
+Equities
+7.76%
+5.13%
+reversalmarket timing
+#1231
+Magic Formula in India
+Quarterly
+Equities
+14.19%
+valuefactor investingfundamental analysisstock picking
+#1232
+Defensive Absolute Return Portfolio
+Monthly
+EquitiesCommoditiesBondsCurrencies
+2.80%
+5.00%
+trend-followingvaluemomentumdiversificationfactor investingfactor allocation
+#1233
+Long-Run Interest Rate Differentials and Carry Trade
+Monthly
+Currencies
+2.48%
+6.63%
+carry tradeFX anomalytrend-followingforex system
+#1234
+10-Delta Risk Reversal factor in Currencies
+Monthly
+Currencies
+4.08%
+2.29%
+forex systemvolatility effectFX anomalyreversal
+#1235
+Gold-Treasury Momentum Strategy
+Monthly
+CommoditiesBonds
+11.38%
+13.98%
+asset class pickingmarket timingmomentumrotational systembond timing
+#1236
+Structural Convexity Index
+Monthly
+CommoditiesEquitiesBondsREITs
+7.80%
+arbitragediversificationequity long shortfactor investingpairs trading
+#1237
+Stock Trading Variability and Option Returns
+Monthly
+Equities
+14.57%
+4.82%
+liquidity risk premiumvolatility premiumstock pickingvolume effect
+#1238
+Large Language Models and Futures Price Factors in China
+Daily
+Commodities
+59.71%
+24.84%
+factor investingmachine learningmomentumsentiment
+#1239
+Forecasting Cryptocurrency Markets with Reddit
+Daily
+Crypto
+63.76%
+6.26%
+cryptocurrenciessentimentsentiment tradingmachine learning
+#1240
+Populism Factor
+Monthly
+Equities
+7.70%
+11.47%
+alternative datamachine learningsentimentsentiment tradingfactor investingstock pickingequity long short
+#1241
+How to Identify Gamma Squeeze Stocks
+Daily
+Equities
+69.48%
+37.25%
+arbitragefactor investingfundamental analysisliquidity risk premiummomentumsentiment tradingvolatility effectsentimentvolume effect
+#1242
+Drift Regimes Unlock Hidden Cross-Sectional Predictability
+Daily
+Equities
+62.00%
+12.20%
+factor investingreversalmomentumequity long shortmarket timingstock pickingliquidity risk premium
+#1243
+Expiration Seasonality in the Commodity Spreads
+Daily
+Commodities
+17.30%
+38.90%
+spread tradingmarket timingliquidity risk premiumseasonality
+#1244
+Systematic FX Session Breakout Strategy
+Intraday
+Currencies
+20.00%
+10.00%
+forex systemFX anomalymachine learningmomentumtrend-followingvolatility effect
+#1245
+MAX on Steroids: A New Measure of Investor Attraction to Lottery Stocks
+Monthly
+Equities
+5.54%
+14.59%
+equity long shortfactor investingsentimentstock pickingbeta factor
+#1246
+Factor MAX Strategy
+Monthly
+Equities
+3.91%
+5.05%
+factor investingmomentumequity long shortdiversificationmarket timingsentiment
+#1247
+Momentum-Driven EAFE Tactical Allocation
+Monthly
+Equities
+0.80%
+2.58%
+market timingmomentumrotational systemspread tradingtrend-following
+#1248
+FOMC Cycle 2-year Treasury Momentum Strategy
+Monthly
+Bonds
+0.65%
+0.79%
+bond timingmarket timingmomentumtrend-followingterm spread
+#1249
+Small-Cap Stock Trading Strategies for Retail Traders
+Weekly
+Equities
+12.40%
+15.12%
+small capmomentumliquidity risk premiumstock picking
+#1250
+Intraday Volatility Surface Geometry and Rebalancing Premia in Options
+Intraday
+Equities
+6.65%
+1.49%
+arbitragediversificationequity long shortfactor investingliquidity risk premiummomentumreversalvolatility effectvolatility premium
+#1251
+Structured Event Representation and Stock Return Predictability
+Daily
+Equities
+10.90%
+13.97%
+alternative datamachine learningsentimentstock pickingearnings announcementfundamental analysissentiment trading
+#1252
+Systematic Trend-Following with Adaptive Portfolio Construction in Cryptocurrencies
+Intraday
+Crypto
+40.50%
+16.80%
+cryptocurrenciestrend-followingmomentummarket timing
+#1253
+A Regime-Aware Market Capitalization Rotation Strategy
+Monthly
+EquitiesBonds
+12.08%
+12.77%
+momentumrotational systemsmall capmarket timingtrend-followingvolatility effectasset class picking
+#1254
+Government Shutdown Signal Strategy
+Daily
+Equities
+1.20%
+market timingseasonalityalternative datasentimentsentiment tradingshort selling
+#1255
+Machine Learning Insider Trading Strategy
+Monthly
+Equities
+10.03%
+18.39%
+insiders trading effectmachine learningequity long shortstock pickingsentiment tradingsentimentfactor investing
+#1256
+Agentic AI Nowcasting Predicts Stock Returns
+Daily
+Equities
+57.46%
+72.40%
+alternative dataarbitragefactor investingmachine learningmarket timingsentimentsentiment tradingstock picking
+#1257
+Atypical Firms and the Cross-Section of Expected Stock Returns
+Monthly
+Equities
+12.03%
+31.35%
+equity long shortfactor investingfundamental analysismachine learningsentimentsmall capstock pickingsentiment trading
+#1258
+Morning Volatility Uncertainty and Variance Risk Premium
+Intraday
+Equities
+16.07%
+10.00%
+volatility premiumseasonalitymarket timingsentimentvolatility effectsentiment trading
+1259
+LPPLS for Bubbles in Speculative Markets
+Weekly
+Equities
+20.12%
+40.24%
+market timingmomentumtrend-followingstock pickinggrowth stocks
+#1260
+Hedged Industry Momentum
+Monthly
+Equities
+5.79%
+5.26%
+momentumreversalfactor investingequity long shortdiversificationsector pickingstock picking
+#1261
+Geopolitical Risk in Currency Markets
+Monthly
+Currencies
+3.28%
+8.37%
+FX anomalyfactor investingsentimentforex systemalternative data
+#1262
+Seasonality in Real Estate Spread Trading
+Monthly
+REITs
+9.72%
+19.05%
+market timingseasonality
+#1263
+Niche ETF Reversal Strategy
+Daily
+EquitiesCommoditiesBondsCurrencies
+19.37%
+10.04%
+arbitragereversalliquidity risk premium
+#1264
+Effects of Monsoon on Indian Stock Market
+Monthly
+Equities
+5.45%
+seasonalitysector picking
+#1265
+The Intramonth Momentum Cycle
+Daily
+Equities
+6.74%
+momentummomentum in stocksliquidity risk premiumseasonalitystock pickingmarket timingfactor investingsmart betafactor allocation
+#1266
+Dynamic Factor Allocation via Momentum-Based Regime Switching
+Monthly
+Equities
+12.98%
+19.54%
+factor allocationmomentumtrend-followingdiversificationmarket timinggrowth stockssmart betavaluesmall caprotational system
+#1267
+A Forecast Model For Crypto Currencies
+Daily
+Crypto
+29.33%
+14.81%
+cryptocurrenciesdiversificationmomentumtrend-following
+#1268
+Nonlinear Time Series Momentum
+Daily
+EquitiesCommoditiesCurrenciesBonds
+8.40%
+10.00%
+momentummachine learningtrend-followingvolatility effectfactor investingasset class picking
+#1269
+Innovative Human Capital - Inventor Intensity Factor
+Yearly
+Equities
+4.47%
+13.73%
+factor investingfundamental analysisgrowth stocksstock pickingalternative data
+#1270
+Risk Premia in Diversified Energy Portfolios
+Daily
+Commodities
+4.00%
+5.00%
+arbitragediversificationfactor investingpairs tradingspread trading
+#1271
+High Volume Stocks Outperform Overnight
+Intraday
+Equities
+29.08%
+22.77%
+volume effectequity long shortfactor investingmarket timingreversalstock pickingsmart beta
+#1272
+Similarly Priced Stocks Momentum
+Monthly
+Equities
+3.91%
+9.25%
+momentum in stocksstock pickingmomentumequity long short
+#1273
+Anomaly-Driven Demand Factor
+Monthly
+Equities
+4.03%
+6.61%
+factor investingstock pickingtrading earningsequity long shortfactor allocation
+#1274
+Liquidity Improvements Factor
+Monthly
+Equities
+8.08%
+40.40%
+liquidity risk premiummomentummomentum in stocksfactor investingstock pickingequity long short
+#1275
+Skewness Dispersion and Stock Market Returns
+Monthly
+Equities
+8.36%
+9.39%
+sentimentsentiment tradingmarket timing
+#1276
+Momentum EM-US Tactical Allocation
+Monthly
+Equities
+7.13%
+12.64%
+momentummarket timingspread tradingtrend-followingfactor allocation
+#1277
+Beyond Prompting: An Autonomous Framework for Systematic Factor Investing via Agentic AI
+Daily
+Equities
+42.11%
+19.05%
+factor investingmachine learningequity long shortmomentumtrend-followingfundamental analysisstock picking
+#1278
+52-Week High and the Conditional Betting-Against-Beta
+Monthly
+Equities
+15.24%
+24.98%
+beta factorfactor investingstock pickingequity long shortsmart beta
+#1279
+Relative-Value Reversal in Precious Metals and Mining ETFs
+Daily
+EquitiesCommodities
+25.60%
+47.32%
+reversalpairs tradingspread trading
+#1280
+Gold-Bitcoin Dual Momentum Strategy
+Weekly
+CommoditiesCrypto
+12.01%
+8.77%
+cryptocurrenciesdiversificationmomentumasset class pickingmarket timingrotational system
+#1281
+Orthogonal Residual Commodity Momentum
+Weekly
+Commodities
+16.25%
+14.84%
+momentumreversalfactor investingsentimentsentiment trading
+#1282
+Large Language Models and Generative Factor Discovery in Crypto Markets
+Daily
+Crypto
+15.43%
+26.86%
+cryptocurrenciesfactor investingmachine learningmomentumfundamental analysissentiment tradingdiversification
+#1283
+Volume-Price-Adjusted MACD Trading Strategy
+Daily
+Equities
+23.45%
+15.53%
+momentumtrend-followingvolume effectvolatility effectmarket timing
+#1284
+Cross-Sectional Dispersion and the State Dependence of Cryptocurrency Momentum
+Daily
+Crypto
+7.74%
+9.69%
+cryptocurrenciesmomentumfactor investingvolatility effectdiversificationmarket timingtrend-following
+#1285
+Cross-sectional FOMC Announcement Premium in Stocks
+Daily
+Equities
+4.65%
+2.00%
+volatility premiumbeta factorfactor investingstock pickingmarket timing
+#1286
+Multi-Asset Commodities Volatility Portfolio
+Monthly
+Commodities
+8.00%
+9.00%
+carry tradepairs tradingspread tradingvolatility premium
+#1287
+Regret-Based Portfolio Allocation
+6 Months
+EquitiesCommoditiesBondsREITs
+14.82%
+16.60%
+diversificationasset class pickingfactor allocationfactor investingmarket timingmomentum
+#1288
+Reviving Anomalies
+Monthly
+Equities
+16.00%
+15.80%
+diversificationequity long shortfactor investingmachine learningmomentumstock pickingfactor allocationsmart beta
+#1289
+Volatility-Targeted QQQ–TLT Rotation with a Multi-Scale CNN-LSTM Forecast
+Daily
+EquitiesBonds
+15.10%
+25.17%
+asset class pickingdiversificationmachine learningmarket timingvolatility effect
+#1290
+The MAX Effect with VIX-Based Leverage Scaling
+Daily
+Equities
+13.27%
+22.12%
+liquidity risk premiumsentimentsentiment tradingvolatility effectstock pickingequity long short
+#1291
+The Election Anomaly in Bitcoin Returns
+Daily
+Crypto
+8.80%
+cryptocurrenciesmarket timingsentimentseasonalitysentiment trading
+#1292
+Commodity Dual Momentum Trend Filter
+Monthly
+Commodities
+7.59%
+14.67%
+momentummarket timingtrend-followingsector picking
+#1293
+Trend-Following Pullback Reversal Strategy
+Daily
+EquitiesBondsCurrenciesCommodities
+5.32%
+6.68%
+reversalmarket timing
+#1294
+Value-Growth Spread Timing Strategy
+Monthly
+Equities
+3.71%
+10.65%
+valuegrowth stocksmarket timingtrend-followingmomentumspread tradingsmall capequity long short
+#1295
+Multi-Asset Skewness Strategy v2
+Monthly
+CurrenciesEquitiesBondsCommodities
+7.67%
+15.57%
+volatility effectfactor investingdiversification
+#1296
+Composite Seasonal Equity Strategy
+Daily
+Equities
+7.47%
+seasonalitymarket timingtrend-following
+#1297
+Exotic Commodity Momentum Strategy
+Monthly
+Commodities
+6.93%
+14.08%
+momentumdiversificationliquidity risk premiumtrend-followingfactor allocationfactor investing
+#1298
+Large Cap-Mid Cap Spread Strategy
+Quarterly
+Equities
+11.23%
+28.00%
+equity long shortdiversificationshort sellingstock pickingmarket timing
+#1299
+Industry Factor Structure and Crisis Risk Premium
+6 Months
+Equities
+5.60%
+10.05%
+beta factordiversificationfactor investingsector pickingsmart beta
+#1300
+Latency Alpha in Crude Oil Futures
+Intraday
+Commodities
+31.20%
+17.14%
+arbitragemachine learningsentimentsentiment trading
+#1301
+GARCH-LSTM Pair Trading Strategies on ETH-BTC pair
+Daily
+Crypto
+56.71%
+18.84%
+cryptocurrenciesmachine learningpairs tradingsentimentsentiment trading
+#1302
+Token Dilution Premium Strategy
+Weekly
+Crypto
+32.36%
+28.51%
+#1303
+Dynamic Conversion Arbitrage on the Magnificent 7
+Daily
+Equities
+7.50%
+2.70%
+arbitrageequity long shortgrowth stocksvolatility effectvolatility premium
+#1304
+Filing Language Stability as a Selection Signal
+Monthly
+Equities
+21.09%
+35.15%
+trading earningssentiment tradingsentimentmarket timingmachine learningearnings announcementalternative data
+#1305
+Polymarket Mean-Reversion Strategy
+Daily
+Crypto
+22.09%
+17.97%
+market timingreversalsentimentcryptocurrencies
+#1306
+QQQ-Bitcoin Breakout Rotation
+Daily
+EquitiesCrypto
+43.69%
+25.85%
+cryptocurrenciesmomentumrotational systemmarket timingtrend-followingsentimentgrowth stocks
+#1307
+Degree of Extrapolation Effect in Commodities
+Weekly
+Commodities
+13.11%
+18.67%
+momentumliquidity risk premiumalternative data
+#1308
+China-U.S. Dual-Anchor Commodity Strategy
+Weekly
+Commodities
+36.50%
+21.99%
+fundamental analysisvaluemarket timingtrend-following
+#1309
+Intraday Donchian Trend-Following Framework
+Intraday
+Equities
+28.49%
+trend-followingmomentummarket timing
+#1310
+ENSO Signals in Soft Commodity Futures
+Weekly
+Commodities
+1.18%
+1.12%
+alternative datamachine learningmarket timingmomentumseasonalityvolatility effect
+#1311
+Seven Factor Model for Crypto
+Weekly
+Crypto
+80.30%
+61.33%
+cryptocurrenciesalternative datafactor investingreversalvalue
+#1312
+Cross-Sectional Return Prediction in Cryptocurrency Markets Using Variational Latent Factor Models
+Daily
+Crypto
+47.60%
+41.03%
+cryptocurrenciesmachine learningfactor investingdiversificationmarket timing
+#1313
+Skewness Managed Portfolios
+Monthly
+Equities
+13.10%
+24.26%
+equity long shortfactor investingvaluemomentum in stockssmall capvolatility premium
+#1314
+M-Score - A Measure of Accounting Quality
+Yearly
+Equities
+6.74%
+9.08%
+accruals effectfundamental analysisstock pickingshort sellingequity long shortfactor investingsmart beta
+#1315
+Intraday Volume Periodicity
+Weekly
+Equities
+27.32%
+34.15%
+volume effectliquidity risk premiummachine learningmarket timingseasonality
+#1316
+Sizing Market Exposure With Aggregate Sales Growth
+Monthly
+Equities
+20.48%
+25.60%
+fundamental analysismarket timingasset class picking
+#1317
+Using Machine Learning to Trade The Implied Volatility Surface and the Cross-Section of Stocks
+Monthly
+Equities
+7.48%
+7.41%
+machine learningstock pickingvolatility premiumvolatility effectshort selling
+#1318
+Wikipedia Attention Premium Strategy
+Daily
+Equities
+11.74%
+9.01%
+alternative datasentimentequity long shortfactor investingsmart beta
+#1319
+Price Path Continuity and the Cross-Section of Cryptocurrency Returns
+Weekly
+Crypto
+84.20%
+29.40%
+momentum
+#1320
+Reversal-Tilted Momentum
+Monthly
+Equities
+18.80%
+24.10%
+momentum in stocksreversalequity long shortsmall capfactor investingsmart beta
+#1321
+A Systematic Multi-Asset Defensive Overlay for Equity Portfolios
+Weekly
+BondsCurrenciesCommodities
+14.10%
+14.20%
+diversificationmomentumtrend-following
+#1322
+Structural-Break Entry and the Disposition Effect in a Commercial XAUUSD Strategy
+Intraday
+Commodities
+49.18%
+16.07%
+market timingtrend-following
+#1323
+Sectoral Intramonth Momentum Cycle Strategy
+Daily
+Equities
+5.99%
+10.87%
+momentumsector pickingmarket timingreversalseasonality
+#1324
+Intraday Cross-Session Momentum in Gold and Silver Markets
+Intraday
+Commodities
+27.20%
+15.00%
+momentummarket timing
+#1325
+Hybrid Momentum-Contrarian Portfolio Strategy
+Weekly
+Equities
+18.60%
+18.00%
+momentumreversalstock pickingfactor investingsmart beta
+#1326
+Call Pressure U-Shape Strategy
+Daily
+Equities
+104.08%
+42.83%
+market timingmomentumreversalsentiment tradingvolatility premiumvolatility effect
+#1327
+Betting on the Leverage Effect
+Monthly
+Equities
+5.91%
+8.81%
+volatility effectfactor investingstock pickingequity long shortsmart beta
+#1328
+Calendar Effects of Asset Pricing Factors
+Monthly
+Equities
+18.80%
+12.64%
+factor investingequity long shortseasonalitysentimentmarket timing
+#1329
+Bitcoin Regime Signal for Growth Equities
+Weekly
+EquitiesBonds
+14.74%
+18.43%
+asset class pickingcryptocurrenciesmarket timingmomentumtrend-following
+#1330
+IBS Mean Reversion Strategy
+Daily
+Equities
+6.22%
+reversalmarket timingcountry pickingarbitrage
+#1331
+Correlation and Commodity Risk Premia
+Monthly
+Commodities
+4.31%
+12.81%
+factor investingdiversification
+#1332
+The Special-Dividend Drift
+Daily
+Equities
+14.40%
+stock pickingalternative data
+#1333
+Cryptocurrency Futures Market Arbitrage
+Intraday
+Crypto
+14.46%
+10.00%
+cryptocurrenciesarbitragecarry tradevolatility premium
+#1334
+Diversified Multi-Asset Trend Multi-Strategy
+Daily
+EquitiesCommoditiesBondsCurrenciesCrypto
+13.06%
+13.28%
+trend-followingmomentumdiversification
+#1335
+Using the SPX to Time the VIX
+Daily
+Equities
+7.64%
+market timingvolatility premiumsentiment trading
+#1336
+Binary Bias and Stock Returns
+Monthly
+Equities
+14.03%
+12.09%
+stock pickingequity long shortfactor investingsmart betareversal
+ff01
+Fama/French SMB (Small Minus Big) Factor (3 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff02
+Fama/French HML (High Minus Low) Factor (3 Factors Model)
+Yearly
+Equities
+stock pickingfactor investingequity long shortsmart betavalue
+ff03
+Fama/French Rm-Rf Factor (3 Factors Model)
+Yearly
+Equities
+stock pickingfactor investingequity long shortsmart beta
+ff04
+Fama/French SMB (Small Minus Big) Factor (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff05
+Fama/French RMW (Robust Minus Weak) Factor (5 Factors Model)
+Yearly
+Equities
+stock pickingfactor investingequity long shortsmart beta
+ff06
+Fama/French CMA (Conservative Minus Aggressive) Factor (5 Factors Model)
+Yearly
+Equities
+stock pickingfactor investingequity long shortsmart beta
+ff07
+Fama/French Momentum Factor
+Daily
+Equities
+momentumsmall capstock pickingfactor investingequity long shortsmart beta
+ff08
+Fama/French Short-Term Reversal Factor
+Daily
+Equities
+reversalsmall capstock pickingfactor investingequity long shortsmart beta
+ff09
+Fama/French Long-Term Reversal Factor
+Daily
+Equities
+reversalsmall capstock pickingfactor investingequity long shortsmart beta
+ff10
+Fama/French SMB (Small Minus Big) Factor for Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff11
+Fama/French HML (High Minus Low) Factor for Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart betavalue
+ff12
+Fama/French RMW (Robust Minus Weak) Factor for Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff13
+Fama/French CMA (Conservative Minus Aggressive) Factor for Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff14
+Fama/French Rm-Rf Factor for Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff15
+Fama/French SMB (Small Minus Big) Factor for Developed ex US Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff16
+Fama/French HML (High Minus Low) Factor for ex US Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart betavalue
+ff17
+Fama/French RMW (Robust Minus Weak) Factor for ex US Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff18
+Fama/French CMA (Conservative Minus Aggressive) Factor for ex US Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff19
+Fama/French Rm-Rf Factor for ex US Developed Markets (5 Factors Model)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff20
+Fama/French SMB (Small Minus Big) European Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff21
+Fama/French HML (High Minus Low) European Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart betavalue
+ff22
+Fama/French RMW (Robust Minus Weak) European Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff23
+Fama/French CMA (Conservative Minus Aggressive) European Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff24
+Fama/French Rm-Rf European Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff25
+Fama/French SMB (Small Minus Big) Japanese Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff26
+Fama/French HML (High Minus Low) Japanese Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart betavalue
+ff27
+Fama/French RMW (Robust Minus Weak) Japanese Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff28
+Fama/French CMA (Conservative Minus Aggressive) Japanese Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff29
+Fama/French Rm-Rf Japanese Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff30
+Fama/French SMB (Small Minus Big) Asia Pacific ex Japan Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff31
+Fama/French HML (High Minus Low) Asia Pacific ex Japan Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart betavalue
+ff32
+Fama/French RMW (Robust Minus Weak) Asia Pacific ex Japan Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff33
+Fama/French CMA (Conservative Minus Aggressive) Asia Pacific ex Japan Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff34
+Fama/French Rm-Rf Asia Pacific ex Japan Factor (5 Factors)
+Yearly
+Equities
+small capstock pickingfactor investingequity long shortsmart beta
+ff35
+Fama/French Momentum Factor for Developed Markets
+Yearly
+Equities
+momentumsmall capstock pickingfactor investingequity long shortsmart beta
+ff36
+Fama/French Momentum Factor for Developed ex US Markets
+Daily
+Equities
+momentumsmall capstock pickingfactor investingequity long shortsmart beta
+ff37
+Fama/French Momentum Factor for European Markets
+Daily
+Equities
+momentumsmall capstock pickingfactor investingequity long shortsmart beta
+ff38
+Fama/French Momentum Factor for Japanese Markets
+Daily
+Equities
+momentumsmall capstock pickingfactor investingequity long shortsmart beta
+ff39
+Fama/French Momentum Factor for Asia Pacific ex Japan Markets
+Daily
+Equities
+momentumsmall capstock pickingfactor investingequity long shortsmart beta
