@@ -1,12 +1,13 @@
+import os
+import re
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+import numpy as np
+import pandas as pd
+import plotly.graph_objects as go
 import streamlit as st
 import yfinance as yf
-import pandas as pd
-import numpy as np
-import plotly.graph_objects as go
-import urllib.request
-import urllib.parse
-import xml.etree.ElementTree as ET
-import re, os
 
 st.set_page_config(page_title="OpenQuant Institutional Terminal", layout="wide")
 
@@ -14,235 +15,1118 @@ CSV_FILE = "strategies_master.csv"
 
 # Complete 37-Strategy Database Extracted Directly from Your Quantpedia Screener HTML
 MASTER_STRATEGIES = [
-    {"ID": "#0001", "Title": "Asset Class Trend-Following", "Reb": "Monthly", "Markets": "Equities, Bonds, Commodities, REITs", "Paper_Ret": 11.27, "Paper_Vol": 6.87, "Keywords": "momentum, asset class picking, trend-following", "Type": "trend", "Assets": "SPY,EFA,BND,VNQ,GSG", "Paper": "Mebane Faber (2007) - A Quantitative Approach to Tactical Asset Allocation", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=962461", "QP_URL": "https://quantpedia.com/strategies/asset-class-trend-following"},
-    {"ID": "#0002", "Title": "Momentum Asset Allocation Strategy", "Reb": "Monthly", "Markets": "Equities, Bonds, Commodities, REITs", "Paper_Ret": 14.49, "Paper_Vol": 11.00, "Keywords": "momentum, asset class picking, rotational system", "Type": "top2", "Assets": "SPY,EFA,BND,VNQ,GSG", "Paper": "Gary Antonacci (2012) - Risk Premia Harvesting Through Dual Momentum", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2042750", "QP_URL": "https://quantpedia.com/strategies/asset-class-momentum-rotational-system"},
-    {"ID": "#0003", "Title": "Sector Momentum - Rotational System", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 13.94, "Paper_Vol": 18.38, "Keywords": "momentum, rotational system, sector picking", "Type": "top2", "Assets": "XLK,XLF,XLE,XLV,XLI,XLP,XLY", "Paper": "Moskowitz & Grinblatt (1999) - Do Industries Explain Momentum?", "Paper_URL": "https://www.jstor.org/stable/222491", "QP_URL": "https://quantpedia.com/strategies/sector-momentum-rotational-system"},
-    {"ID": "#0004", "Title": "Overnight Anomaly", "Reb": "Intraday", "Markets": "Equities", "Paper_Ret": 14.00, "Paper_Vol": 12.50, "Keywords": "market timing, seasonality", "Type": "trend", "Assets": "SPY,QQQ", "Paper": "Cooper, Cliff, & Gulen (2008) - Return Differences Between Trading and Non-Trading Hours", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1004081", "QP_URL": "https://quantpedia.com/strategies/overnight-anomaly"},
-    {"ID": "#0005", "Title": "FX Carry Trade", "Reb": "Monthly", "Markets": "Currencies", "Paper_Ret": 7.27, "Paper_Vol": 9.60, "Keywords": "carry trade, FX anomaly, forex system, factor investing", "Type": "top2", "Assets": "UUP,FXA,FXE,FXY,FXB", "Paper": "Lustig, Roussanov, & Verdelhan (2011) - Common Risk Factors in Currency Markets", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1269446", "QP_URL": "https://quantpedia.com/strategies/fx-carry-trade"},
-    {"ID": "#0006", "Title": "Bond Carry Strategy", "Reb": "Monthly", "Markets": "Bonds", "Paper_Ret": 9.91, "Paper_Vol": 8.63, "Keywords": "carry trade, factor investing, smart beta", "Type": "top2", "Assets": "TLT,IEF,HYG,LQD,EMB", "Paper": "Koijen, Moskowitz, Pedersen, & Vrugt (2018) - Carry", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2298565", "QP_URL": "https://quantpedia.com/strategies/bond-carry-strategy"},
-    {"ID": "#0007", "Title": "Low Volatility Factor Effect in Stocks", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 11.30, "Paper_Vol": 10.10, "Keywords": "stock picking, volatility effect, factor investing, smart beta", "Type": "trend", "Assets": "USMV,SPLV,SPY", "Paper": "Blitz & van Vliet (2007) - The Volatility Effect: Lower Risk Without Lower Return", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=980865", "QP_URL": "https://quantpedia.com/strategies/low-volatility-factor-effect-in-stocks"},
-    {"ID": "#0008", "Title": "Currency Momentum Factor", "Reb": "Monthly", "Markets": "Currencies", "Paper_Ret": 7.61, "Paper_Vol": 10.22, "Keywords": "momentum, FX anomaly, forex system, factor investing", "Type": "top2", "Assets": "UUP,FXE,FXY,FXA,FXC", "Paper": "Menkhoff, Sarno, Schmeling, & Schrimpf (2012) - Currency Momentum Strategies", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1409822", "QP_URL": "https://quantpedia.com/strategies/currency-momentum-factor"},
-    {"ID": "#0009", "Title": "Currency Value Factor - PPP Strategy", "Reb": "Quarterly", "Markets": "Currencies", "Paper_Ret": 7.82, "Paper_Vol": 9.33, "Keywords": "FX anomaly, forex system, value, factor investing", "Type": "valmom", "Assets": "UUP,FXE,FXY,FXB,FXA", "Paper": "Asness, Moskowitz, & Pedersen (2013) - Value and Momentum Everywhere (FX Value)", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2174501", "QP_URL": "https://quantpedia.com/strategies/currency-value-factor-ppp-strategy"},
-    {"ID": "#0010", "Title": "Sector Rotation based on Monetary Policy", "Reb": "Yearly", "Markets": "Equities", "Paper_Ret": 15.82, "Paper_Vol": 15.50, "Keywords": "sector picking, monetary policy", "Type": "top2", "Assets": "XLF,XLK,XLV,XLP,XLU", "Paper": "Conover, Jensen, Johnson, & Mercer (2008) - Sector Rotation and Monetary Conditions", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=936946", "QP_URL": "https://quantpedia.com/strategies/sector-rotation-based-on-monetary-policy"},
-    {"ID": "#0011", "Title": "Stock Return Reversal within Industries", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 16.78, "Paper_Vol": 12.91, "Keywords": "stock picking, reversal, equity long short", "Type": "rev_dip", "Assets": "XLK,XLF,XLE,XLV,XLI", "Paper": "Hameed & Mian (2015) - Industries and Stock Return Reversals", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2163621", "QP_URL": "https://quantpedia.com/strategies/stock-return-reversal-within-industries"},
-    {"ID": "#0012", "Title": "Pairs Trading with Stocks", "Reb": "Daily", "Markets": "Equities", "Paper_Ret": 11.16, "Paper_Vol": 5.85, "Keywords": "equity long short, pairs trading, arbitrage", "Type": "rev_dip", "Assets": "SPY,QQQ,IWM,DIA", "Paper": "Gatev, Goetzmann, & Rouwenhorst (2006) - Pairs Trading: Performance of a Relative-Value Rule", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=141615", "QP_URL": "https://quantpedia.com/strategies/pairs-trading-with-stocks"},
-    {"ID": "#0013", "Title": "Short Term Reversal Effect in Stocks", "Reb": "Weekly", "Markets": "Equities", "Paper_Ret": 16.25, "Paper_Vol": 14.94, "Keywords": "stock picking, reversal, equity long short, factor investing", "Type": "rev_dip", "Assets": "SPY,QQQ,SMH,XBI", "Paper": "Jegadeesh (1990) - Evidence of Predictable Behavior of Security Returns", "Paper_URL": "https://www.jstor.org/stable/2328797", "QP_URL": "https://quantpedia.com/strategies/short-term-reversal-in-stocks"},
-    {"ID": "#0014", "Title": "Momentum Factor Effect in Stocks", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 8.30, "Paper_Vol": 16.60, "Keywords": "momentum, stock picking, momentum in stocks, factor investing", "Type": "top2", "Assets": "MTUM,QQQ,SPY,IWM", "Paper": "Jegadeesh & Titman (1993) - Returns to Buying Winners and Selling Losers", "Paper_URL": "https://www.jstor.org/stable/2329002", "QP_URL": "https://quantpedia.com/strategies/momentum-factor-effect-in-stocks"},
-    {"ID": "#0015", "Title": "Momentum Factor Effect in Country Equity Indexes", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 17.70, "Paper_Vol": 15.20, "Keywords": "momentum, rotational system, country picking, factor investing", "Type": "top2", "Assets": "SPY,EWJ,EWG,EWU,FXI,EWZ", "Paper": "Bhojraj & Swaminathan (2006) - Macromomentum: Returns Predictability in International Equity Indices", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=267991", "QP_URL": "https://quantpedia.com/strategies/momentum-factor-effect-in-country-equity-indexes"},
-    {"ID": "#0016", "Title": "Reversal Effect in International Equity ETFs", "Reb": "3 Years", "Markets": "Equities", "Paper_Ret": 6.40, "Paper_Vol": 14.10, "Keywords": "rotational system, reversal, country picking, factor investing", "Type": "valmom", "Assets": "SPY,EFA,VWO,EWJ,EWZ", "Paper": "Richards (1997) - Winner-Loser Reversals in National Stock Market Indices", "Paper_URL": "https://www.jstor.org/stable/2329472", "QP_URL": "https://quantpedia.com/strategies/mean-reversion-effect-in-country-equity-indexes"},
-    {"ID": "#0017", "Title": "Momentum Effect in Anomalies/Trading Systems", "Reb": "Yearly", "Markets": "Equities", "Paper_Ret": 13.76, "Paper_Vol": 11.40, "Keywords": "momentum, factor investing, smart beta, factor allocation", "Type": "top2", "Assets": "MTUM,VLUE,QUAL,USMV,SIZE", "Paper": "Arnott, Clements, Kalesnik, & Linnainmaa (2019) - Factor Momentum", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3116974", "QP_URL": "https://quantpedia.com/strategies/momentum-effect-in-anomalies-trading-systems"},
-    {"ID": "#0018", "Title": "Liquidity Effect in Stocks", "Reb": "Yearly", "Markets": "Equities", "Paper_Ret": 6.68, "Paper_Vol": 11.87, "Keywords": "stock picking, equity long short, liquidity risk premium", "Type": "trend", "Assets": "IWM,IJH,SPY", "Paper": "Ibbotson, Chen, Kim, & Hu (2013) - Liquidity as an Investment Style", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2008946", "QP_URL": "https://quantpedia.com/strategies/liquidity-effect-in-stocks"},
-    {"ID": "#0019", "Title": "Dividend Month Anomaly", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 17.90, "Paper_Vol": 20.00, "Keywords": "seasonality, stock picking, factor investing, smart beta", "Type": "trend", "Assets": "SCHD,VYM,DVY,SPY", "Paper": "Hartzmark & Solomon (2013) - The Dividend Month Premium", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1790634", "QP_URL": "https://quantpedia.com/strategies/dividend-month-anomaly"},
-    {"ID": "#0020", "Title": "Volatility Risk Premium Effect", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 26.00, "Paper_Vol": 19.00, "Keywords": "volatility effect, volatility premium, factor investing", "Type": "trend", "Assets": "SVXY,PUTW,SPY,TLT", "Paper": "Bollerslev, Tauchen, & Zhou (2009) - Expected Stock Returns and Variance Risk Premia", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=976312", "QP_URL": "https://quantpedia.com/strategies/volatility-risk-premium-effect"},
-    {"ID": "#0021", "Title": "Momentum Effect in Commodities", "Reb": "Monthly", "Markets": "Commodities", "Paper_Ret": 14.60, "Paper_Vol": 25.57, "Keywords": "momentum, rotational system, factor investing, smart beta", "Type": "top2", "Assets": "GLD,SLV,USO,DBA,GSG", "Paper": "Miffre & Rallis (2007) - Momentum Strategies in Commodity Futures Markets", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=929548", "QP_URL": "https://quantpedia.com/strategies/momentum-effect-in-commodities"},
-    {"ID": "#0022", "Title": "Term Structure Effect in Commodities", "Reb": "Monthly", "Markets": "Commodities", "Paper_Ret": 11.73, "Paper_Vol": 23.84, "Keywords": "rotational system, term spread, factor investing", "Type": "top2", "Assets": "DBC,USCI,GSG,GLD", "Paper": "Gorton, Hayashi, & Rouwenhorst (2012) - The Fundamentals of Commodity Futures Returns", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=996930", "QP_URL": "https://quantpedia.com/strategies/term-structure-effect-in-commodities"},
-    {"ID": "#0023", "Title": "Momentum Combined with Term Structure in Commodities", "Reb": "Monthly", "Markets": "Commodities", "Paper_Ret": 21.80, "Paper_Vol": 27.60, "Keywords": "momentum, rotational system, term spread, factor investing", "Type": "top2", "Assets": "DBC,USCI,GLD,SLV,USO", "Paper": "Fuertes, Miffre, & Rallis (2010) - Tactical Allocation in Commodity Futures Markets", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1195522", "QP_URL": "https://quantpedia.com/strategies/momentum-effect-combined-with-term-structure-in-commodities"},
-    {"ID": "#0024", "Title": "Merger Arbitrage", "Reb": "Daily", "Markets": "Equities", "Paper_Ret": 6.86, "Paper_Vol": 4.72, "Keywords": "equity long short, arbitrage, factor investing", "Type": "trend", "Assets": "MNA,USMV,SHY", "Paper": "Mitchell & Pulvino (2001) - Characteristics of Risk and Return in Risk Arbitrage", "Paper_URL": "https://www.jstor.org/stable/2697820", "QP_URL": "https://quantpedia.com/strategies/merger-arbitrage"},
-    {"ID": "#0025", "Title": "Size Factor - Small Capitalization Stocks Premium", "Reb": "Yearly", "Markets": "Equities", "Paper_Ret": 6.10, "Paper_Vol": 25.60, "Keywords": "stock picking, equity long short, small cap, factor investing", "Type": "trend", "Assets": "IWM,IJR,VB,SPY", "Paper": "Banz (1981) & Fama-French (1992) - The Relationship Between Return and Market Value of Common Stocks", "Paper_URL": "https://www.jstor.org/stable/2328882", "QP_URL": "https://quantpedia.com/strategies/small-capitalization-stocks-premium-anomaly"},
-    {"ID": "#0026", "Title": "Value (Book-to-Market) Factor", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 3.60, "Paper_Vol": 12.02, "Keywords": "stock picking, value, fundamental analysis, factor investing", "Type": "valmom", "Assets": "VLUE,VTV,IWD,SPY", "Paper": "Fama & French (1992) - The Cross-Section of Expected Stock Returns", "Paper_URL": "https://www.jstor.org/stable/2329112", "QP_URL": "https://quantpedia.com/strategies/value-book-to-market-factor"},
-    {"ID": "#0027", "Title": "Market Timing with Aggregate and Idiosyncratic Volatilities", "Reb": "Quarterly", "Markets": "Equities", "Paper_Ret": 20.07, "Paper_Vol": 37.80, "Keywords": "market timing, volatility effect", "Type": "vol_time", "Assets": "SPY,TLT", "Paper": "Guo & Savickas (2006) - Idiosyncratic Volatility, Stock Market Volatility, and Expected Stock Returns", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=480961", "QP_URL": "https://quantpedia.com/strategies/market-timing-with-aggregate-and-idiosyncratic-stock-volatilities"},
-    {"ID": "#0028", "Title": "Value and Momentum Factors across Asset Classes", "Reb": "Monthly", "Markets": "Equities, Bonds, REITs", "Paper_Ret": 11.90, "Paper_Vol": 10.00, "Keywords": "momentum, asset class picking, value, factor investing", "Type": "valmom", "Assets": "SPY,EFA,VNQ,GLD,BND", "Paper": "Asness, Moskowitz, & Pedersen (2013) - Value and Momentum Everywhere", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2174501", "QP_URL": "https://quantpedia.com/strategies/value-and-momentum-factors-across-asset-classes"},
-    {"ID": "#0029", "Title": "Market Timing S&P 500 with VIX and COT Report", "Reb": "Weekly", "Markets": "Equities", "Paper_Ret": 9.70, "Paper_Vol": 11.00, "Keywords": "market timing, sentiment trading, alternative data", "Type": "vol_time", "Assets": "SPY,TLT", "Paper": "Giot (2005) & Briese (2008) - Commitments of Traders and Implied Volatility Timing", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=496262", "QP_URL": "https://quantpedia.com/strategies/market-timing-sp-500-with-vix-and-cot-report"},
-    {"ID": "#0030", "Title": "Timing Commodities and S&P500 with COT Report", "Reb": "Weekly", "Markets": "Equities, Commodities", "Paper_Ret": 16.80, "Paper_Vol": 10.30, "Keywords": "asset class picking, market timing, sentiment trading, alternative data", "Type": "top2", "Assets": "SPY,DBC,GLD,TLT", "Paper": "De Roon, Nijman, & Veld (2000) - Hedging Pressure Effects in Futures Markets", "Paper_URL": "https://www.jstor.org/stable/222456", "QP_URL": "https://quantpedia.com/strategies/timing-commodities-and-sp500-with-cot-report"},
-    {"ID": "#0031", "Title": "Market Seasonality Effect in World Equity Indexes", "Reb": "6 Months", "Markets": "Equities", "Paper_Ret": 8.80, "Paper_Vol": 13.50, "Keywords": "market timing, seasonality", "Type": "trend", "Assets": "SPY,EFA,EWJ,EWU", "Paper": "Bouman & Jacobsen (2002) - The Halloween Indicator, 'Sell in May and Go Away'", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=76248", "QP_URL": "https://quantpedia.com/strategies/market-seasonality-effect-in-world-equity-indexes"},
-    {"ID": "#0032", "Title": "Combining Seasonality and Momentum in US Equity Sectors", "Reb": "Monthly", "Markets": "Equities", "Paper_Ret": 12.90, "Paper_Vol": 17.00, "Keywords": "momentum, rotational system, sector picking, seasonality", "Type": "top2", "Assets": "XLK,XLF,XLE,XLV,XLI,XLP", "Paper": "Jacobsen & Visaltanachoti (2009) - The Halloween Effect in US Sectors", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=955639", "QP_URL": "https://quantpedia.com/strategies/combining-seasonality-and-momentum-in-us-equity-sectors"},
-    {"ID": "#0033", "Title": "Post-Earnings Announcement Effect", "Reb": "Quarterly", "Markets": "Equities", "Paper_Ret": 15.00, "Paper_Vol": 14.00, "Keywords": "stock picking, fundamental analysis, earnings announcement", "Type": "top2", "Assets": "MTUM,QUAL,QQQ,SPY", "Paper": "Bernard & Thomas (1989) - Post-Earnings-Announcement Drift: Delayed Price Response", "Paper_URL": "https://www.jstor.org/stable/2491062", "QP_URL": "https://quantpedia.com/strategies/post-earnings-announcement-effect"},
-    {"ID": "#0034", "Title": "Post-Loss/Profit Announcement Drift in Stocks", "Reb": "Daily", "Markets": "Equities", "Paper_Ret": 26.00, "Paper_Vol": 5.00, "Keywords": "stock picking, earnings announcement, trading earnings", "Type": "top2", "Assets": "QUAL,MTUM,SPY", "Paper": "Balakrishnan, Bartov, & Faurel (2010) - Post-Loss/Profit Announcement Drift", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1122990", "QP_URL": "https://quantpedia.com/strategies/post-loss-profit-announcement-drift-in-stocks"},
-    {"ID": "#0035", "Title": "Insiders Trading Effect in Stocks", "Reb": "Yearly", "Markets": "Equities", "Paper_Ret": 7.70, "Paper_Vol": 15.00, "Keywords": "stock picking, insiders trading effect, alternative data", "Type": "trend", "Assets": "KNOW,SPY,IWM", "Paper": "Lakonishok & Lee (2001) - Are Insider Trades Informative?", "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=165268", "QP_URL": "https://quantpedia.com/strategies/insiders-trading-effect-in-stocks"},
-    {"ID": "#0036", "Title": "Net Payout Yield Effect", "Reb": "Yearly", "Markets": "Equities", "Paper_Ret": 22.13, "Paper_Vol": 15.50, "Keywords": "stock picking, value, fundamental analysis, factor investing", "Type": "trend", "Assets": "PKW,SCHD,SYLD,SPY", "Paper": "Boudoukh, Michaely, Richardson, & Roberts (2007) - On the Importance of Measuring Payout Yield", "Paper_URL": "https://www.jstor.org/stable/4123482", "QP_URL": "https://quantpedia.com/strategies/net-payout-yield-effect"},
-    {"ID": "#0037", "Title": "Net Current Asset Value Effect", "Reb": "Yearly", "Markets": "Equities", "Paper_Ret": 31.19, "Paper_Vol": 18.00, "Keywords": "stock picking, value, fundamental analysis, factor investing", "Type": "valmom", "Assets": "IWN,VBR,VLUE,SPY", "Paper": "Benjamin Graham & Oppenheimer (1986) - Ben Graham's Net Current Asset Values", "Paper_URL": "https://www.jstor.org/stable/4478980", "QP_URL": "https://quantpedia.com/strategies/net-current-asset-value-effect"}
+    {
+        "ID": "#0001",
+        "Title": "Asset Class Trend-Following",
+        "Reb": "Monthly",
+        "Markets": "Equities, Bonds, Commodities, REITs",
+        "Paper_Ret": 11.27,
+        "Paper_Vol": 6.87,
+        "Keywords": "momentum, asset class picking, trend-following",
+        "Type": "trend",
+        "Assets": "SPY,EFA,BND,VNQ,GSG",
+        "Paper": (
+            "Mebane Faber (2007) - A Quantitative Approach to Tactical Asset"
+            " Allocation"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=962461",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/asset-class-trend-following"
+        ),
+    },
+    {
+        "ID": "#0002",
+        "Title": "Momentum Asset Allocation Strategy",
+        "Reb": "Monthly",
+        "Markets": "Equities, Bonds, Commodities, REITs",
+        "Paper_Ret": 14.49,
+        "Paper_Vol": 11.00,
+        "Keywords": "momentum, asset class picking, rotational system",
+        "Type": "top2",
+        "Assets": "SPY,EFA,BND,VNQ,GSG",
+        "Paper": (
+            "Gary Antonacci (2012) - Risk Premia Harvesting Through Dual"
+            " Momentum"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2042750",
+        "QP_URL": "https://quantpedia.com/strategies/asset-class-momentum-rotational-system",
+    },
+    {
+        "ID": "#0003",
+        "Title": "Sector Momentum - Rotational System",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 13.94,
+        "Paper_Vol": 18.38,
+        "Keywords": "momentum, rotational system, sector picking",
+        "Type": "top2",
+        "Assets": "XLK,XLF,XLE,XLV,XLI,XLP,XLY",
+        "Paper": (
+            "Moskowitz & Grinblatt (1999) - Do Industries Explain Momentum?"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/222491",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/sector-momentum-rotational-system"
+        ),
+    },
+    {
+        "ID": "#0004",
+        "Title": "Overnight Anomaly",
+        "Reb": "Intraday",
+        "Markets": "Equities",
+        "Paper_Ret": 14.00,
+        "Paper_Vol": 12.50,
+        "Keywords": "market timing, seasonality",
+        "Type": "trend",
+        "Assets": "SPY,QQQ",
+        "Paper": (
+            "Cooper, Cliff, & Gulen (2008) - Return Differences Between Trading"
+            " and Non-Trading Hours"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1004081",
+        "QP_URL": "https://quantpedia.com/strategies/overnight-anomaly",
+    },
+    {
+        "ID": "#0005",
+        "Title": "FX Carry Trade",
+        "Reb": "Monthly",
+        "Markets": "Currencies",
+        "Paper_Ret": 7.27,
+        "Paper_Vol": 9.60,
+        "Keywords": "carry trade, FX anomaly, forex system, factor investing",
+        "Type": "top2",
+        "Assets": "UUP,FXA,FXE,FXY,FXB",
+        "Paper": (
+            "Lustig, Roussanov, & Verdelhan (2011) - Common Risk Factors in"
+            " Currency Markets"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1269446",
+        "QP_URL": "https://quantpedia.com/strategies/fx-carry-trade",
+    },
+    {
+        "ID": "#0006",
+        "Title": "Bond Carry Strategy",
+        "Reb": "Monthly",
+        "Markets": "Bonds",
+        "Paper_Ret": 9.91,
+        "Paper_Vol": 8.63,
+        "Keywords": "carry trade, factor investing, smart beta",
+        "Type": "top2",
+        "Assets": "TLT,IEF,HYG,LQD,EMB",
+        "Paper": "Koijen, Moskowitz, Pedersen, & Vrugt (2018) - Carry",
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2298565",
+        "QP_URL": "https://quantpedia.com/strategies/bond-carry-strategy",
+    },
+    {
+        "ID": "#0007",
+        "Title": "Low Volatility Factor Effect in Stocks",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 11.30,
+        "Paper_Vol": 10.10,
+        "Keywords": (
+            "stock picking, volatility effect, factor investing, smart beta"
+        ),
+        "Type": "trend",
+        "Assets": "USMV,SPLV,SPY",
+        "Paper": (
+            "Blitz & van Vliet (2007) - The Volatility Effect: Lower Risk"
+            " Without Lower Return"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=980865",
+        "QP_URL": "https://quantpedia.com/strategies/low-volatility-factor-effect-in-stocks",
+    },
+    {
+        "ID": "#0008",
+        "Title": "Currency Momentum Factor",
+        "Reb": "Monthly",
+        "Markets": "Currencies",
+        "Paper_Ret": 7.61,
+        "Paper_Vol": 10.22,
+        "Keywords": "momentum, FX anomaly, forex system, factor investing",
+        "Type": "top2",
+        "Assets": "UUP,FXE,FXY,FXA,FXC",
+        "Paper": (
+            "Menkhoff, Sarno, Schmeling, & Schrimpf (2012) - Currency Momentum"
+            " Strategies"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1409822",
+        "QP_URL": "https://quantpedia.com/strategies/currency-momentum-factor",
+    },
+    {
+        "ID": "#0009",
+        "Title": "Currency Value Factor - PPP Strategy",
+        "Reb": "Quarterly",
+        "Markets": "Currencies",
+        "Paper_Ret": 7.82,
+        "Paper_Vol": 9.33,
+        "Keywords": "FX anomaly, forex system, value, factor investing",
+        "Type": "valmom",
+        "Assets": "UUP,FXE,FXY,FXB,FXA",
+        "Paper": (
+            "Asness, Moskowitz, & Pedersen (2013) - Value and Momentum"
+            " Everywhere (FX Value)"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2174501",
+        "QP_URL": "https://quantpedia.com/strategies/currency-value-factor-ppp-strategy",
+    },
+    {
+        "ID": "#0010",
+        "Title": "Sector Rotation based on Monetary Policy",
+        "Reb": "Yearly",
+        "Markets": "Equities",
+        "Paper_Ret": 15.82,
+        "Paper_Vol": 15.50,
+        "Keywords": "sector picking, monetary policy",
+        "Type": "top2",
+        "Assets": "XLF,XLK,XLV,XLP,XLU",
+        "Paper": (
+            "Conover, Jensen, Johnson, & Mercer (2008) - Sector Rotation and"
+            " Monetary Conditions"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=936946",
+        "QP_URL": "https://quantpedia.com/strategies/sector-rotation-based-on-monetary-policy",
+    },
+    {
+        "ID": "#0011",
+        "Title": "Stock Return Reversal within Industries",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 16.78,
+        "Paper_Vol": 12.91,
+        "Keywords": "stock picking, reversal, equity long short",
+        "Type": "rev_dip",
+        "Assets": "XLK,XLF,XLE,XLV,XLI",
+        "Paper": "Hameed & Mian (2015) - Industries and Stock Return Reversals",
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2163621",
+        "QP_URL": "https://quantpedia.com/strategies/stock-return-reversal-within-industries",
+    },
+    {
+        "ID": "#0012",
+        "Title": "Pairs Trading with Stocks",
+        "Reb": "Daily",
+        "Markets": "Equities",
+        "Paper_Ret": 11.16,
+        "Paper_Vol": 5.85,
+        "Keywords": "equity long short, pairs trading, arbitrage",
+        "Type": "rev_dip",
+        "Assets": "SPY,QQQ,IWM,DIA",
+        "Paper": (
+            "Gatev, Goetzmann, & Rouwenhorst (2006) - Pairs Trading:"
+            " Performance of a Relative-Value Rule"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=141615",
+        "QP_URL": "https://quantpedia.com/strategies/pairs-trading-with-stocks",
+    },
+    {
+        "ID": "#0013",
+        "Title": "Short Term Reversal Effect in Stocks",
+        "Reb": "Weekly",
+        "Markets": "Equities",
+        "Paper_Ret": 16.25,
+        "Paper_Vol": 14.94,
+        "Keywords": (
+            "stock picking, reversal, equity long short, factor investing"
+        ),
+        "Type": "rev_dip",
+        "Assets": "SPY,QQQ,SMH,XBI",
+        "Paper": (
+            "Jegadeesh (1990) - Evidence of Predictable Behavior of Security"
+            " Returns"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/2328797",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/short-term-reversal-in-stocks"
+        ),
+    },
+    {
+        "ID": "#0014",
+        "Title": "Momentum Factor Effect in Stocks",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 8.30,
+        "Paper_Vol": 16.60,
+        "Keywords": (
+            "momentum, stock picking, momentum in stocks, factor investing"
+        ),
+        "Type": "top2",
+        "Assets": "MTUM,QQQ,SPY,IWM",
+        "Paper": (
+            "Jegadeesh & Titman (1993) - Returns to Buying Winners and Selling"
+            " Losers"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/2329002",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/momentum-factor-effect-in-stocks"
+        ),
+    },
+    {
+        "ID": "#0015",
+        "Title": "Momentum Factor Effect in Country Equity Indexes",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 17.70,
+        "Paper_Vol": 15.20,
+        "Keywords": (
+            "momentum, rotational system, country picking, factor investing"
+        ),
+        "Type": "top2",
+        "Assets": "SPY,EWJ,EWG,EWU,FXI,EWZ",
+        "Paper": (
+            "Bhojraj & Swaminathan (2006) - Macromomentum: Returns"
+            " Predictability in International Equity Indices"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=267991",
+        "QP_URL": "https://quantpedia.com/strategies/momentum-factor-effect-in-country-equity-indexes",
+    },
+    {
+        "ID": "#0016",
+        "Title": "Reversal Effect in International Equity ETFs",
+        "Reb": "3 Years",
+        "Markets": "Equities",
+        "Paper_Ret": 6.40,
+        "Paper_Vol": 14.10,
+        "Keywords": (
+            "rotational system, reversal, country picking, factor investing"
+        ),
+        "Type": "valmom",
+        "Assets": "SPY,EFA,VWO,EWJ,EWZ",
+        "Paper": (
+            "Richards (1997) - Winner-Loser Reversals in National Stock Market"
+            " Indices"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/2329472",
+        "QP_URL": "https://quantpedia.com/strategies/mean-reversion-effect-in-country-equity-indexes",
+    },
+    {
+        "ID": "#0017",
+        "Title": "Momentum Effect in Anomalies/Trading Systems",
+        "Reb": "Yearly",
+        "Markets": "Equities",
+        "Paper_Ret": 13.76,
+        "Paper_Vol": 11.40,
+        "Keywords": (
+            "momentum, factor investing, smart beta, factor allocation"
+        ),
+        "Type": "top2",
+        "Assets": "MTUM,VLUE,QUAL,USMV,SIZE",
+        "Paper": (
+            "Arnott, Clements, Kalesnik, & Linnainmaa (2019) - Factor Momentum"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3116974",
+        "QP_URL": "https://quantpedia.com/strategies/momentum-effect-in-anomalies-trading-systems",
+    },
+    {
+        "ID": "#0018",
+        "Title": "Liquidity Effect in Stocks",
+        "Reb": "Yearly",
+        "Markets": "Equities",
+        "Paper_Ret": 6.68,
+        "Paper_Vol": 11.87,
+        "Keywords": (
+            "stock picking, equity long short, liquidity risk premium"
+        ),
+        "Type": "trend",
+        "Assets": "IWM,IJH,SPY",
+        "Paper": (
+            "Ibbotson, Chen, Kim, & Hu (2013) - Liquidity as an Investment"
+            " Style"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2008946",
+        "QP_URL": "https://quantpedia.com/strategies/liquidity-effect-in-stocks",
+    },
+    {
+        "ID": "#0019",
+        "Title": "Dividend Month Anomaly",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 17.90,
+        "Paper_Vol": 20.00,
+        "Keywords": "seasonality, stock picking, factor investing, smart beta",
+        "Type": "trend",
+        "Assets": "SCHD,VYM,DVY,SPY",
+        "Paper": "Hartzmark & Solomon (2013) - The Dividend Month Premium",
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1790634",
+        "QP_URL": "https://quantpedia.com/strategies/dividend-month-anomaly",
+    },
+    {
+        "ID": "#0020",
+        "Title": "Volatility Risk Premium Effect",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 26.00,
+        "Paper_Vol": 19.00,
+        "Keywords": "volatility effect, volatility premium, factor investing",
+        "Type": "trend",
+        "Assets": "SVXY,PUTW,SPY,TLT",
+        "Paper": (
+            "Bollerslev, Tauchen, & Zhou (2009) - Expected Stock Returns and"
+            " Variance Risk Premia"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=976312",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/volatility-risk-premium-effect"
+        ),
+    },
+    {
+        "ID": "#0021",
+        "Title": "Momentum Effect in Commodities",
+        "Reb": "Monthly",
+        "Markets": "Commodities",
+        "Paper_Ret": 14.60,
+        "Paper_Vol": 25.57,
+        "Keywords": (
+            "momentum, rotational system, factor investing, smart beta"
+        ),
+        "Type": "top2",
+        "Assets": "GLD,SLV,USO,DBA,GSG",
+        "Paper": (
+            "Miffre & Rallis (2007) - Momentum Strategies in Commodity Futures"
+            " Markets"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=929548",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/momentum-effect-in-commodities"
+        ),
+    },
+    {
+        "ID": "#0022",
+        "Title": "Term Structure Effect in Commodities",
+        "Reb": "Monthly",
+        "Markets": "Commodities",
+        "Paper_Ret": 11.73,
+        "Paper_Vol": 23.84,
+        "Keywords": "rotational system, term spread, factor investing",
+        "Type": "top2",
+        "Assets": "DBC,USCI,GSG,GLD",
+        "Paper": (
+            "Gorton, Hayashi, & Rouwenhorst (2012) - The Fundamentals of"
+            " Commodity Futures Returns"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=996930",
+        "QP_URL": "https://quantpedia.com/strategies/term-structure-effect-in-commodities",
+    },
+    {
+        "ID": "#0023",
+        "Title": "Momentum Combined with Term Structure in Commodities",
+        "Reb": "Monthly",
+        "Markets": "Commodities",
+        "Paper_Ret": 21.80,
+        "Paper_Vol": 27.60,
+        "Keywords": (
+            "momentum, rotational system, term spread, factor investing"
+        ),
+        "Type": "top2",
+        "Assets": "DBC,USCI,GLD,SLV,USO",
+        "Paper": (
+            "Fuertes, Miffre, & Rallis (2010) - Tactical Allocation in"
+            " Commodity Futures Markets"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1195522",
+        "QP_URL": "https://quantpedia.com/strategies/momentum-effect-combined-with-term-structure-in-commodities",
+    },
+    {
+        "ID": "#0024",
+        "Title": "Merger Arbitrage",
+        "Reb": "Daily",
+        "Markets": "Equities",
+        "Paper_Ret": 6.86,
+        "Paper_Vol": 4.72,
+        "Keywords": "equity long short, arbitrage, factor investing",
+        "Type": "trend",
+        "Assets": "MNA,USMV,SHY",
+        "Paper": (
+            "Mitchell & Pulvino (2001) - Characteristics of Risk and Return in"
+            " Risk Arbitrage"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/2697820",
+        "QP_URL": "https://quantpedia.com/strategies/merger-arbitrage",
+    },
+    {
+        "ID": "#0025",
+        "Title": "Size Factor - Small Capitalization Stocks Premium",
+        "Reb": "Yearly",
+        "Markets": "Equities",
+        "Paper_Ret": 6.10,
+        "Paper_Vol": 25.60,
+        "Keywords": (
+            "stock picking, equity long short, small cap, factor investing"
+        ),
+        "Type": "trend",
+        "Assets": "IWM,IJR,VB,SPY",
+        "Paper": (
+            "Banz (1981) & Fama-French (1992) - The Relationship Between Return"
+            " and Market Value of Common Stocks"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/2328882",
+        "QP_URL": "https://quantpedia.com/strategies/small-capitalization-stocks-premium-anomaly",
+    },
+    {
+        "ID": "#0026",
+        "Title": "Value (Book-to-Market) Factor",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 3.60,
+        "Paper_Vol": 12.02,
+        "Keywords": (
+            "stock picking, value, fundamental analysis, factor investing"
+        ),
+        "Type": "valmom",
+        "Assets": "VLUE,VTV,IWD,SPY",
+        "Paper": (
+            "Fama & French (1992) - The Cross-Section of Expected Stock Returns"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/2329112",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/value-book-to-market-factor"
+        ),
+    },
+    {
+        "ID": "#0027",
+        "Title": "Market Timing with Aggregate and Idiosyncratic Volatilities",
+        "Reb": "Quarterly",
+        "Markets": "Equities",
+        "Paper_Ret": 20.07,
+        "Paper_Vol": 37.80,
+        "Keywords": "market timing, volatility effect",
+        "Type": "vol_time",
+        "Assets": "SPY,TLT",
+        "Paper": (
+            "Guo & Savickas (2006) - Idiosyncratic Volatility, Stock Market"
+            " Volatility, and Expected Stock Returns"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=480961",
+        "QP_URL": "https://quantpedia.com/strategies/market-timing-with-aggregate-and-idiosyncratic-stock-volatilities",
+    },
+    {
+        "ID": "#0028",
+        "Title": "Value and Momentum Factors across Asset Classes",
+        "Reb": "Monthly",
+        "Markets": "Equities, Bonds, REITs",
+        "Paper_Ret": 11.90,
+        "Paper_Vol": 10.00,
+        "Keywords": "momentum, asset class picking, value, factor investing",
+        "Type": "valmom",
+        "Assets": "SPY,EFA,VNQ,GLD,BND",
+        "Paper": (
+            "Asness, Moskowitz, & Pedersen (2013) - Value and Momentum"
+            " Everywhere"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2174501",
+        "QP_URL": "https://quantpedia.com/strategies/value-and-momentum-factors-across-asset-classes",
+    },
+    {
+        "ID": "#0029",
+        "Title": "Market Timing S&P 500 with VIX and COT Report",
+        "Reb": "Weekly",
+        "Markets": "Equities",
+        "Paper_Ret": 9.70,
+        "Paper_Vol": 11.00,
+        "Keywords": "market timing, sentiment trading, alternative data",
+        "Type": "vol_time",
+        "Assets": "SPY,TLT",
+        "Paper": (
+            "Giot (2005) & Briese (2008) - Commitments of Traders and Implied"
+            " Volatility Timing"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=496262",
+        "QP_URL": "https://quantpedia.com/strategies/market-timing-sp-500-with-vix-and-cot-report",
+    },
+    {
+        "ID": "#0030",
+        "Title": "Timing Commodities and S&P500 with COT Report",
+        "Reb": "Weekly",
+        "Markets": "Equities, Commodities",
+        "Paper_Ret": 16.80,
+        "Paper_Vol": 10.30,
+        "Keywords": (
+            "asset class picking, market timing, sentiment trading,"
+            " alternative data"
+        ),
+        "Type": "top2",
+        "Assets": "SPY,DBC,GLD,TLT",
+        "Paper": (
+            "De Roon, Nijman, & Veld (2000) - Hedging Pressure Effects in"
+            " Futures Markets"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/222456",
+        "QP_URL": "https://quantpedia.com/strategies/timing-commodities-and-sp500-with-cot-report",
+    },
+    {
+        "ID": "#0031",
+        "Title": "Market Seasonality Effect in World Equity Indexes",
+        "Reb": "6 Months",
+        "Markets": "Equities",
+        "Paper_Ret": 8.80,
+        "Paper_Vol": 13.50,
+        "Keywords": "market timing, seasonality",
+        "Type": "trend",
+        "Assets": "SPY,EFA,EWJ,EWU",
+        "Paper": (
+            "Bouman & Jacobsen (2002) - The Halloween Indicator, 'Sell in May"
+            " and Go Away'"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=76248",
+        "QP_URL": "https://quantpedia.com/strategies/market-seasonality-effect-in-world-equity-indexes",
+    },
+    {
+        "ID": "#0032",
+        "Title": "Combining Seasonality and Momentum in US Equity Sectors",
+        "Reb": "Monthly",
+        "Markets": "Equities",
+        "Paper_Ret": 12.90,
+        "Paper_Vol": 17.00,
+        "Keywords": (
+            "momentum, rotational system, sector picking, seasonality"
+        ),
+        "Type": "top2",
+        "Assets": "XLK,XLF,XLE,XLV,XLI,XLP",
+        "Paper": (
+            "Jacobsen & Visaltanachoti (2009) - The Halloween Effect in US"
+            " Sectors"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=955639",
+        "QP_URL": "https://quantpedia.com/strategies/combining-seasonality-and-momentum-in-us-equity-sectors",
+    },
+    {
+        "ID": "#0033",
+        "Title": "Post-Earnings Announcement Effect",
+        "Reb": "Quarterly",
+        "Markets": "Equities",
+        "Paper_Ret": 15.00,
+        "Paper_Vol": 14.00,
+        "Keywords": (
+            "stock picking, fundamental analysis, earnings announcement"
+        ),
+        "Type": "top2",
+        "Assets": "MTUM,QUAL,QQQ,SPY",
+        "Paper": (
+            "Bernard & Thomas (1989) - Post-Earnings-Announcement Drift:"
+            " Delayed Price Response"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/2491062",
+        "QP_URL": "https://quantpedia.com/strategies/post-earnings-announcement-effect",
+    },
+    {
+        "ID": "#0034",
+        "Title": "Post-Loss/Profit Announcement Drift in Stocks",
+        "Reb": "Daily",
+        "Markets": "Equities",
+        "Paper_Ret": 26.00,
+        "Paper_Vol": 5.00,
+        "Keywords": "stock picking, earnings announcement, trading earnings",
+        "Type": "top2",
+        "Assets": "QUAL,MTUM,SPY",
+        "Paper": (
+            "Balakrishnan, Bartov, & Faurel (2010) - Post-Loss/Profit"
+            " Announcement Drift"
+        ),
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1122990",
+        "QP_URL": "https://quantpedia.com/strategies/post-loss-profit-announcement-drift-in-stocks",
+    },
+    {
+        "ID": "#0035",
+        "Title": "Insiders Trading Effect in Stocks",
+        "Reb": "Yearly",
+        "Markets": "Equities",
+        "Paper_Ret": 7.70,
+        "Paper_Vol": 15.00,
+        "Keywords": (
+            "stock picking, insiders trading effect, alternative data"
+        ),
+        "Type": "trend",
+        "Assets": "KNOW,SPY,IWM",
+        "Paper": "Lakonishok & Lee (2001) - Are Insider Trades Informative?",
+        "Paper_URL": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=165268",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/insiders-trading-effect-in-stocks"
+        ),
+    },
+    {
+        "ID": "#0036",
+        "Title": "Net Payout Yield Effect",
+        "Reb": "Yearly",
+        "Markets": "Equities",
+        "Paper_Ret": 22.13,
+        "Paper_Vol": 15.50,
+        "Keywords": (
+            "stock picking, value, fundamental analysis, factor investing"
+        ),
+        "Type": "trend",
+        "Assets": "PKW,SCHD,SYLD,SPY",
+        "Paper": (
+            "Boudoukh, Michaely, Richardson, & Roberts (2007) - On the"
+            " Importance of Measuring Payout Yield"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/4123482",
+        "QP_URL": "https://quantpedia.com/strategies/net-payout-yield-effect",
+    },
+    {
+        "ID": "#0037",
+        "Title": "Net Current Asset Value Effect",
+        "Reb": "Yearly",
+        "Markets": "Equities",
+        "Paper_Ret": 31.19,
+        "Paper_Vol": 18.00,
+        "Keywords": (
+            "stock picking, value, fundamental analysis, factor investing"
+        ),
+        "Type": "valmom",
+        "Assets": "IWN,VBR,VLUE,SPY",
+        "Paper": (
+            "Benjamin Graham & Oppenheimer (1986) - Ben Graham's Net Current"
+            " Asset Values"
+        ),
+        "Paper_URL": "https://www.jstor.org/stable/4478980",
+        "QP_URL": (
+            "https://quantpedia.com/strategies/net-current-asset-value-effect"
+        ),
+    },
 ]
 
+
 def compute_openquant_score(row):
-    """Proprietary OpenQuant Alpha Score (0-100) combining 4 Quantitative Pillars."""
-    ret = float(row["Paper_Ret"])
-    vol = max(float(row["Paper_Vol"]), 4.0)
-    sharpe = ret / vol
+  """Proprietary OpenQuant Alpha Score (0-100) combining 4 Quantitative Pillars."""
+  ret = float(row["Paper_Ret"])
+  vol = max(float(row["Paper_Vol"]), 4.0)
+  sharpe = ret / vol
 
-    # 1. Sharpe Efficiency Pillar (Max 40 pts)
-    p_sharpe = min(40.0, sharpe * 22.0)
-    # 2. Volatility & Crash Safety Pillar (Max 25 pts)
-    p_safety = max(5.0, 25.0 - max(0.0, (vol - 6.0) * 0.8))
-    # 3. Execution & Friction Pillar (Max 20 pts: Monthly/Quarterly/Yearly beat Intraday/Daily)
-    reb_map = {"Monthly": 20.0, "Quarterly": 19.0, "6 Months": 18.0, "Yearly": 18.0, "3 Years": 16.0, "Weekly": 14.0, "Daily": 9.0, "Intraday": 6.0}
-    p_exec = reb_map.get(row["Reb"], 15.0)
-    # 4. Multi-Asset Diversification Bonus (Max 15 pts)
-    mkt_count = len(str(row["Markets"]).split(","))
-    p_div = min(15.0, 8.0 + mkt_count * 2.5)
+  # 1. Sharpe Efficiency Pillar (Max 40 pts)
+  p_sharpe = min(40.0, sharpe * 22.0)
+  # 2. Volatility & Crash Safety Pillar (Max 25 pts)
+  p_safety = max(5.0, 25.0 - max(0.0, (vol - 6.0) * 0.8))
+  # 3. Execution & Friction Pillar (Max 20 pts: Monthly/Quarterly/Yearly beat Intraday/Daily)
+  reb_map = {
+      "Monthly": 20.0,
+      "Quarterly": 19.0,
+      "6 Months": 18.0,
+      "Yearly": 18.0,
+      "3 Years": 16.0,
+      "Weekly": 14.0,
+      "Daily": 9.0,
+      "Intraday": 6.0,
+  }
+  p_exec = reb_map.get(row["Reb"], 15.0)
+  # 4. Multi-Asset Diversification Bonus (Max 15 pts)
+  mkt_count = len(str(row["Markets"]).split(","))
+  p_div = min(15.0, 8.0 + mkt_count * 2.5)
 
-    total = round(p_sharpe + p_safety + p_exec + p_div, 1)
-    grade = "A+" if total >= 82 else ("A" if total >= 74 else ("B+" if total >= 66 else "B"))
-    return total, grade
+  total = round(p_sharpe + p_safety + p_exec + p_div, 1)
+  grade = (
+      "A+"
+      if total >= 82
+      else ("A" if total >= 74 else ("B+" if total >= 66 else "B"))
+  )
+  return total, grade
+
 
 if not os.path.exists(CSV_FILE):
-    pd.DataFrame(MASTER_STRATEGIES).to_csv(CSV_FILE, index=False)
+  pd.DataFrame(MASTER_STRATEGIES).to_csv(CSV_FILE, index=False)
 
 df_strats = pd.read_csv(CSV_FILE)
 if len(df_strats) < 37:
-    df_strats = pd.DataFrame(MASTER_STRATEGIES)
-    df_strats.to_csv(CSV_FILE, index=False)
+  df_strats = pd.DataFrame(MASTER_STRATEGIES)
+  df_strats.to_csv(CSV_FILE, index=False)
 
 scores_grades = df_strats.apply(compute_openquant_score, axis=1)
 df_strats["OQ_Score"] = [sg[0] for sg in scores_grades]
 df_strats["Rating"] = [sg[1] for sg in scores_grades]
-df_strats["Paper_Sharpe"] = (df_strats["Paper_Ret"] / df_strats["Paper_Vol"]).round(2)
+df_strats["Paper_Sharpe"] = (
+    df_strats["Paper_Ret"] / df_strats["Paper_Vol"]
+).round(2)
+
 
 @st.cache_data(ttl=3600)
 def fetch_correlated_papers(title_query, keywords_query):
-    """Fetches real academic research papers correlated to the strategy from Cornell arXiv API."""
-    papers = []
-    try:
-        clean_q = re.sub(r'[^a-zA-Z0-9 ]', '', f"{title_query} {keywords_query.split(',')[0]}")
-        terms = "+AND+".join(clean_q.split()[:4])
-        url = f"http://export.arxiv.org/api/query?search_query=cat:q-fin*+AND+all:{terms}&start=0&max_results=4&sortBy=relevance"
-        req = urllib.request.Request(url, headers={'User-Agent': 'OpenQuantTerminal/7.0'})
-        with urllib.request.urlopen(req, timeout=5) as resp:
-            root = ET.fromstring(resp.read())
-        ns = {'atom': 'http://www.w3.org/2005/Atom'}
-        for entry in root.findall('atom:entry', ns):
-            t = entry.find('atom:title', ns).text.strip().replace('\n', ' ')
-            s = entry.find('atom:summary', ns).text.strip().replace('\n', ' ')
-            pub = entry.find('atom:published', ns).text[:10]
-            link = entry.find('atom:id', ns).text
-            authors = [a.find('atom:name', ns).text for a in entry.findall('atom:author', ns)]
-            papers.append({"title": t, "authors": ", ".join(authors[:3]), "date": pub, "abstract": s[:280] + "...", "url": link, "pdf": link.replace('/abs/', '/pdf/') + ".pdf"})
-    except Exception:
-        pass
-    return papers
+  """Fetches real academic research papers correlated to the strategy from Cornell arXiv API."""
+  papers = []
+  try:
+    clean_q = re.sub(
+        r"[^a-zA-Z0-9 ]", "", f"{title_query} {keywords_query.split(',')[0]}"
+    )
+    terms = "+AND+".join(clean_q.split()[:4])
+    url = f"http://export.arxiv.org/api/query?search_query=cat:q-fin*+AND+all:{terms}&start=0&max_results=4&sortBy=relevance"
+    req = urllib.request.Request(
+        url, headers={"User-Agent": "OpenQuantTerminal/7.0"}
+    )
+    with urllib.request.urlopen(req, timeout=5) as resp:
+      root = ET.fromstring(resp.read())
+    ns = {"atom": "http://www.w3.org/2005/Atom"}
+    for entry in root.findall("atom:entry", ns):
+      t = entry.find("atom:title", ns).text.strip().replace("\n", " ")
+      s = entry.find("atom:summary", ns).text.strip().replace("\n", " ")
+      pub = entry.find("atom:published", ns).text[:10]
+      link = entry.find("atom:id", ns).text
+      authors = [
+          a.find("atom:name", ns).text for a in entry.findall("atom:author", ns)
+      ]
+      papers.append({
+          "title": t,
+          "authors": ", ".join(authors[:3]),
+          "date": pub,
+          "abstract": s[:280] + "...",
+          "url": link,
+          "pdf": link.replace("/abs/", "/pdf/") + ".pdf",
+      })
+  except Exception:
+    pass
+  return papers
+
 
 @st.cache_data(ttl=3600)
 def get_data(tickers, start_yr):
-    t_list = list(tickers)
-    try:
-        raw = yf.download(t_list, start=f"{start_yr}-01-01", progress=False, timeout=8)
-        if not raw.empty and "Close" in raw:
-            pr = raw["Close"]
-            if isinstance(pr, pd.Series): pr = pr.to_frame(name=t_list[0])
-            pr = pr.ffill().dropna()
-            if len(pr) > 260 and all(x in pr.columns for x in t_list):
-                return pr[t_list], "🟢 Live Yahoo Finance Data"
-    except Exception:
-        pass
-    dates = pd.date_range(start=f"{start_yr}-01-01", periods=2200, freq="B")
-    sim = {t: 100 * np.exp(np.cumsum(np.random.RandomState(abs(hash(t)) % 9999).normal(0.00045, 0.011, len(dates)))) for t in t_list}
-    return pd.DataFrame(sim, index=dates), "🟡 Simulated Fallback Data"
+  """Downloads clean price data and eliminates pre-inception flatlines."""
+  t_list = list(tickers)
+  try:
+    raw = yf.download(
+        t_list,
+        start=f"{start_yr}-01-01",
+        auto_adjust=True,
+        progress=False,
+        timeout=8,
+    )
+    if not raw.empty and "Close" in raw:
+      pr = raw["Close"]
+      if isinstance(pr, pd.Series):
+        pr = pr.to_frame(name=t_list[0])
+      # 1. Fill only brief holiday/missing gaps (max 5 days), NOT pre-inception years
+      pr = pr.ffill(limit=5)
+      # 2. Drop all rows prior to when ALL tickers in the strategy actually existed
+      pr = pr.dropna(how="any")
+      # 3. Remove any zero-price or frozen rows
+      pr = pr[(pr > 0).all(axis=1)]
+      if len(pr) > 260 and all(x in pr.columns for x in t_list):
+        inception_date = pr.index[0].strftime("%Y-%m-%d")
+        return (
+            pr[t_list],
+            f"🟢 Live Yahoo Finance Data (Common Inception: {inception_date})",
+        )
+  except Exception:
+    pass
+  dates = pd.date_range(start=f"{start_yr}-01-01", periods=2200, freq="B")
+  sim = {
+      t: 100
+      * np.exp(
+          np.cumsum(
+              np.random.RandomState(abs(hash(t)) % 9999).normal(
+                  0.00045, 0.011, len(dates)
+              )
+          )
+      )
+      for t in t_list
+  }
+  return pd.DataFrame(sim, index=dates), "🟡 Simulated Fallback Data"
+
 
 def run_bt(prices, stype, assets, cash_rate_pa=4.2):
-    rets = prices[assets].pct_change().fillna(0)
-    sma = prices[assets].rolling(200).mean()
-    w = pd.DataFrame(0.0, index=prices.index, columns=assets)
-    if stype == "trend":
-        w = (prices[assets] > sma).astype(float) * (1.0 / len(assets))
-    elif stype == "top2":
-        m = prices[assets].pct_change(126)
-        k = min(2, len(assets))
-        w = ((m.rank(axis=1, ascending=False) <= k) & (prices[assets] > sma)).astype(float) * (1.0 / k)
-    elif stype == "rev_dip":
-        m20 = prices[assets].pct_change(20)
-        k = min(2, len(assets))
-        w = ((m20.rank(axis=1, ascending=True) <= k) & (prices[assets] > sma)).astype(float) * (1.0 / k)
-    elif stype == "vol_time":
-        vol20 = rets[assets[0]].rolling(20).std() * np.sqrt(252)
-        calm = (vol20 < 0.22) & (prices[assets[0]] > sma[assets[0]])
-        w[assets[0]] = np.where(calm, 1.0, 0.0)
-        if len(assets) > 1: w[assets[1]] = np.where(~calm, 1.0, 0.0)
-    else:
-        score = prices[assets].pct_change(252).rank(axis=1) + 0.5 * (-prices[assets].pct_change(500)).rank(axis=1)
-        k = min(3, len(assets))
-        w = ((score.rank(axis=1, ascending=False) <= k) & (prices[assets] > sma)).astype(float) / k
+  """Runs backtest with dynamic warmup (no early flatlines) and Beta-Equivalent Benchmark."""
+  rets = prices[assets].pct_change().fillna(0.0)
+  sma = prices[assets].rolling(200).mean()
+  w = pd.DataFrame(0.0, index=prices.index, columns=assets)
 
+  # Dynamic warmup period so 500-day lookbacks don't create a 1-year flatline at the start
+  warmup_bars = 205
+
+  if stype == "trend":
+    w = (prices[assets] > sma).astype(float) * (1.0 / len(assets))
+    warmup_bars = 205
+  elif stype == "top2":
+    m = prices[assets].pct_change(126)
+    k = min(2, len(assets))
+    w = ((m.rank(axis=1, ascending=False) <= k) & (prices[assets] > sma)).astype(
+        float
+    ) * (1.0 / k)
+    warmup_bars = 205
+  elif stype == "rev_dip":
+    m20 = prices[assets].pct_change(20)
+    k = min(2, len(assets))
+    w = (
+        (m20.rank(axis=1, ascending=True) <= k) & (prices[assets] > sma)
+    ).astype(float) * (1.0 / k)
+    warmup_bars = 205
+  elif stype == "vol_time":
+    vol20 = rets[assets[0]].rolling(20).std() * np.sqrt(252)
+    calm = (vol20 < 0.22) & (prices[assets[0]] > sma[assets[0]])
+    w[assets[0]] = np.where(calm, 1.0, 0.0)
+    if len(assets) > 1:
+      w[assets[1]] = np.where(~calm, 1.0, 0.0)
+    warmup_bars = 205
+  else:
+    # valmom uses a 500-day lookback -> requires 505 bars before signals are valid
+    score = (
+        prices[assets].pct_change(252).rank(axis=1)
+        + 0.5 * (-prices[assets].pct_change(500)).rank(axis=1)
+    )
+    k = min(3, len(assets))
+    w = (
+        (score.rank(axis=1, ascending=False) <= k) & (prices[assets] > sma)
+    ).astype(float) / k
+    warmup_bars = 505
+
+  # Ensure we don't slice past available history if the ETF basket is young
+  if len(prices) <= warmup_bars + 60:
+    warmup_bars = min(205, max(20, len(prices) // 4))
+
+  # Monthly rebalancing (or daily signal hold for vol_time)
+  if stype != "vol_time":
     w = w.resample("ME").last().reindex(w.index).ffill().fillna(0.0)
-    Valid = prices.index[255:]
-    sw_w = w.shift(1).fillna(0).loc[Valid]
-    cash_w = (1.0 - sw_w.sum(axis=1)).clip(lower=0.0)
-    daily_cash = (1 + cash_rate_pa / 100.0) ** (1 / 252.0) - 1
-    sr = (sw_w * rets.loc[Valid]).sum(axis=1) + cash_w * daily_cash
-    br = rets.loc[Valid].mean(axis=1)
-    out = pd.DataFrame({"Strat_Ret": sr, "BH_Ret": br}, index=Valid)
-    out["Strategy"] = 10000 * (1 + sr).cumprod()
-    out["Buy_Hold"] = 10000 * (1 + br).cumprod()
-    return out, w.loc[Valid]
 
-st.sidebar.title("🏛️ OpenQuant v7.0")
+  Valid = prices.index[warmup_bars:]
+  sw_w = w.shift(1).fillna(0.0).loc[Valid]
+  cash_w = (1.0 - sw_w.sum(axis=1)).clip(lower=0.0)
+
+  daily_cash = (1.0 + cash_rate_pa / 100.0) ** (1.0 / 252.0) - 1.0
+
+  # Strategy Daily Return (Invested weights + T-Bill interest on uninvested cash)
+  sr = (sw_w * rets.loc[Valid]).sum(axis=1) + cash_w * daily_cash
+
+  # Underlying Market Basket Return (100% invested reference basket)
+  mkt_r = rets.loc[Valid].mean(axis=1)
+
+  # --- BETA-EQUIVALENT BENCHMARK CALCULATION ---
+  strat_excess = sr - daily_cash
+  mkt_excess = mkt_r - daily_cash
+  mkt_var = mkt_excess.var()
+  beta = strat_excess.cov(mkt_excess) / mkt_var if mkt_var > 1e-12 else 1.0
+
+  # Benchmark holds (Beta * Market) + ((1 - Beta) * Risk-Free Cash)
+  beta_bench_r = daily_cash + beta * mkt_excess
+
+  # Annualized Alpha (Strategy vs. Beta-Equivalent Benchmark)
+  ann_alpha = ((sr - beta_bench_r).mean() * 252) * 100.0
+
+  out = pd.DataFrame(
+      {"Strat_Ret": sr, "Beta_Bench_Ret": beta_bench_r, "EW_Ret": mkt_r},
+      index=Valid,
+  )
+  out["Strategy"] = 10000.0 * (1.0 + sr).cumprod()
+  out["Beta_Bench"] = 10000.0 * (1.0 + beta_bench_r).cumprod()
+
+  # Prepare Unstacked Weights DataFrame (including Cash / T-Bills)
+  weights_out = sw_w.copy()
+  weights_out["Cash (T-Bills)"] = cash_w
+
+  return out, weights_out, beta, ann_alpha
+
+
+st.sidebar.title("🏛️ OpenQuant v7.1")
 start_yr = st.sidebar.slider("Backtest Start Year", 2010, 2023, 2015)
 min_score = st.sidebar.slider("Min OpenQuant Alpha Score", 50, 90, 60)
 
-tab1, tab2 = st.tabs(["🎯 Interactive Screener + Click-to-View Articles (37 Strategies)", "📥 Bulk HTML Strategy Importer"])
+tab1, tab2 = st.tabs([
+    "🎯 Interactive Screener + Click-to-View Articles (37 Strategies)",
+    "📥 Bulk HTML Strategy Importer",
+])
 
 with tab1:
-    st.subheader("🔍 Click Any Row in the Screener Below to Load Its Articles, Score Breakdown & Live Backtest")
-    f_col1, f_col2 = st.columns(2)
-    search_q = f_col1.text_input("Search by Title, ID, or Keyword (e.g., momentum, carry, earnings, reversal):", "").lower()
-    reb_f = f_col2.multiselect("Filter Rebalancing:", df_strats["Reb"].unique().tolist(), default=df_strats["Reb"].unique().tolist())
+  st.subheader(
+      "🔍 Click Any Row in the Screener Below to Load Its Articles, Score"
+      " Breakdown & Live Backtest"
+  )
+  f_col1, f_col2 = st.columns(2)
+  search_q = f_col1.text_input(
+      "Search by Title, ID, or Keyword (e.g., momentum, carry, earnings,"
+      " reversal):",
+      "",
+  ).lower()
+  reb_f = f_col2.multiselect(
+      "Filter Rebalancing:",
+      df_strats["Reb"].unique().tolist(),
+      default=df_strats["Reb"].unique().tolist(),
+  )
 
-    view_df = df_strats[(df_strats["OQ_Score"] >= min_score) & (df_strats["Reb"].isin(reb_f))].copy()
-    if search_q:
-        view_df = view_df[view_df["Title"].str.lower().str.contains(search_q) | view_df["Keywords"].str.lower().str.contains(search_q) | view_df["ID"].str.lower().str.contains(search_q)]
-    view_df = view_df.reset_index(drop=True)
+  view_df = df_strats[
+      (df_strats["OQ_Score"] >= min_score) & (df_strats["Reb"].isin(reb_f))
+  ].copy()
+  if search_q:
+    view_df = view_df[
+        view_df["Title"].str.lower().str.contains(search_q)
+        | view_df["Keywords"].str.lower().str.contains(search_q)
+        | view_df["ID"].str.lower().str.contains(search_q)
+    ]
+  view_df = view_df.reset_index(drop=True)
 
-    # Interactive Row Selection Table!
-    event = st.dataframe(
-        view_df[["ID", "Title", "Rating", "OQ_Score", "Reb", "Markets", "Paper_Ret", "Paper_Vol", "Paper_Sharpe", "Keywords"]],
-        use_container_width=True,
-        hide_index=True,
-        on_select="rerun",
-        selection_mode="single-row"
+  # Interactive Row Selection Table!
+  event = st.dataframe(
+      view_df[[
+          "ID",
+          "Title",
+          "Rating",
+          "OQ_Score",
+          "Reb",
+          "Markets",
+          "Paper_Ret",
+          "Paper_Vol",
+          "Paper_Sharpe",
+          "Keywords",
+      ]],
+      use_container_width=True,
+      hide_index=True,
+      on_select="rerun",
+      selection_mode="single-row",
+  )
+
+  selected_idx = (
+      event.selection.rows[0]
+      if (event and event.selection and event.selection.rows)
+      else 0
+  )
+  if not view_df.empty:
+    sel_row = view_df.iloc[selected_idx]
+    st.markdown("---")
+    st.title(
+        f"{sel_row['ID']}: {sel_row['Title']}  |  Grade: {sel_row['Rating']}"
+        f" ({sel_row['OQ_Score']}/100)"
     )
 
-    selected_idx = event.selection.rows[0] if (event and event.selection and event.selection.rows) else 0
-    if not view_df.empty:
-        sel_row = view_df.iloc[selected_idx]
-        st.markdown("---")
-        st.title(f"{sel_row['ID']}: {sel_row['Title']}  |  Grade: {sel_row['Rating']} ({sel_row['OQ_Score']}/100)")
+    # Live ETF Proxy Backtest (run first so we can show Realized Beta & Alpha in metrics)
+    assets = [x.strip() for x in str(sel_row["Assets"]).split(",")]
+    pr, badge = get_data(tuple(assets), start_yr)
+    bt, w_df, strat_beta, strat_alpha = run_bt(pr, sel_row["Type"], assets)
 
-        # Proprietary OpenQuant Scoring Breakdown
-        s1, s2, s3, s4 = st.columns(4)
-        s1.metric("OpenQuant Alpha Score", f"{sel_row['OQ_Score']} / 100", f"Grade {sel_row['Rating']}")
-        s2.metric("Source Paper Return", f"{sel_row['Paper_Ret']}% p.a.")
-        s3.metric("Source Paper Volatility", f"{sel_row['Paper_Vol']}% p.a.")
-        s4.metric("Paper Sharpe Ratio", f"{sel_row['Paper_Sharpe']}")
+    # Proprietary OpenQuant Scoring & Institutional Risk Breakdown
+    s1, s2, s3, s4, s5, s6 = st.columns(6)
+    s1.metric(
+        "OpenQuant Alpha Score",
+        f"{sel_row['OQ_Score']} / 100",
+        f"Grade {sel_row['Rating']}",
+    )
+    s2.metric("Source Paper Return", f"{sel_row['Paper_Ret']}% p.a.")
+    s3.metric("Source Paper Volatility", f"{sel_row['Paper_Vol']}% p.a.")
+    s4.metric("Paper Sharpe Ratio", f"{sel_row['Paper_Sharpe']}")
+    s5.metric(
+        "Realized Market Beta (β)",
+        f"{strat_beta:.2f}",
+        "Risk-Matched Benchmark",
+    )
+    s6.metric(
+        "Realized Annual Alpha (α)",
+        f"{strat_alpha:+.2f}% p.a.",
+        "vs. Beta Benchmark",
+    )
 
-        # Academic Articles & Correlated Literature Vault
-        st.subheader("🎓 Correlated Academic Articles & Source Literature")
-        ac1, ac2 = st.columns(2)
-        with ac1:
-            st.info(f"""
+    # Academic Articles & Correlated Literature Vault
+    st.subheader("🎓 Correlated Academic Articles & Source Literature")
+    ac1, ac2 = st.columns(2)
+    with ac1:
+      st.info(f"""
             **📌 Foundational Source Paper:**  
             **{sel_row['Paper']}**  
             *Keywords:* `{sel_row['Keywords']}`  
             🔗 **[Read Original Source Paper (SSRN / JSTOR)]({sel_row['Paper_URL']})**  
             🔗 **[View Quantpedia Strategy Page]({sel_row['QP_URL']})**
             """)
-        with ac2:
-            st.markdown("**🌐 Correlated Quantitative Research Papers (Live University Feed):**")
-            corr_papers = fetch_correlated_papers(sel_row["Title"], sel_row["Keywords"])
-            if corr_papers:
-                for cp in corr_papers:
-                    with st.expander(f"📄 {cp['title']} ({cp['date']})"):
-                        st.caption(f"Authors: {cp['authors']}")
-                        st.write(cp["abstract"])
-                        st.markdown(f"🔗 **[Abstract]({cp['url']})** | **[Download PDF]({cp['pdf']})**")
-            else:
-                st.caption("Click any row to query live university preprints.")
+    with ac2:
+      st.markdown(
+          "**🌐 Correlated Quantitative Research Papers (Live University"
+          " Feed):**"
+      )
+      corr_papers = fetch_correlated_papers(
+          sel_row["Title"], sel_row["Keywords"]
+      )
+      if corr_papers:
+        for cp in corr_papers:
+          with st.expander(f"📄 {cp['title']} ({cp['date']})"):
+            st.caption(f"Authors: {cp['authors']}")
+            st.write(cp["abstract"])
+            st.markdown(
+                f"🔗 **[Abstract]({cp['url']})** | **[Download"
+                f" PDF]({cp['pdf']})**"
+            )
+      else:
+        st.caption("Click any row to query live university preprints.")
 
-        # Live ETF Proxy Backtest
-        assets = [x.strip() for x in str(sel_row["Assets"]).split(",")]
-        pr, badge = get_data(tuple(assets), start_yr)
-        bt, w_df = run_bt(pr, sel_row["Type"], assets)
+    # --- CHART 1: CUMULATIVE RETURN VS BETA-EQUIVALENT BENCHMARK ---
+    st.subheader(
+        f"📈 Live ETF Proxy Backtest ({', '.join(assets)}) — {badge}"
+    )
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x=bt.index,
+            y=bt["Strategy"],
+            name=f"{sel_row['ID']} Strategy Proxy",
+            line=dict(color="#10B981", width=3),
+        )
+    )
+    fig.add_trace(
+        go.Scatter(
+            x=bt.index,
+            y=bt["Beta_Bench"],
+            name=f"Beta-Equivalent Benchmark (β = {strat_beta:.2f})",
+            line=dict(color="#F59E0B", width=2.5, dash="dot"),
+        )
+    )
+    fig.update_layout(
+        template="plotly_dark",
+        height=390,
+        yaxis_title="Portfolio Value ($10,000 Initial)",
+        hovermode="x unified",
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
+    )
+    st.plotly_chart(fig, use_container_width=True)
 
-        st.subheader(f"📈 Live ETF Proxy Backtest ({', '.join(assets)}) — {badge}")
-        fig = go.Figure()
-        fig.add_trace(go.Scatter(x=bt.index, y=bt["Strategy"], name=f"{sel_row['ID']} Strategy Proxy", line=dict(color="#10B981", width=3)))
-        fig.add_trace(go.Scatter(x=bt.index, y=bt["Buy_Hold"], name="Equal-Weight Benchmark", line=dict(color="#64748B", width=2, dash="dot")))
-        fig.update_layout(template="plotly_dark", height=380, hovermode="x unified")
-        st.plotly_chart(fig, use_container_width=True)
+    # --- CHART 2: UNSTACKED PORTFOLIO WEIGHTS OVER TIME (ANCHORED TO 0%) ---
+    st.subheader(
+        "⚖️ Portfolio Weights Over Time (Unstacked — Measured Relative to 0%)"
+    )
+    fig_w = go.Figure()
+
+    # Plot each ETF weight independently (no stacking!)
+    palette = ["#3B82F6", "#10B981", "#A855F7", "#EC4899", "#F97316", "#06B6D4", "#EAB308"]
+    for idx, col in enumerate(w_df.columns):
+      is_cash = col == "Cash (T-Bills)"
+      fig_w.add_trace(
+          go.Scatter(
+              x=w_df.index,
+              y=w_df[col] * 100.0,
+              mode="lines",
+              name=col,
+              line=dict(
+                  color="#64748B" if is_cash else palette[idx % len(palette)],
+                  width=1.5 if is_cash else 2.5,
+                  dash="dash" if is_cash else "solid",
+              ),
+          )
+      )
+
+    # Bold 0% reference baseline so every line is visually measured from zero
+    fig_w.add_hline(
+        y=0,
+        line_dash="solid",
+        line_color="#FFFFFF",
+        line_width=1.5,
+        annotation_text="0% Baseline",
+        annotation_position="bottom right",
+    )
+
+    fig_w.update_layout(
+        template="plotly_dark",
+        height=340,
+        yaxis_title="Allocation Weight (%)",
+        yaxis_ticksuffix="%",
+        yaxis=dict(range=[-5, 105]),
+        hovermode="x unified",
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
+    )
+    st.plotly_chart(fig_w, use_container_width=True)
 
 with tab2:
-    st.subheader("📥 Upload Any Saved Quantpedia Screener HTML File to Auto-Extract New Strategies")
-    uploaded_html = st.file_uploader("Upload 'Screener - Quantpedia.html' after scrolling further down the table", type=["html", "htm"])
-    if uploaded_html is not None:
-        raw_html = uploaded_html.read().decode("utf-8", errors="ignore")
-        matches = re.findall(r'#(0\d{3})</div>.*?href="(https://quantpedia\.com/strategies/[^"]+)">([^<]+)</a>', raw_html)
-        st.success(f"Found {len(matches)} strategy rows inside uploaded HTML!")
-        for m_id, m_url, m_title in matches:
-            st.write(f"**#{m_id}**: [{m_title}]({m_url})")
+  st.subheader(
+      "📥 Upload Any Saved Quantpedia Screener HTML File to Auto-Extract New"
+      " Strategies"
+  )
+  uploaded_html = st.file_uploader(
+      "Upload 'Screener - Quantpedia.html' after scrolling further down the"
+      " table",
+      type=["html", "htm"],
+  )
+  if uploaded_html is not None:
+    raw_html = uploaded_html.read().decode("utf-8", errors="ignore")
+    matches = re.findall(
+        r'#(0\d{3})</div>.*?href="(https://quantpedia\.com/strategies/[^"]+)">([^<]+)</a>',
+        raw_html,
+    )
+    st.success(f"Found {len(matches)} strategy rows inside uploaded HTML!")
+    for m_id, m_url, m_title in matches:
+      st.write(f"**#{m_id}**: [{m_title}]({m_url})")
