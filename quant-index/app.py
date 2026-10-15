@@ -737,8 +737,8 @@ df_strats["Paper_Sharpe"] = (
 
 
 @st.cache_data(ttl=3600)
-def fetch_correlated_papers(title_query, keywords_query):
-  """Fetches real academic research papers correlated to the strategy from Cornell arXiv API."""
+def fetch_related_papers(title_query, keywords_query):
+  """Fetches real academic working papers related to the strategy from Cornell arXiv API."""
   papers = []
   try:
     clean_q = re.sub(
@@ -747,7 +747,7 @@ def fetch_correlated_papers(title_query, keywords_query):
     terms = "+AND+".join(clean_q.split()[:4])
     url = f"http://export.arxiv.org/api/query?search_query=cat:q-fin*+AND+all:{terms}&start=0&max_results=4&sortBy=relevance"
     req = urllib.request.Request(
-        url, headers={"User-Agent": "OpenQuantTerminal/7.0"}
+        url, headers={"User-Agent": "OpenQuantTerminal/7.2"}
     )
     with urllib.request.urlopen(req, timeout=5) as resp:
       root = ET.fromstring(resp.read())
@@ -775,7 +775,7 @@ def fetch_correlated_papers(title_query, keywords_query):
 
 @st.cache_data(ttl=3600)
 def get_data(tickers, start_yr):
-  """Downloads clean price data and eliminates pre-inception flatlines."""
+  """Downloads clean total-return adjusted price data and eliminates pre-inception flatlines."""
   t_list = list(tickers)
   try:
     raw = yf.download(
@@ -818,39 +818,39 @@ def get_data(tickers, start_yr):
   return pd.DataFrame(sim, index=dates), "🟡 Simulated Fallback Data"
 
 
-def run_bt(prices, stype, assets, cash_rate_pa=4.2):
-  """Runs backtest with dynamic warmup (no early flatlines) and Beta-Equivalent Benchmark."""
+def run_bt(prices, stype, assets, reb_freq="Monthly", cash_rate_pa=4.2):
+  """Runs backtest with:
+
+  1. Dynamic warmup (eliminates early lookback flatlines)
+  2. True intra-period portfolio weight drift between rebalances (Sancetta
+  method)
+  3. Beta-Equivalent Benchmark
+  """
   rets = prices[assets].pct_change().fillna(0.0)
   sma = prices[assets].rolling(200).mean()
-  w = pd.DataFrame(0.0, index=prices.index, columns=assets)
+  target_w = pd.DataFrame(0.0, index=prices.index, columns=assets)
 
-  # Dynamic warmup period so 500-day lookbacks don't create a 1-year flatline at the start
   warmup_bars = 205
-
   if stype == "trend":
-    w = (prices[assets] > sma).astype(float) * (1.0 / len(assets))
-    warmup_bars = 205
+    target_w = (prices[assets] > sma).astype(float) * (1.0 / len(assets))
   elif stype == "top2":
     m = prices[assets].pct_change(126)
     k = min(2, len(assets))
-    w = ((m.rank(axis=1, ascending=False) <= k) & (prices[assets] > sma)).astype(
-        float
-    ) * (1.0 / k)
-    warmup_bars = 205
+    target_w = (
+        (m.rank(axis=1, ascending=False) <= k) & (prices[assets] > sma)
+    ).astype(float) * (1.0 / k)
   elif stype == "rev_dip":
     m20 = prices[assets].pct_change(20)
     k = min(2, len(assets))
-    w = (
+    target_w = (
         (m20.rank(axis=1, ascending=True) <= k) & (prices[assets] > sma)
     ).astype(float) * (1.0 / k)
-    warmup_bars = 205
   elif stype == "vol_time":
     vol20 = rets[assets[0]].rolling(20).std() * np.sqrt(252)
     calm = (vol20 < 0.22) & (prices[assets[0]] > sma[assets[0]])
-    w[assets[0]] = np.where(calm, 1.0, 0.0)
+    target_w[assets[0]] = np.where(calm, 1.0, 0.0)
     if len(assets) > 1:
-      w[assets[1]] = np.where(~calm, 1.0, 0.0)
-    warmup_bars = 205
+      target_w[assets[1]] = np.where(~calm, 1.0, 0.0)
   else:
     # valmom uses a 500-day lookback -> requires 505 bars before signals are valid
     score = (
@@ -858,30 +858,71 @@ def run_bt(prices, stype, assets, cash_rate_pa=4.2):
         + 0.5 * (-prices[assets].pct_change(500)).rank(axis=1)
     )
     k = min(3, len(assets))
-    w = (
+    target_w = (
         (score.rank(axis=1, ascending=False) <= k) & (prices[assets] > sma)
     ).astype(float) / k
     warmup_bars = 505
 
-  # Ensure we don't slice past available history if the ETF basket is young
   if len(prices) <= warmup_bars + 60:
     warmup_bars = min(205, max(20, len(prices) // 4))
 
-  # Monthly rebalancing (or daily signal hold for vol_time)
-  if stype != "vol_time":
-    w = w.resample("ME").last().reindex(w.index).ffill().fillna(0.0)
-
   Valid = prices.index[warmup_bars:]
-  sw_w = w.shift(1).fillna(0.0).loc[Valid]
-  cash_w = (1.0 - sw_w.sum(axis=1)).clip(lower=0.0)
+  # Shift target signals by 1 day so we trade at next day's close without lookahead bias
+  sig_w = target_w.shift(1).fillna(0.0).loc[Valid]
+  valid_rets = rets.loc[Valid]
+
+  # Determine actual rebalance dates based on the strategy's schedule
+  freq_map = {
+      "Weekly": "W-FRI",
+      "Monthly": "ME",
+      "Quarterly": "QE",
+      "6 Months": "2QE",
+      "Yearly": "YE",
+      "3 Years": "3YE",
+  }
+  pd_freq = freq_map.get(reb_freq, None)
+  if pd_freq and stype != "vol_time":
+    reb_dates = set(sig_w.resample(pd_freq).last().index)
+  else:
+    reb_dates = set(Valid)  # Daily / Intraday strategies rebalance daily
 
   daily_cash = (1.0 + cash_rate_pa / 100.0) ** (1.0 / 252.0) - 1.0
 
-  # Strategy Daily Return (Invested weights + T-Bill interest on uninvested cash)
-  sr = (sw_w * rets.loc[Valid]).sum(axis=1) + cash_w * daily_cash
+  # --- SIMULATE REAL PORTFOLIO DRIFT BETWEEN REBALANCE DATES ---
+  n_days = len(Valid)
+  n_assets = len(assets)
+  drifted_w = np.zeros((n_days, n_assets))
+  cash_w_arr = np.zeros(n_days)
+  strat_ret_arr = np.zeros(n_days)
 
-  # Underlying Market Basket Return (100% invested reference basket)
-  mkt_r = rets.loc[Valid].mean(axis=1)
+  # Initialize holdings on Day 0 of Valid window
+  curr_w = sig_w.iloc[0].values.copy()
+  curr_cash = max(0.0, 1.0 - curr_w.sum())
+
+  for i, dt in enumerate(Valid):
+    # Reset weights to target allocation ONLY on scheduled rebalance dates
+    if i == 0 or dt in reb_dates:
+      curr_w = sig_w.iloc[i].values.copy()
+      curr_cash = max(0.0, 1.0 - curr_w.sum())
+
+    # Record beginning-of-day actual (drifted) weights
+    drifted_w[i, :] = curr_w
+    cash_w_arr[i] = curr_cash
+
+    # Calculate day's portfolio return from current drifted weights
+    r_vec = valid_rets.iloc[i].values
+    day_ret = np.dot(curr_w, r_vec) + curr_cash * daily_cash
+    strat_ret_arr[i] = day_ret
+
+    # Let weights naturally drift with asset price changes at end of day:
+    # New Weight_i = Old Weight_i * (1 + r_i) / (1 + Portfolio_Return)
+    denom = 1.0 + day_ret
+    if denom > 1e-9:
+      curr_w = curr_w * (1.0 + r_vec) / denom
+      curr_cash = curr_cash * (1.0 + daily_cash) / denom
+
+  sr = pd.Series(strat_ret_arr, index=Valid)
+  mkt_r = valid_rets.mean(axis=1)
 
   # --- BETA-EQUIVALENT BENCHMARK CALCULATION ---
   strat_excess = sr - daily_cash
@@ -889,10 +930,7 @@ def run_bt(prices, stype, assets, cash_rate_pa=4.2):
   mkt_var = mkt_excess.var()
   beta = strat_excess.cov(mkt_excess) / mkt_var if mkt_var > 1e-12 else 1.0
 
-  # Benchmark holds (Beta * Market) + ((1 - Beta) * Risk-Free Cash)
   beta_bench_r = daily_cash + beta * mkt_excess
-
-  # Annualized Alpha (Strategy vs. Beta-Equivalent Benchmark)
   ann_alpha = ((sr - beta_bench_r).mean() * 252) * 100.0
 
   out = pd.DataFrame(
@@ -902,25 +940,25 @@ def run_bt(prices, stype, assets, cash_rate_pa=4.2):
   out["Strategy"] = 10000.0 * (1.0 + sr).cumprod()
   out["Beta_Bench"] = 10000.0 * (1.0 + beta_bench_r).cumprod()
 
-  # Prepare Unstacked Weights DataFrame (including Cash / T-Bills)
-  weights_out = sw_w.copy()
-  weights_out["Cash (T-Bills)"] = cash_w
+  # Build Unstacked Drifted Weights DataFrame (measured from 0%)
+  weights_out = pd.DataFrame(drifted_w, index=Valid, columns=assets)
+  weights_out["Cash (T-Bills)"] = cash_w_arr
 
   return out, weights_out, beta, ann_alpha
 
 
-st.sidebar.title("🏛️ OpenQuant v7.1")
+st.sidebar.title("🏛️ OpenQuant v7.2")
 start_yr = st.sidebar.slider("Backtest Start Year", 2010, 2023, 2015)
 min_score = st.sidebar.slider("Min OpenQuant Alpha Score", 50, 90, 60)
 
 tab1, tab2 = st.tabs([
-    "🎯 Interactive Screener + Click-to-View Articles (37 Strategies)",
+    "🎯 Interactive Screener + Research & Live Backtest (37 Strategies)",
     "📥 Bulk HTML Strategy Importer",
 ])
 
 with tab1:
   st.subheader(
-      "🔍 Click Any Row in the Screener Below to Load Its Articles, Score"
+      "🔍 Click Any Row in the Screener Below to Load Its Literature, Score"
       " Breakdown & Live Backtest"
   )
   f_col1, f_col2 = st.columns(2)
@@ -982,7 +1020,9 @@ with tab1:
     # Live ETF Proxy Backtest (run first so we can show Realized Beta & Alpha in metrics)
     assets = [x.strip() for x in str(sel_row["Assets"]).split(",")]
     pr, badge = get_data(tuple(assets), start_yr)
-    bt, w_df, strat_beta, strat_alpha = run_bt(pr, sel_row["Type"], assets)
+    bt, w_df, strat_beta, strat_alpha = run_bt(
+        pr, sel_row["Type"], assets, reb_freq=sel_row["Reb"]
+    )
 
     # Proprietary OpenQuant Scoring & Institutional Risk Breakdown
     s1, s2, s3, s4, s5, s6 = st.columns(6)
@@ -1005,27 +1045,22 @@ with tab1:
         "vs. Beta Benchmark",
     )
 
-    # Academic Articles & Correlated Literature Vault
-    st.subheader("🎓 Correlated Academic Articles & Source Literature")
+    # Foundational Research & Related Literature (Renamed per institutional feedback!)
+    st.subheader("📚 Foundational Research & Related Literature")
     ac1, ac2 = st.columns(2)
     with ac1:
       st.info(f"""
-            **📌 Foundational Source Paper:**  
+            **📌 Original Academic Paper:**  
             **{sel_row['Paper']}**  
-            *Keywords:* `{sel_row['Keywords']}`  
+            *Factor Tags:* `{sel_row['Keywords']}`  
             🔗 **[Read Original Source Paper (SSRN / JSTOR)]({sel_row['Paper_URL']})**  
-            🔗 **[View Quantpedia Strategy Page]({sel_row['QP_URL']})**
+            🔗 **[View Strategy Specification on Quantpedia]({sel_row['QP_URL']})**
             """)
     with ac2:
-      st.markdown(
-          "**🌐 Correlated Quantitative Research Papers (Live University"
-          " Feed):**"
-      )
-      corr_papers = fetch_correlated_papers(
-          sel_row["Title"], sel_row["Keywords"]
-      )
-      if corr_papers:
-        for cp in corr_papers:
+      st.markdown("**🌐 Related Working Papers (Live arXiv Feed):**")
+      rel_papers = fetch_related_papers(sel_row["Title"], sel_row["Keywords"])
+      if rel_papers:
+        for cp in rel_papers:
           with st.expander(f"📄 {cp['title']} ({cp['date']})"):
             st.caption(f"Authors: {cp['authors']}")
             st.write(cp["abstract"])
@@ -1034,18 +1069,18 @@ with tab1:
                 f" PDF]({cp['pdf']})**"
             )
       else:
-        st.caption("Click any row to query live university preprints.")
+        st.caption("Click any row to query related working papers.")
 
     # --- CHART 1: CUMULATIVE RETURN VS BETA-EQUIVALENT BENCHMARK ---
     st.subheader(
-        f"📈 Live ETF Proxy Backtest ({', '.join(assets)}) — {badge}"
+        f"📈 Cumulative Performance ({', '.join(assets)}) — {badge}"
     )
     fig = go.Figure()
     fig.add_trace(
         go.Scatter(
             x=bt.index,
             y=bt["Strategy"],
-            name=f"{sel_row['ID']} Strategy Proxy",
+            name=f"{sel_row['ID']} Strategy ({sel_row['Reb']} Rebalance)",
             line=dict(color="#10B981", width=3),
         )
     )
@@ -1062,18 +1097,28 @@ with tab1:
         height=390,
         yaxis_title="Portfolio Value ($10,000 Initial)",
         hovermode="x unified",
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
+        legend=dict(
+            orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0
+        ),
     )
     st.plotly_chart(fig, use_container_width=True)
 
-    # --- CHART 2: UNSTACKED PORTFOLIO WEIGHTS OVER TIME (ANCHORED TO 0%) ---
+    # --- CHART 2: UNSTACKED PORTFOLIO WEIGHTS & DRIFT OVER TIME (ANCHORED TO 0%) ---
     st.subheader(
-        "⚖️ Portfolio Weights Over Time (Unstacked — Measured Relative to 0%)"
+        f"⚖️ Portfolio Weights & Drift Over Time ({sel_row['Reb']} Rebalancing"
+        " — Unstacked Relative to 0%)"
     )
     fig_w = go.Figure()
 
-    # Plot each ETF weight independently (no stacking!)
-    palette = ["#3B82F6", "#10B981", "#A855F7", "#EC4899", "#F97316", "#06B6D4", "#EAB308"]
+    palette = [
+        "#3B82F6",
+        "#10B981",
+        "#F59E0B",
+        "#EC4899",
+        "#A855F7",
+        "#06B6D4",
+        "#EAB308",
+    ]
     for idx, col in enumerate(w_df.columns):
       is_cash = col == "Cash (T-Bills)"
       fig_w.add_trace(
@@ -1084,8 +1129,8 @@ with tab1:
               name=col,
               line=dict(
                   color="#64748B" if is_cash else palette[idx % len(palette)],
-                  width=1.5 if is_cash else 2.5,
-                  dash="dash" if is_cash else "solid",
+                  width=1.5 if is_cash else 2.2,
+                  dash="dot" if is_cash else "solid",
               ),
           )
       )
@@ -1102,12 +1147,14 @@ with tab1:
 
     fig_w.update_layout(
         template="plotly_dark",
-        height=340,
-        yaxis_title="Allocation Weight (%)",
+        height=350,
+        yaxis_title="Portfolio Weight (%)",
         yaxis_ticksuffix="%",
         yaxis=dict(range=[-5, 105]),
         hovermode="x unified",
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0),
+        legend=dict(
+            orientation="h", yanchor="bottom", y=1.02, xanchor="left", x=0
+        ),
     )
     st.plotly_chart(fig_w, use_container_width=True)
 
