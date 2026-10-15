@@ -12,8 +12,9 @@ import yfinance as yf
 st.set_page_config(page_title="OpenQuant Institutional Terminal", layout="wide")
 
 CSV_FILE = "strategies_master.csv"
+RAW_TXT_FILE = "Untitled document.txt"
 
-# Complete 37-Strategy Database Extracted Directly from Your Quantpedia Screener HTML
+# Curated Metadata for the First 37 Foundational Strategies
 MASTER_STRATEGIES = [
     {
         "ID": "#0001",
@@ -93,7 +94,10 @@ MASTER_STRATEGIES = [
         "Markets": "Currencies",
         "Paper_Ret": 7.27,
         "Paper_Vol": 9.60,
-        "Keywords": "carry trade, FX anomaly, forex system, factor investing",
+        "Keywords": (
+            "carry trade, FX anomaly, forex system, factor investing, smart"
+            " beta"
+        ),
         "Type": "top2",
         "Assets": "UUP,FXA,FXE,FXY,FXB",
         "Paper": (
@@ -143,7 +147,9 @@ MASTER_STRATEGIES = [
         "Markets": "Currencies",
         "Paper_Ret": 7.61,
         "Paper_Vol": 10.22,
-        "Keywords": "momentum, FX anomaly, forex system, factor investing",
+        "Keywords": (
+            "momentum, FX anomaly, forex system, factor investing, smart beta"
+        ),
         "Type": "top2",
         "Assets": "UUP,FXE,FXY,FXA,FXC",
         "Paper": (
@@ -160,7 +166,9 @@ MASTER_STRATEGIES = [
         "Markets": "Currencies",
         "Paper_Ret": 7.82,
         "Paper_Vol": 9.33,
-        "Keywords": "FX anomaly, forex system, value, factor investing",
+        "Keywords": (
+            "FX anomaly, forex system, value, factor investing, smart beta"
+        ),
         "Type": "valmom",
         "Assets": "UUP,FXE,FXY,FXB,FXA",
         "Paper": (
@@ -226,7 +234,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 16.25,
         "Paper_Vol": 14.94,
         "Keywords": (
-            "stock picking, reversal, equity long short, factor investing"
+            "stock picking, reversal, equity long short, factor investing,"
+            " smart beta"
         ),
         "Type": "rev_dip",
         "Assets": "SPY,QQQ,SMH,XBI",
@@ -247,7 +256,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 8.30,
         "Paper_Vol": 16.60,
         "Keywords": (
-            "momentum, stock picking, momentum in stocks, factor investing"
+            "momentum, stock picking, momentum in stocks, factor investing,"
+            " smart beta"
         ),
         "Type": "top2",
         "Assets": "MTUM,QQQ,SPY,IWM",
@@ -268,7 +278,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 17.70,
         "Paper_Vol": 15.20,
         "Keywords": (
-            "momentum, rotational system, country picking, factor investing"
+            "momentum, rotational system, country picking, factor investing,"
+            " smart beta"
         ),
         "Type": "top2",
         "Assets": "SPY,EWJ,EWG,EWU,FXI,EWZ",
@@ -287,7 +298,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 6.40,
         "Paper_Vol": 14.10,
         "Keywords": (
-            "rotational system, reversal, country picking, factor investing"
+            "rotational system, reversal, country picking, factor investing,"
+            " smart beta"
         ),
         "Type": "valmom",
         "Assets": "SPY,EFA,VWO,EWJ,EWZ",
@@ -324,7 +336,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 6.68,
         "Paper_Vol": 11.87,
         "Keywords": (
-            "stock picking, equity long short, liquidity risk premium"
+            "stock picking, equity long short, liquidity risk premium, factor"
+            " investing, smart beta"
         ),
         "Type": "trend",
         "Assets": "IWM,IJH,SPY",
@@ -356,7 +369,10 @@ MASTER_STRATEGIES = [
         "Markets": "Equities",
         "Paper_Ret": 26.00,
         "Paper_Vol": 19.00,
-        "Keywords": "volatility effect, volatility premium, factor investing",
+        "Keywords": (
+            "volatility effect, volatility premium, factor investing, smart"
+            " beta"
+        ),
         "Type": "trend",
         "Assets": "SVXY,PUTW,SPY,TLT",
         "Paper": (
@@ -396,7 +412,9 @@ MASTER_STRATEGIES = [
         "Markets": "Commodities",
         "Paper_Ret": 11.73,
         "Paper_Vol": 23.84,
-        "Keywords": "rotational system, term spread, factor investing",
+        "Keywords": (
+            "rotational system, term spread, factor investing, smart beta"
+        ),
         "Type": "top2",
         "Assets": "DBC,USCI,GSG,GLD",
         "Paper": (
@@ -414,7 +432,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 21.80,
         "Paper_Vol": 27.60,
         "Keywords": (
-            "momentum, rotational system, term spread, factor investing"
+            "momentum, rotational system, term spread, factor investing, smart"
+            " beta"
         ),
         "Type": "top2",
         "Assets": "DBC,USCI,GLD,SLV,USO",
@@ -432,7 +451,9 @@ MASTER_STRATEGIES = [
         "Markets": "Equities",
         "Paper_Ret": 6.86,
         "Paper_Vol": 4.72,
-        "Keywords": "equity long short, arbitrage, factor investing",
+        "Keywords": (
+            "equity long short, arbitrage, factor investing, smart beta"
+        ),
         "Type": "trend",
         "Assets": "MNA,USMV,SHY",
         "Paper": (
@@ -450,7 +471,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 6.10,
         "Paper_Vol": 25.60,
         "Keywords": (
-            "stock picking, equity long short, small cap, factor investing"
+            "stock picking, equity long short, small cap, factor investing,"
+            " smart beta"
         ),
         "Type": "trend",
         "Assets": "IWM,IJR,VB,SPY",
@@ -469,7 +491,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 3.60,
         "Paper_Vol": 12.02,
         "Keywords": (
-            "stock picking, value, fundamental analysis, factor investing"
+            "stock picking, value, fundamental analysis, factor investing,"
+            " smart beta"
         ),
         "Type": "valmom",
         "Assets": "VLUE,VTV,IWD,SPY",
@@ -505,7 +528,9 @@ MASTER_STRATEGIES = [
         "Markets": "Equities, Bonds, REITs",
         "Paper_Ret": 11.90,
         "Paper_Vol": 10.00,
-        "Keywords": "momentum, asset class picking, value, factor investing",
+        "Keywords": (
+            "momentum, asset class picking, value, factor investing, smart beta"
+        ),
         "Type": "valmom",
         "Assets": "SPY,EFA,VNQ,GLD,BND",
         "Paper": (
@@ -577,7 +602,8 @@ MASTER_STRATEGIES = [
         "Paper_Ret": 12.90,
         "Paper_Vol": 17.00,
         "Keywords": (
-            "momentum, rotational system, sector picking, seasonality"
+            "momentum, rotational system, sector picking, seasonality, equity"
+            " long short"
         ),
         "Type": "top2",
         "Assets": "XLK,XLF,XLE,XLV,XLI,XLP",
@@ -684,6 +710,245 @@ MASTER_STRATEGIES = [
     },
 ]
 
+KNOWN_KEYWORDS = sorted(
+    [
+        "momentum in stocks",
+        "asset class picking",
+        "trend-following",
+        "rotational system",
+        "sector picking",
+        "market timing",
+        "seasonality",
+        "carry trade",
+        "FX anomaly",
+        "forex system",
+        "factor investing",
+        "smart beta",
+        "stock picking",
+        "volatility effect",
+        "equity long short",
+        "pairs trading",
+        "country picking",
+        "factor allocation",
+        "liquidity risk premium",
+        "volatility premium",
+        "term spread",
+        "small cap",
+        "fundamental analysis",
+        "sentiment trading",
+        "alternative data",
+        "earnings announcement",
+        "trading earnings",
+        "insiders trading effect",
+        "accruals effect",
+        "fund picking",
+        "short selling",
+        "volume effect",
+        "beta factor",
+        "growth stocks",
+        "bond timing",
+        "spread trading",
+        "cryptocurrencies",
+        "machine learning",
+        "ESG investing",
+        "diversification",
+        "monetary policy",
+        "arbitrage",
+        "reversal",
+        "momentum",
+        "value",
+        "sentiment",
+    ],
+    key=len,
+    reverse=True,
+)
+
+VALID_REBS = {
+    "Monthly",
+    "Quarterly",
+    "Yearly",
+    "Daily",
+    "Intraday",
+    "Weekly",
+    "6 Months",
+    "3 Years",
+}
+
+
+def split_concatenated_keywords(raw_kw):
+  """Splits squished Quantpedia keyword strings like 'momentumasset class picking' into clean tags."""
+  rem = raw_kw.strip()
+  found = []
+  for kw in KNOWN_KEYWORDS:
+    if kw in rem:
+      found.append(kw)
+      rem = rem.replace(kw, " ")
+  return ", ".join(found) if found else raw_kw.strip()
+
+
+def assign_proxy_assets_and_type(markets_str, keywords_str, title_str):
+  """Automatically assigns liquid ETF proxies and signal logic to any parsed strategy."""
+  m_low = markets_str.lower()
+  k_low = keywords_str.lower()
+  t_low = title_str.lower()
+
+  # 1. Assign ETF Proxy Basket
+  if "crypto" in m_low or "bitcoin" in t_low or "crypto" in t_low:
+    if "equities" in m_low or "commodities" in m_low:
+      assets = "BTC-USD,GLD,QQQ,SPY"
+    else:
+      assets = "BTC-USD,ETH-USD,SPY"
+  elif (
+      len(markets_str.split(",")) >= 3
+      or "asset class" in k_low
+      or "multi-asset" in t_low
+  ):
+    assets = "SPY,EFA,BND,VNQ,GLD"
+  elif "currencies" in m_low:
+    assets = "UUP,FXE,FXY,FXA,FXB"
+  elif "commodities" in m_low and "equities" in m_low:
+    assets = "SPY,DBC,GLD,USO,TLT"
+  elif "commodities" in m_low:
+    assets = "GLD,SLV,USO,DBA,DBC"
+  elif "bonds" in m_low and "equities" in m_low:
+    assets = "SPY,TLT,IEF,HYG,SHY"
+  elif "bonds" in m_low:
+    assets = "TLT,IEF,LQD,HYG,SHY"
+  elif "reits" in m_low:
+    assets = "VNQ,IYR,SCHH,SPY"
+  elif "sector" in k_low or "industry" in t_low:
+    assets = "XLK,XLF,XLE,XLV,XLI,XLP,XLU"
+  elif (
+      "country" in k_low
+      or "international" in t_low
+      or "china" in t_low
+      or "india" in t_low
+      or "european" in t_low
+      or "japanese" in t_low
+  ):
+    assets = "SPY,EFA,VWO,EWJ,EWG,FXI"
+  elif "small cap" in k_low or "smb" in t_low:
+    assets = "IWM,IJR,VB,SPY"
+  elif "value" in k_low or "hml" in t_low:
+    assets = "VLUE,VTV,IWD,SPY"
+  elif "volatility" in k_low or "vix" in t_low or "beta" in k_low:
+    assets = "USMV,SPLV,SPY,TLT"
+  else:
+    assets = "MTUM,QUAL,VLUE,USMV,SPY"
+
+  # 2. Assign Signal Type
+  if "reversal" in k_low or "pairs trading" in k_low or "arbitrage" in k_low:
+    stype = "rev_dip"
+  elif "volatility" in k_low and "market timing" in k_low:
+    stype = "vol_time"
+  elif "value" in k_low:
+    stype = "valmom"
+  elif "trend-following" in k_low or "market timing" in k_low:
+    stype = "trend"
+  else:
+    stype = "top2"
+
+  return assets, stype
+
+
+def parse_quantpedia_raw_text(raw_text):
+  """Parses the raw text dump ('Untitled document.txt') into structured strategy dicts."""
+  curated_map = {row["ID"]: row for row in MASTER_STRATEGIES}
+  lines = [
+      line.strip()
+      for line in raw_text.replace("\r\n", "\n").split("\n")
+      if line.strip()
+  ]
+
+  id_pattern = re.compile(r"^(#\d{4}|\d{3,4}|ff\d{2})$", re.IGNORECASE)
+  blocks = []
+  curr_id = None
+  curr_lines = []
+
+  for line in lines:
+    if id_pattern.match(line):
+      if curr_id is not None:
+        blocks.append((curr_id, curr_lines))
+      raw_id = line
+      if raw_id.isdigit():
+        curr_id = f"#{int(raw_id):04d}"
+      elif raw_id.lower().startswith("ff"):
+        curr_id = raw_id.upper()
+      else:
+        curr_id = raw_id
+      curr_lines = []
+    else:
+      if curr_id is not None:
+        curr_lines.append(line)
+  if curr_id is not None:
+    blocks.append((curr_id, curr_lines))
+
+  parsed_rows = {}
+  for cid, b_lines in blocks:
+    if cid in curated_map:
+      parsed_rows[cid] = curated_map[cid]
+      continue
+    if not b_lines:
+      continue
+
+    title = b_lines[0]
+    reb = "Monthly"
+    markets = "Equities"
+    pcts = []
+    kw_raw = ""
+
+    for item in b_lines[1:]:
+      if item in VALID_REBS:
+        reb = item
+      elif item.endswith("%") and re.match(r"^-?\d+(\.\d+)?%$", item):
+        pcts.append(float(item.replace("%", "")))
+      else:
+        mkt_matches = re.findall(
+            r"Equities|Bonds|Commodities|REITs|Currencies|Crypto", item
+        )
+        if mkt_matches and "".join(mkt_matches) == item.replace(" ", ""):
+          markets = ", ".join(mkt_matches)
+        else:
+          kw_raw += " " + item
+
+    if len(pcts) >= 2:
+      paper_ret, paper_vol = pcts[0], max(pcts[1], 1.0)
+    elif len(pcts) == 1:
+      paper_ret = pcts[0]
+      paper_vol = 14.0
+    else:
+      paper_ret, paper_vol = 9.5, 14.0
+
+    keywords = (
+        split_concatenated_keywords(kw_raw) if kw_raw.strip() else "factor investing, smart beta"
+    )
+    assets, stype = assign_proxy_assets_and_type(markets, keywords, title)
+    slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+    qp_url = f"https://quantpedia.com/strategies/{slug}"
+    paper_search_url = f"https://scholar.google.com/scholar?q={urllib.parse.quote(title + ' quantitative strategy')}"
+
+    parsed_rows[cid] = {
+        "ID": cid,
+        "Title": title,
+        "Reb": reb,
+        "Markets": markets,
+        "Paper_Ret": round(paper_ret, 2),
+        "Paper_Vol": round(paper_vol, 2),
+        "Keywords": keywords,
+        "Type": stype,
+        "Assets": assets,
+        "Paper": f"Quantpedia Quantitative Factor Study — {title}",
+        "Paper_URL": paper_search_url,
+        "QP_URL": qp_url,
+    }
+
+  # Ensure all 37 curated strategies are always present
+  for row in MASTER_STRATEGIES:
+    if row["ID"] not in parsed_rows:
+      parsed_rows[row["ID"]] = row
+
+  return list(parsed_rows.values())
+
 
 def compute_openquant_score(row):
   """Proprietary OpenQuant Alpha Score (0-100) combining 4 Quantitative Pillars."""
@@ -691,11 +956,8 @@ def compute_openquant_score(row):
   vol = max(float(row["Paper_Vol"]), 4.0)
   sharpe = ret / vol
 
-  # 1. Sharpe Efficiency Pillar (Max 40 pts)
-  p_sharpe = min(40.0, sharpe * 22.0)
-  # 2. Volatility & Crash Safety Pillar (Max 25 pts)
+  p_sharpe = min(40.0, max(0.0, sharpe * 22.0))
   p_safety = max(5.0, 25.0 - max(0.0, (vol - 6.0) * 0.8))
-  # 3. Execution & Friction Pillar (Max 20 pts: Monthly/Quarterly/Yearly beat Intraday/Daily)
   reb_map = {
       "Monthly": 20.0,
       "Quarterly": 19.0,
@@ -707,7 +969,6 @@ def compute_openquant_score(row):
       "Intraday": 6.0,
   }
   p_exec = reb_map.get(row["Reb"], 15.0)
-  # 4. Multi-Asset Diversification Bonus (Max 15 pts)
   mkt_count = len(str(row["Markets"]).split(","))
   p_div = min(15.0, 8.0 + mkt_count * 2.5)
 
@@ -720,11 +981,18 @@ def compute_openquant_score(row):
   return total, grade
 
 
-if not os.path.exists(CSV_FILE):
-  pd.DataFrame(MASTER_STRATEGIES).to_csv(CSV_FILE, index=False)
-
-df_strats = pd.read_csv(CSV_FILE)
-if len(df_strats) < 37:
+# Auto-load from Untitled document.txt if present in repo, else strategies_master.csv
+if os.path.exists(RAW_TXT_FILE):
+  with open(RAW_TXT_FILE, "r", encoding="utf-8", errors="ignore") as f:
+    parsed_list = parse_quantpedia_raw_text(f.read())
+  df_strats = pd.DataFrame(parsed_list)
+  df_strats.to_csv(CSV_FILE, index=False)
+elif os.path.exists(CSV_FILE):
+  df_strats = pd.read_csv(CSV_FILE)
+  if len(df_strats) < 37:
+    df_strats = pd.DataFrame(MASTER_STRATEGIES)
+    df_strats.to_csv(CSV_FILE, index=False)
+else:
   df_strats = pd.DataFrame(MASTER_STRATEGIES)
   df_strats.to_csv(CSV_FILE, index=False)
 
@@ -732,7 +1000,7 @@ scores_grades = df_strats.apply(compute_openquant_score, axis=1)
 df_strats["OQ_Score"] = [sg[0] for sg in scores_grades]
 df_strats["Rating"] = [sg[1] for sg in scores_grades]
 df_strats["Paper_Sharpe"] = (
-    df_strats["Paper_Ret"] / df_strats["Paper_Vol"]
+    df_strats["Paper_Ret"] / df_strats["Paper_Vol"].replace(0, 14.0)
 ).round(2)
 
 
@@ -742,12 +1010,14 @@ def fetch_related_papers(title_query, keywords_query):
   papers = []
   try:
     clean_q = re.sub(
-        r"[^a-zA-Z0-9 ]", "", f"{title_query} {keywords_query.split(',')[0]}"
+        r"[^a-zA-Z0-9 ]",
+        "",
+        f"{title_query} {str(keywords_query).split(',')[0]}",
     )
     terms = "+AND+".join(clean_q.split()[:4])
     url = f"http://export.arxiv.org/api/query?search_query=cat:q-fin*+AND+all:{terms}&start=0&max_results=4&sortBy=relevance"
     req = urllib.request.Request(
-        url, headers={"User-Agent": "OpenQuantTerminal/7.2"}
+        url, headers={"User-Agent": "OpenQuantTerminal/7.3"}
     )
     with urllib.request.urlopen(req, timeout=5) as resp:
       root = ET.fromstring(resp.read())
@@ -789,11 +1059,7 @@ def get_data(tickers, start_yr):
       pr = raw["Close"]
       if isinstance(pr, pd.Series):
         pr = pr.to_frame(name=t_list[0])
-      # 1. Fill only brief holiday/missing gaps (max 5 days), NOT pre-inception years
-      pr = pr.ffill(limit=5)
-      # 2. Drop all rows prior to when ALL tickers in the strategy actually existed
-      pr = pr.dropna(how="any")
-      # 3. Remove any zero-price or frozen rows
+      pr = pr.ffill(limit=5).dropna(how="any")
       pr = pr[(pr > 0).all(axis=1)]
       if len(pr) > 260 and all(x in pr.columns for x in t_list):
         inception_date = pr.index[0].strftime("%Y-%m-%d")
@@ -819,13 +1085,7 @@ def get_data(tickers, start_yr):
 
 
 def run_bt(prices, stype, assets, reb_freq="Monthly", cash_rate_pa=4.2):
-  """Runs backtest with:
-
-  1. Dynamic warmup (eliminates early lookback flatlines)
-  2. True intra-period portfolio weight drift between rebalances (Sancetta
-  method)
-  3. Beta-Equivalent Benchmark
-  """
+  """Runs backtest with dynamic warmup, intra-period weight drift, and Beta-Equivalent Benchmark."""
   rets = prices[assets].pct_change().fillna(0.0)
   sma = prices[assets].rolling(200).mean()
   target_w = pd.DataFrame(0.0, index=prices.index, columns=assets)
@@ -852,7 +1112,6 @@ def run_bt(prices, stype, assets, reb_freq="Monthly", cash_rate_pa=4.2):
     if len(assets) > 1:
       target_w[assets[1]] = np.where(~calm, 1.0, 0.0)
   else:
-    # valmom uses a 500-day lookback -> requires 505 bars before signals are valid
     score = (
         prices[assets].pct_change(252).rank(axis=1)
         + 0.5 * (-prices[assets].pct_change(500)).rank(axis=1)
@@ -867,11 +1126,9 @@ def run_bt(prices, stype, assets, reb_freq="Monthly", cash_rate_pa=4.2):
     warmup_bars = min(205, max(20, len(prices) // 4))
 
   Valid = prices.index[warmup_bars:]
-  # Shift target signals by 1 day so we trade at next day's close without lookahead bias
   sig_w = target_w.shift(1).fillna(0.0).loc[Valid]
   valid_rets = rets.loc[Valid]
 
-  # Determine actual rebalance dates based on the strategy's schedule
   freq_map = {
       "Weekly": "W-FRI",
       "Monthly": "ME",
@@ -884,38 +1141,32 @@ def run_bt(prices, stype, assets, reb_freq="Monthly", cash_rate_pa=4.2):
   if pd_freq and stype != "vol_time":
     reb_dates = set(sig_w.resample(pd_freq).last().index)
   else:
-    reb_dates = set(Valid)  # Daily / Intraday strategies rebalance daily
+    reb_dates = set(Valid)
 
   daily_cash = (1.0 + cash_rate_pa / 100.0) ** (1.0 / 252.0) - 1.0
 
-  # --- SIMULATE REAL PORTFOLIO DRIFT BETWEEN REBALANCE DATES ---
+  # Simulate Real Intra-Period Portfolio Weight Drift Between Rebalance Dates
   n_days = len(Valid)
   n_assets = len(assets)
   drifted_w = np.zeros((n_days, n_assets))
   cash_w_arr = np.zeros(n_days)
   strat_ret_arr = np.zeros(n_days)
 
-  # Initialize holdings on Day 0 of Valid window
   curr_w = sig_w.iloc[0].values.copy()
   curr_cash = max(0.0, 1.0 - curr_w.sum())
 
   for i, dt in enumerate(Valid):
-    # Reset weights to target allocation ONLY on scheduled rebalance dates
     if i == 0 or dt in reb_dates:
       curr_w = sig_w.iloc[i].values.copy()
       curr_cash = max(0.0, 1.0 - curr_w.sum())
 
-    # Record beginning-of-day actual (drifted) weights
     drifted_w[i, :] = curr_w
     cash_w_arr[i] = curr_cash
 
-    # Calculate day's portfolio return from current drifted weights
     r_vec = valid_rets.iloc[i].values
     day_ret = np.dot(curr_w, r_vec) + curr_cash * daily_cash
     strat_ret_arr[i] = day_ret
 
-    # Let weights naturally drift with asset price changes at end of day:
-    # New Weight_i = Old Weight_i * (1 + r_i) / (1 + Portfolio_Return)
     denom = 1.0 + day_ret
     if denom > 1e-9:
       curr_w = curr_w * (1.0 + r_vec) / denom
@@ -924,7 +1175,7 @@ def run_bt(prices, stype, assets, reb_freq="Monthly", cash_rate_pa=4.2):
   sr = pd.Series(strat_ret_arr, index=Valid)
   mkt_r = valid_rets.mean(axis=1)
 
-  # --- BETA-EQUIVALENT BENCHMARK CALCULATION ---
+  # Beta-Equivalent Benchmark Calculation
   strat_excess = sr - daily_cash
   mkt_excess = mkt_r - daily_cash
   mkt_var = mkt_excess.var()
@@ -940,31 +1191,33 @@ def run_bt(prices, stype, assets, reb_freq="Monthly", cash_rate_pa=4.2):
   out["Strategy"] = 10000.0 * (1.0 + sr).cumprod()
   out["Beta_Bench"] = 10000.0 * (1.0 + beta_bench_r).cumprod()
 
-  # Build Unstacked Drifted Weights DataFrame (measured from 0%)
   weights_out = pd.DataFrame(drifted_w, index=Valid, columns=assets)
   weights_out["Cash (T-Bills)"] = cash_w_arr
 
   return out, weights_out, beta, ann_alpha
 
 
-st.sidebar.title("🏛️ OpenQuant v7.2")
+st.sidebar.title("🏛️ OpenQuant v8.0")
+st.sidebar.caption(
+    f"Loaded Database: **{len(df_strats):,} Quantitative Strategies**"
+)
 start_yr = st.sidebar.slider("Backtest Start Year", 2010, 2023, 2015)
-min_score = st.sidebar.slider("Min OpenQuant Alpha Score", 50, 90, 60)
+min_score = st.sidebar.slider("Min OpenQuant Alpha Score", 40, 90, 55)
 
 tab1, tab2 = st.tabs([
-    "🎯 Interactive Screener + Research & Live Backtest (37 Strategies)",
-    "📥 Bulk HTML Strategy Importer",
+    f"🎯 Interactive Screener ({len(df_strats):,} Strategies)",
+    "📥 Bulk Text / HTML Strategy Importer",
 ])
 
 with tab1:
   st.subheader(
-      "🔍 Click Any Row in the Screener Below to Load Its Literature, Score"
-      " Breakdown & Live Backtest"
+      "🔍 Click Any Strategy Row Below to Load Its Literature, Score Breakdown"
+      " & Live Backtest"
   )
   f_col1, f_col2 = st.columns(2)
   search_q = f_col1.text_input(
-      "Search by Title, ID, or Keyword (e.g., momentum, carry, earnings,"
-      " reversal):",
+      "Search by Title, ID, Market, or Factor (e.g., #0850, crypto, carry,"
+      " machine learning):",
       "",
   ).lower()
   reb_f = f_col2.multiselect(
@@ -978,13 +1231,13 @@ with tab1:
   ].copy()
   if search_q:
     view_df = view_df[
-        view_df["Title"].str.lower().str.contains(search_q)
-        | view_df["Keywords"].str.lower().str.contains(search_q)
-        | view_df["ID"].str.lower().str.contains(search_q)
+        view_df["Title"].astype(str).str.lower().str.contains(search_q)
+        | view_df["Keywords"].astype(str).str.lower().str.contains(search_q)
+        | view_df["ID"].astype(str).str.lower().str.contains(search_q)
+        | view_df["Markets"].astype(str).str.lower().str.contains(search_q)
     ]
   view_df = view_df.reset_index(drop=True)
 
-  # Interactive Row Selection Table!
   event = st.dataframe(
       view_df[[
           "ID",
@@ -1017,14 +1270,12 @@ with tab1:
         f" ({sel_row['OQ_Score']}/100)"
     )
 
-    # Live ETF Proxy Backtest (run first so we can show Realized Beta & Alpha in metrics)
     assets = [x.strip() for x in str(sel_row["Assets"]).split(",")]
     pr, badge = get_data(tuple(assets), start_yr)
     bt, w_df, strat_beta, strat_alpha = run_bt(
         pr, sel_row["Type"], assets, reb_freq=sel_row["Reb"]
     )
 
-    # Proprietary OpenQuant Scoring & Institutional Risk Breakdown
     s1, s2, s3, s4, s5, s6 = st.columns(6)
     s1.metric(
         "OpenQuant Alpha Score",
@@ -1045,15 +1296,14 @@ with tab1:
         "vs. Beta Benchmark",
     )
 
-    # Foundational Research & Related Literature (Renamed per institutional feedback!)
     st.subheader("📚 Foundational Research & Related Literature")
     ac1, ac2 = st.columns(2)
     with ac1:
       st.info(f"""
-            **📌 Original Academic Paper:**  
+            **📌 Source Study:**  
             **{sel_row['Paper']}**  
             *Factor Tags:* `{sel_row['Keywords']}`  
-            🔗 **[Read Original Source Paper (SSRN / JSTOR)]({sel_row['Paper_URL']})**  
+            🔗 **[Search Academic Paper (SSRN / Google Scholar)]({sel_row['Paper_URL']})**  
             🔗 **[View Strategy Specification on Quantpedia]({sel_row['QP_URL']})**
             """)
     with ac2:
@@ -1071,7 +1321,7 @@ with tab1:
       else:
         st.caption("Click any row to query related working papers.")
 
-    # --- CHART 1: CUMULATIVE RETURN VS BETA-EQUIVALENT BENCHMARK ---
+    # CHART 1: CUMULATIVE RETURN VS BETA-EQUIVALENT BENCHMARK
     st.subheader(
         f"📈 Cumulative Performance ({', '.join(assets)}) — {badge}"
     )
@@ -1103,7 +1353,7 @@ with tab1:
     )
     st.plotly_chart(fig, use_container_width=True)
 
-    # --- CHART 2: UNSTACKED PORTFOLIO WEIGHTS & DRIFT OVER TIME (ANCHORED TO 0%) ---
+    # CHART 2: UNSTACKED PORTFOLIO WEIGHTS & DRIFT OVER TIME (ANCHORED TO 0%)
     st.subheader(
         f"⚖️ Portfolio Weights & Drift Over Time ({sel_row['Reb']} Rebalancing"
         " — Unstacked Relative to 0%)"
@@ -1135,7 +1385,6 @@ with tab1:
           )
       )
 
-    # Bold 0% reference baseline so every line is visually measured from zero
     fig_w.add_hline(
         y=0,
         line_dash="solid",
@@ -1160,20 +1409,28 @@ with tab1:
 
 with tab2:
   st.subheader(
-      "📥 Upload Any Saved Quantpedia Screener HTML File to Auto-Extract New"
-      " Strategies"
+      "📥 Upload Your 'Untitled document.txt' (or Quantpedia HTML) to Import"
+      " All 1,300+ Strategies"
   )
-  uploaded_html = st.file_uploader(
-      "Upload 'Screener - Quantpedia.html' after scrolling further down the"
-      " table",
-      type=["html", "htm"],
+  uploaded_file = st.file_uploader(
+      "Upload 'Untitled document.txt' or 'Screener - Quantpedia.html'",
+      type=["txt", "html", "htm"],
   )
-  if uploaded_html is not None:
-    raw_html = uploaded_html.read().decode("utf-8", errors="ignore")
-    matches = re.findall(
-        r'#(0\d{3})</div>.*?href="(https://quantpedia\.com/strategies/[^"]+)">([^<]+)</a>',
-        raw_html,
-    )
-    st.success(f"Found {len(matches)} strategy rows inside uploaded HTML!")
-    for m_id, m_url, m_title in matches:
-      st.write(f"**#{m_id}**: [{m_title}]({m_url})")
+  if uploaded_file is not None:
+    raw_content = uploaded_file.read().decode("utf-8", errors="ignore")
+    if uploaded_file.name.endswith(".txt"):
+      new_rows = parse_quantpedia_raw_text(raw_content)
+      new_df = pd.DataFrame(new_rows)
+      new_df.to_csv(CSV_FILE, index=False)
+      st.success(
+          f"✅ Parsed and saved {len(new_df):,} strategies into"
+          f" `{CSV_FILE}`! Refresh or switch to Tab 1."
+      )
+    else:
+      matches = re.findall(
+          r'#(0\d{3})</div>.*?href="(https://quantpedia\.com/strategies/[^"]+)">([^<]+)</a>',
+          raw_content,
+      )
+      st.success(f"Found {len(matches)} strategy rows inside uploaded HTML!")
+      for m_id, m_url, m_title in matches:
+        st.write(f"**#{m_id}**: [{m_title}]({m_url})")
